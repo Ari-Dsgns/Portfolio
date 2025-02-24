@@ -35,7 +35,7 @@ body {
   width: 700%;
 
   animation: grain 7s steps(10) infinite;
-  background-image: url(/noise.png);
+  background-image: url(/noise1.png);
   background-size: 200px;
   background-repeat: repeat;
   opacity: 0.6;
