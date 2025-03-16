@@ -1,0 +1,212 @@
+@media (max-width: 1440px) {
+  
+  .brand{
+    border: solid 1px #cac6c6;
+    height: 120px;
+    top: 0px;
+    h2{
+      top: 0px;
+    }
+    h6{
+      top: -30px;
+    }
+  }
+  .portfolio-box{
+    border: solid 1px #cac6c6;
+    width: 940px;
+    height: 360px;
+    top: 0px;
+  }
+  .portfolio1{
+    font-size: 240px;
+    letter-spacing: 0px;
+    top: 20px;
+    left: 0px;
+  }
+  .portfolio2{
+    font-size: 240px;
+    letter-spacing: 0px;
+    top: -30px;
+    left: 0px;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  
+  .list{
+    top: 10px;
+  }
+  #card1, #card2, #card3, #card4, #card5, #card6{
+    h3{
+      font-size: 60px;
+    }
+  }
+
+  .portfolio1{
+    font-size: 200px;
+    letter-spacing: 0px;
+    top: 4px;
+    left: 0px;
+  }
+  .portfolio2{
+    font-size: 200px;
+    letter-spacing: 0px;
+    top: -5px;
+    left: 0px;
+  }
+
+  .about-me{
+    h3{
+      font-size: 52px;
+    }
+    p{
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  
+
+  .portfolio-box{
+    border: solid 0px #cac6c6;
+    width:620px;
+    height:260px;
+    top: 40px;
+  }
+
+  .portfolio1{
+    font-size: 160px;
+  }
+  .portfolio2{
+    font-size: 160px;
+    top: -8px;
+  }
+
+  .brand{
+    h2{
+      font-size: 58px;
+    }
+    h6{
+      font-size: 14px;
+      top: -30px;
+    }
+  }
+  .list{
+    
+    div{
+      gap: 12px;
+      display: none;
+    }
+  }
+}   
+
+@media (max-width: 425px) {
+  
+}   
+
+@media (max-width: 375px) {
+  .cointainer{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-columns:  repeat(2,1fr);
+  }
+  .menu{  
+    display: none;
+  }
+
+  .tori{
+    display: none;
+  }
+
+  .list{
+    display: none;
+  }
+
+
+  .icon-menu{
+
+    position: relative;
+    gap: 4px;
+    height: 60px;
+    left: -30px;
+    top: -30px;
+  }
+  #sunset-style-btn,#night-style-btn,#jpn-style-btn{
+    padding: 2px;
+  }
+  .icon-menu2{
+    display: none;
+    position:relative;
+    left: 40px;
+    top: -35px;
+  }
+
+  
+  .brand{
+    position: absolute;
+    border: solid 0px #cac6c6;
+    height: 100px;
+    
+    width:320px;
+    top: 140px;
+    left: 18px;
+    h2{
+      font-size: 48px;
+      top: 8px;
+    }
+    h6{
+        font-size: 13px;
+        font-weight: 700;
+        top: -4px;
+        letter-spacing: 0px;
+    }
+    
+  }
+
+  .portfolio{
+    font-size: 80px;
+    letter-spacing: 0px;
+    top: -60px;
+  }
+  .portfolio1{
+    font-size: 80px;
+    letter-spacing: 0px;
+    top: 4px;
+    left: 16px;
+  }
+  .list{
+    
+    position: absolute;
+    right: 20px;
+    top: -80px;
+    width: 150px;
+    height: 180px;
+    border: solid 0px #cac6c6;
+    padding: 2px;
+    div{
+        gap: 20px;
+    }
+}
+#work-btn{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+}
+#about-btn{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+
+}
+#contact-btn{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+}
+
+
+}

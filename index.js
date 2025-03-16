@@ -1,112 +1,176 @@
 document.addEventListener("DOMContentLoaded", () => {
-  
   let mainContainer = document.querySelector(".main-container");
   let navBar = document.querySelector(".navbar");
   let list = document.querySelector(".list");
 
   let noise = document.querySelector(".noise");
-  let brighterBtn = document.querySelector("#bright-btn");
 
   let noiseBtn = document.querySelector("#noise-btn");
 
-  noiseBtn.addEventListener("click", cleanNoise);
-  brighterBtn.addEventListener("click", brighter);
-
-  let sunsetBtn = document.querySelector("#sunset-style-btn");
-  sunsetBtn.addEventListener("click",()=>{
-    
-    mainContainer.classList.remove("night");
-    mainContainer.classList.remove("japan");
-    
-  })
-
-  let nightBtn = document.querySelector("#night-style-btn");
-      nightBtn.addEventListener("click", ()=>{
-        mainContainer.classList.add("night");
-        mainContainer.classList.remove("japan");
-        mainContainer.classList.remove("sunset");
-
-        
-    });
-
-  let jpnBtn = document.querySelector("#jpn-style-btn");
-  jpnBtn.addEventListener("click", ()=>{
-
-    jpnBtn.classList.toggle("picked");
-    mainContainer.classList.add("japan");
-    mainContainer.classList.remove("night");
-    mainContainer.classList.remove("sunset");
+  noiseBtn.addEventListener("click", () => {
+    if (noise.classList.contains("clean")) {
+      noiseBtn.classList.remove("on");
+    } else {
+      noiseBtn.classList.add("on");
+    }
+    cleanNoise();
   });
 
-  function cleanNoise(){
-      if(noise.classList.contains("clean")){
-          noise.classList.remove("clean");
-      }else{
-          noise.classList.add("clean");
-      }
+  let darkBtn = document.querySelector("#dark-btn");
+  let icon = darkBtn.querySelector("i");
+
+  darkBtn.addEventListener("click", () => {
+    mainContainer.classList.toggle("night");
+
+    if (mainContainer.classList.contains("night")) {
+      icon.classList.remove("bi-brightness-high");
+      icon.classList.add("bi-brightness-high-fill");
+    } else {
+      icon.classList.remove("bi-brightness-high-fill");
+      icon.classList.add("bi-brightness-high");
+    }
+  });
+
+  function cleanNoise() {
+    if (noise.classList.contains("clean")) {
+      noise.classList.remove("clean");
+    } else {
+      noise.classList.add("clean");
+    }
   }
 
-  function brighter(){
-      if(mainContainer.classList.contains("brighter")){
-          mainContainer.classList.remove("brighter");
-      }else{     
-      mainContainer.classList.add("brighter");
-      }
-  }
-  let portfolio = document.querySelector(".portfolio");
-  let portfolio1 = document.querySelector(".portfolio1");
+  let portfolioBox = document.querySelector(".portfolio-box");
   let brand = document.querySelector(".brand");
+  let workContainer = document.querySelector(".work-container");
+  let containerFlow = document.querySelector(".container-flow");
 
- let workBtn = document.querySelector(".work-btn");
- workBtn.addEventListener("click", showOff); 
+  let backBtn = document.querySelector(".backButton");
 
- let contactBtn = document.querySelector(".contact-btn");
- let contact = document.querySelector(".contact");
-  contactBtn.addEventListener("click", ()=>{
+  backBtn.addEventListener("click", () => {
+    showOn();
+    backBtn.classList.remove("visible");
+    justGoodStuffContent.style.display = "none";
+    containerFlow.style.display = "flex";
+    workContainer.style.display = "none";
+    containerCards.style.display = "none";
+    list.style.display = "flex";
+    
+    card1.classList.remove("selected"); 
+
+  });
+
+  let workBtn = document.querySelector(".work-btn");
+
+  workBtn.addEventListener("click", () => {
     showOff();
-    contact.classList.add("visible");
-    about.classList.remove("visible");
-    list.style.display="none";
-    closeBtn.style.display="inline";
-    
+    backBtn.classList.add("visible");
+    card1.classList.add("selected");
+    justGoodStuffContent.style.display = "flex";
+    containerFlow.style.display = "none";
+    workContainer.style.display = "flex";
+    containerCards.style.display = "flex";
+    list.style.display = "none";
+   
+  });
 
-    
+  let contactBtn = document.querySelector(".contact-btn");
+  let contact = document.querySelector(".contact");
+
+  contactBtn.addEventListener("click", () => {
+    showOff();
+    contact.style.display = "block";
+    list.style.display = "none";
+    backBtn.classList.add("visible");
   });
 
   let aboutBtn = document.querySelector(".about-btn");
   let about = document.querySelector(".about-me");
-  aboutBtn.addEventListener("click", ()=>{
+
+  aboutBtn.addEventListener("click", () => {
     showOff();
-    about.classList.add("visible");
-    contact.classList.remove("visible");
-    list.style.display="none";
-    closeBtn.style.display="inline";
-  });
- 
-  
-  let closeBtn = document.querySelector("#close");
-  closeBtn.addEventListener("click", ()=>{
-    showOn();
-    list.style.display="flex";
-    contact.classList.remove("visible"); 
-    about.classList.remove("visible");
-    closeBtn.style.display="none";
-  
+    about.style.display = "flex";
+    list.style.display = "none";
+    backBtn.classList.add("visible");
+    // backBtn.style.display = "flex";
   });
 
- function showOff(){
-    portfolio.style.left = "-1300px";
-    portfolio1.style.left = "1900px";
-    brand.style.left = "-600px";
-    closeBtn.style.display="none";
- }
- 
+  
 
- function showOn(){
-    portfolio.style.left = "10px";
-    portfolio1.style.left = "28px";
-    brand.style.left = "30px";
- }
-  
-  
+  function showOff() {
+    portfolioBox.style.bottom = "-500px";
+    brand.style.top = "-200px";
+    
+  }
+
+  function showOn() {
+    list.style.display = "flex";
+    portfolioBox.style.bottom = "0px";
+    brand.style.top = "0px";
+    contact.style.display = "none";
+    about.style.display = "none";
+    
+  }
+  let containerCards = document.querySelector(".cardsDetail-container");
+
+  let card1 = document.querySelector("#card1");
+  let card2 = document.querySelector("#card2");
+  let card3 = document.querySelector("#card3");
+  let card4 = document.querySelector("#card4");
+  let card5 = document.querySelector("#card5");
+  let card6 = document.querySelector("#card6");
+
+  let justGoodStuffContent = document.querySelector(".justgoodstuff-content");
+  let tuviniloContent = document.querySelector(".tuvinilo-content");
+  let destineaContent = document.querySelector(".destinea-content");
+  let readmeappContent = document.querySelector(".readmeapp-content");
+
+  card1.addEventListener("mouseover", () => {
+    justGoodStuffContent.style.display = "flex";
+    tuviniloContent.style.display = "none";
+    destineaContent.style.display = "none";
+    readmeappContent.style.display = "none";
+
+    card1.classList.add("selected");
+    card2.classList.remove("selected");
+    card3.classList.remove("selected");
+    card5.classList.remove("selected");
+
+  });
+
+  card2.addEventListener("mouseover", () => {
+    tuviniloContent.style.display = "flex";
+    justGoodStuffContent.style.display = "none";
+    destineaContent.style.display = "none";
+    readmeappContent.style.display = "none";
+
+    card2.classList.add("selected");
+    card1.classList.remove("selected");
+    card3.classList.remove("selected");
+    card5.classList.remove("selected");
+  });
+
+  card3.addEventListener("mouseover", () => {
+    destineaContent.style.display = "flex";
+    tuviniloContent.style.display = "none";
+    justGoodStuffContent.style.display = "none";
+    readmeappContent.style.display = "none";
+
+    card3.classList.add("selected");
+    card1.classList.remove("selected");
+    card2.classList.remove("selected");
+    card5.classList.remove("selected");
+    
+  });
+
+  card5.addEventListener("mouseover", () => {
+    readmeappContent.style.display = "flex";
+    justGoodStuffContent.style.display = "none";
+    tuviniloContent.style.display = "none";
+    destineaContent.style.display = "none";
+
+    card5.classList.add("selected");
+    card3.classList.remove("selected");
+    card1.classList.remove("selected");
+    card2.classList.remove("selected");
+  });
 });
