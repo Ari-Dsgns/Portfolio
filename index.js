@@ -44,14 +44,28 @@ document.addEventListener("DOMContentLoaded", () => {
   let workContainer = document.querySelector(".work-container");
   let containerFlow = document.querySelector(".container-flow");
 
+  let menuBtn = document.querySelector(".menuButton");
+
+  menuBtn.addEventListener("click", () => {
+    brand.style.display = "none";
+    portfolioBox.style.display = "none";
+
+  });
+
   let backBtn = document.querySelector(".backButton");
 
   backBtn.addEventListener("click", () => {
-    showOn();
+
+    list.style.display = "flex";
+    portfolioBox.style.display = "flex";
+    brand.style.display = "flex";
+    contact.style.display = "none";
+    about.style.display = "none";
+    workContainer.style.display = "none";
+
     backBtn.classList.remove("visible");
     justGoodStuffContent.style.display = "none";
     containerFlow.style.display = "flex";
-    workContainer.style.display = "none";
     containerCards.style.display = "none";
     list.style.display = "flex";
     
@@ -62,7 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let workBtn = document.querySelector(".work-btn");
 
   workBtn.addEventListener("click", () => {
-    showOff();
+    
+    portfolioBox.style.display = "none";
+    brand.style.display = "none";
     backBtn.classList.add("visible");
     card1.classList.add("selected");
     justGoodStuffContent.style.display = "flex";
@@ -77,8 +93,10 @@ document.addEventListener("DOMContentLoaded", () => {
   let contact = document.querySelector(".contact");
 
   contactBtn.addEventListener("click", () => {
-    showOff();
-    contact.style.display = "block";
+    
+    portfolioBox.style.display = "none";
+    brand.style.display = "none";
+    contact.style.display = "flex";
     list.style.display = "none";
     backBtn.classList.add("visible");
   });
@@ -87,29 +105,21 @@ document.addEventListener("DOMContentLoaded", () => {
   let about = document.querySelector(".about-me");
 
   aboutBtn.addEventListener("click", () => {
-    showOff();
+    
+
+    portfolioBox.style.display = "none";
+    brand.style.display = "none";
     about.style.display = "flex";
     list.style.display = "none";
     backBtn.classList.add("visible");
-    // backBtn.style.display = "flex";
+    
   });
 
   
 
-  function showOff() {
-    portfolioBox.style.bottom = "-500px";
-    brand.style.top = "-200px";
-    
-  }
+  
 
-  function showOn() {
-    list.style.display = "flex";
-    portfolioBox.style.bottom = "0px";
-    brand.style.top = "0px";
-    contact.style.display = "none";
-    about.style.display = "none";
-    
-  }
+  
   let containerCards = document.querySelector(".cardsDetail-container");
 
   let card1 = document.querySelector("#card1");

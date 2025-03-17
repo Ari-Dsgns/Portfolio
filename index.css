@@ -42,7 +42,7 @@ body {
 
   animation: grain 7s steps(10) infinite;
   background-image: url(./noise1.png);
-  background-size: 200px;
+  background-size: 12.5rem;
   background-repeat: repeat;
   opacity: 0.5;
   pointer-events: none;
@@ -92,35 +92,35 @@ body {
   
   position: relative;
   visibility: hidden;
-  right: 0px;
-  top: 0px;
+  right: 0rem;
+  top: 0rem;
   opacity: 0;
-  filter: blur(1.2px);
+  filter: blur(.075rem);
   animation: moon 0s infinite ;
   transition: 0.3s;
   
   
   
   img{
-    width: 145px;
-    height: 200px;
+    width: 9.0625rem;
+    height: 12.5rem;
     z-index: 1;
   }
 }
 @keyframes moon{
   0%{
-    transform: translateY(-10px) translateX(0px);
-    filter: blur(1px);
+    transform: translateY(-0.625rem) translateX(0rem);
+    filter: blur(.0625rem);
   }
   
   100%{
-    transform: translateY(-300px) translateX(750px);
-    filter: blur(0.5px);
+    transform: translateY(-18.75rem) translateX(46.875rem);
+    filter: blur(.0313rem);
   }
 }
 
 .moon:hover{
-  filter: blur(0.6px);
+  filter: blur(.0375rem);
 }
 
 
@@ -142,13 +142,13 @@ body {
   #card1, #card2, #card3, #card4, #card5, #card6{
     filter: contrast(0.8); 
     h3{
-      -webkit-text-stroke:  1px #475a91;
+      -webkit-text-stroke:  .0625rem #475a91;
         color:#475a91;
     }
     
   }
   .selected{
-    border-right: solid 8px #475a91 ;
+    border-right: solid .5rem #475a91 ;
     filter: contrast(1);
   }
   .navbar{
@@ -176,7 +176,7 @@ body {
   }
   .portfolio1{
     color:#1d1d1e;
-    -webkit-text-stroke:  1px  var(--font-color-night2);
+    -webkit-text-stroke:  .0625rem  var(--font-color-night2);
   }
   .portfolio2{
     color: var(--font-color-night2);
@@ -247,8 +247,8 @@ body {
 
 #dark-btn{
   cursor: pointer;
-  border-right: solid 1.5px ;
-  padding-right: 12px;
+  border-right: solid .0938rem ;
+  padding-right: .75rem;
   
 }
 
@@ -263,7 +263,7 @@ body {
   width: 100vw;
   height: 100vh;
   user-select: none;
-  padding: 10px;
+  padding: .625rem;
   background-color: black;
   align-items: center;
   z-index: 3;
@@ -278,7 +278,7 @@ body {
   align-self: center;
   
   height: 100%;
-  border: solid 0px rgba(80, 80, 80, 0);
+  border: solid 0rem rgba(80, 80, 80, 0);
   background-color: var(--background-color);
   user-select: none;
   overflow: hidden;
@@ -294,11 +294,11 @@ body {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: hidden;
-  border: solid 0px rgba(227, 226, 226, 0);
+  border: solid 0rem rgba(227, 226, 226, 0);
   background-color: var(--background-color);
-  padding: 20px;
-  margin: 0px;
-  right: 0px;
+  padding: 1.25rem;
+  margin: 0rem;
+  right: 0rem;
   z-index: 3;
   position: relative;
   transition:  0.5s;
@@ -308,11 +308,11 @@ body {
   display: flex;
   
   width: 100%;
-  border: solid 1px rgb(233, 232, 232);
+  border: solid .0625rem rgb(233, 232, 232);
   flex-direction: column;
   justify-content: space-between;
   
-  padding: 40px;
+  padding: 2.5rem;
 }
 
 
@@ -321,32 +321,53 @@ body {
 .navbar {
   display: flex;
   width:100%;
-  height: 350px;
+  height: 21.875rem;
   justify-content: space-between;
-  padding: 20px;
+  padding: 1.25rem;
   background-color: var(--navbar-color);
   color: var(--font-color);
   z-index: 1;
   
 }
+.menuBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 0rem;
+  border: solid 0rem rgba(255, 255, 255, 0.788);
+  z-index: 2;
+}
 
 .backButton{
-  /* display: none;
-  position: fixed; */
-  top: 35px;
-  right: 20px;
-  width: 150px;
-  height: 30px;
-  font-size: 16px;
+  display: flex;
+  width: 9.375rem;
+  visibility: hidden;
+  opacity: 0;
+}
+.menuButton{
+  display: flex;
+  width: 9.375rem;
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* .backButton{
+  
+  top: 2.1875rem;
+  right: 1.25rem;
+  width: 9.375rem;
+  height: 1.875rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--font-color);
   background: none;
   visibility: hidden;
   opacity: 0;
-  border: 0px solid;
+  border: 0rem solid;
   cursor: pointer;
   z-index: 4;
-}
+} */
 
 .visible{
   visibility: visible;
@@ -357,11 +378,11 @@ body {
 .icon-menu{
   display: flex;
   justify-content: start;
-  gap: 12px;
-  padding: 4px;
-  width: 150px;
-  height: 40px;
-  border: solid 0px rgba(221, 220, 220, 0.897);
+  gap: .75rem;
+  padding: .25rem;
+  width: 9.375rem;
+  height: 2.5rem;
+  border: solid 0rem rgba(221, 220, 220, 0.897);
   z-index: 2;
   
 }
@@ -372,20 +393,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 0px;
+  top: 0rem;
   background-color: transparent;
-  border: solid 1px rgba(238, 238, 238, 0);
+  border: solid .0625rem rgba(238, 238, 238, 0);
   transition: 0.3s;
   z-index: 1;
  
   h2 {
     font-family: "Advent Pro", serif;
     position: relative;
-    top: -10px;
+    top: -0.625rem;
     font-weight: 800;
-    font-size: 100px;
-    letter-spacing: 2px;
-    /* -webkit-text-stroke: 0.5px #e5eaf6d0; */
+    font-size: 6.25rem;
+    letter-spacing: .125rem;
+    /* -webkit-text-stroke: .0313rem #e5eaf6d0; */
     color: var(--font-color);
     
    
@@ -394,16 +415,16 @@ body {
   h6 {
     display: inline-block;
         position: relative;
-        top: -42px;
+        top: -2.625rem;
         font-weight: 900;
-        font-size: 24px;
+        font-size: 1.5rem;
         background-color: rgba(30, 30, 30, 0);
-        padding: 8px;
+        padding: .5rem;
         color:var(--font-color);
         user-select: none;
-        left: -2px;
-        border: solid 1px rgba(255, 255, 255, 0);
-        letter-spacing: 0.5px;
+        left: -0.125rem;
+        border: solid .0625rem rgba(255, 255, 255, 0);
+        letter-spacing: .0313rem;
         transition: 1s;
   }
 }
@@ -412,16 +433,16 @@ body {
   
   display: flex;
   position: relative;
-  bottom: 0px;
+  bottom: 0rem;
   
   flex-direction: column;
   align-items: center;
-  border: solid 1px rgba(244, 244, 244, 0);
-  width:1160px;
-  height:380px;
+  border: solid .0625rem rgba(244, 244, 244, 0);
+  width:72.5rem;
+  height:23.75rem;
   justify-content: center;
   justify-self: center;
-  margin: 0px;
+  margin: 0rem;
   overflow: hidden;
   z-index: 0;
   transition: 0.3s;  
@@ -434,12 +455,12 @@ body {
   position: relative;
   font-family: "Advent Pro", serif;
   font-weight: 900;
-  font-size: 260px;
-  top: 30px;
-  left: 10px;
-  border: solid 1px rgba(244, 244, 244, 0);
-  letter-spacing: 20px;
-  -webkit-text-stroke:  1px var(--font-color);
+  font-size: 16.25rem;
+  top: 1.875rem;
+  left: .625rem;
+  border: solid .0625rem rgba(244, 244, 244, 0);
+  letter-spacing: 1.25rem;
+  -webkit-text-stroke:  .0625rem var(--font-color);
   color: var(--background-color);
   transition: 0.3s;
   
@@ -450,14 +471,14 @@ body {
 }
 .portfolio2{
   position: relative;
-  border: solid 1px rgba(244, 244, 244, 0);
+  border: solid .0625rem rgba(244, 244, 244, 0);
   transform: rotateX(180deg);
   font-family: "Advent Pro", serif;
   font-weight: 900;
-  font-size: 260px;
-  letter-spacing: 20px;
-  top: -30px;
-  left: 10px;
+  font-size: 16.25rem;
+  letter-spacing: 1.25rem;
+  top: -1.875rem;
+  left: .625rem;
   color:  #fce89a9c;
   transition: 0.3s;
   
@@ -470,7 +491,7 @@ body {
 .text{
   display: flex;
   flex-direction: column;
-  gap: 150px;
+  gap: 9.375rem;
 }
 
 
@@ -484,12 +505,12 @@ body {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  border: solid 0px rgb(250, 250, 250);
+  border: solid 0rem rgb(250, 250, 250);
   background-color: var(--background-color);
-  padding: 20px;
-  gap: 20px;
-  padding: 10px;
-  margin: 0px;
+  padding: 1.25rem;
+  gap: 1.25rem;
+  padding: .625rem;
+  margin: 0rem;
   z-index: 3;
  
 }
@@ -500,18 +521,18 @@ body {
   width: 50%;
   height: 100%;
   align-self: self-start;
-  gap: 0px;
+  gap: 0rem;
   background-color: var(--background-color);
-  border: solid 0px rgb(250, 250, 250);
-  padding: 10px;
+  border: solid 0rem rgb(250, 250, 250);
+  padding: .625rem;
 }
 
 .cards-container-flow{
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  border: solid 0px rgb(250, 250, 250);
-  padding: 10px;
+  gap: 1.875rem;
+  border: solid 0rem rgb(250, 250, 250);
+  padding: .625rem;
 }
 
 
@@ -524,12 +545,12 @@ body {
   h3{
     font-family: "Advent Pro", serif;
     font-weight: 900;
-    font-size: 90px;
-    border: solid 0px rgba(244, 244, 244, 0);
-    letter-spacing: 0px;
-    -webkit-text-stroke:  1px var(--font-color);
+    font-size: 5.625rem;
+    border: solid 0rem rgba(244, 244, 244, 0);
+    letter-spacing: 0rem;
+    -webkit-text-stroke:  .0625rem var(--font-color);
     color: var(--font-color);
-    border: solid 0px rgba(250, 250, 250, 0.945);
+    border: solid 0rem rgba(250, 250, 250, 0.945);
     text-overflow: ellipsis;
     opacity: 1;
     transition: 0.3s;
@@ -546,14 +567,14 @@ body {
 /* #card1:hover, #card2:hover, #card3:hover, #card4:hover, #card5:hover, #card6:hover{
   
   h3{
-    border-right: solid 8px var(--font-color);
+    border-right: solid .5rem var(--font-color);
     filter: contrast(1);
   }
 
 } */
 
 .selected{
-  border-right: solid 8px var(--font-color);
+  border-right: solid .5rem var(--font-color);
     h3{
     transform: scale(0.95);
   }
@@ -563,21 +584,22 @@ body {
 #sub1{
   display: inline;
   position: relative;
-  right: 20px;
-  font-size: 16px;
+  right: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
-  -webkit-text-stroke:  0px var(--font-color);
+  -webkit-text-stroke:  0rem var(--font-color);
 }
 
 
 .cardsDetail-container{
+  display: flex;
   overflow-x: hidden;
   overflow-y: auto;
   width: 50%;
   height: 100%;
-  gap: 0px;
-  padding: 0px;
-  border: solid 0px rgba(250, 250, 250, 0.75);
+  gap: 0rem;
+  padding: 0rem;
+  border: solid 0rem rgba(250, 250, 250, 0.75);
   background-color:transparent;
   
   color: var(--font-color);
@@ -588,9 +610,9 @@ body {
 .cardDetail-container-flow{
   display: flex;
   flex-direction: column;
-  gap: 0px;
-  border: solid 0px rgb(250, 250, 250);
-  padding: 0px;
+  gap: 0rem;
+  border: solid 0rem rgb(250, 250, 250);
+  padding: 0rem;
   
 }
 
@@ -607,30 +629,30 @@ a{
   align-items: self-start;
   width: 100%;
   height: 100%;
-  padding: 10px;
-  gap: 30px;
+  padding: .625rem;
+  gap: 1.875rem;
   color:var(--font-color);
-  border: solid 0px rgb(250, 250, 250);
+  border: solid 0rem rgb(250, 250, 250);
   overflow-x: hidden;
   overflow-y: auto;
   
   h4{
     font-family: "Advent Pro", serif;
     font-weight: 700;
-    font-size: 24px;
-    border: solid 0px rgb(250, 250, 250);
+    font-size: 1.5rem;
+    border: solid 0rem rgb(250, 250, 250);
   }
 
   div{
     display: flex;
     align-self: flex-start;
-    gap: 8px;
+    gap: .5rem;
   }
   h5 {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
     font-family: "Nunito Sans", serif;
-    border: solid 0px rgb(250, 250, 250);
+    border: solid 0rem rgb(250, 250, 250);
   }
   img{
     width: 100%;
@@ -640,7 +662,7 @@ a{
   }
   a{
     color: var(--font-color);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
     align-self: center;
   
@@ -659,28 +681,28 @@ a{
   position: absolute;
   justify-content: space-between;
   width:70%;
-  height: 400px;
+  height: 25rem;
   overflow-x: auto;
-  padding: 0px;
-  gap: 40px;
+  padding: 0rem;
+  gap: 2.5rem;
   color: var(--font-color);
-  border: solid #e6e4e4a2 0px;
+  border: solid #e6e4e4a2 0rem;
   user-select: none;
-  top: 40px;
+  top: 2.5rem;
   transition: 0.5s;
   h3{
     font-weight: 800;
-    font-size: 62px;
+    font-size: 3.875rem;
   }
   p {
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: 400;
     font-family: "Nunito Sans", serif;
   }
   div{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
   }
 }
 
@@ -702,24 +724,25 @@ a{
   flex-direction: column;
   justify-items: center;
   align-content: center;
+  align-items: center;
   align-self: center;
   display: none;
-  height: 30%;
-  width: 30%;
-  padding: 20px;
-  top: -200px;
+  height: 50%;
+  width: 100%;
+  padding: 1.25rem;
+  top:0px;
   position: relative;
   cursor: pointer;
-  margin: 80px;
-  border: solid 0px rgba(255, 255, 255, 0.788);
+  margin: 0px;
+  border: solid 0.1rem rgba(255, 255, 255, 0.788);
   div{
     display: flex;
-    gap: 16px;
+    gap: 1rem;
   }
   
   
   a, button{
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 500;
     color:var(--font-color);
     text-decoration: none;
@@ -743,12 +766,12 @@ a{
   flex-direction: column;
   justify-self: center;
   justify-content: space-evenly;
-  top: 120px;
-  right: 40px;
-  width: 280px;
-  height: 280px;
-  border: solid 0px white;
-  padding: 20px;
+  top: 7.5rem;
+  right: 2.5rem;
+  width: 17.5rem;
+  height: 17.5rem;
+  border: solid 0rem white;
+  padding: 1.25rem;
   font-family: "Advent Pro", serif;
   
 
@@ -759,9 +782,9 @@ a{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: end;
-    padding: 10px;
-    gap: 20px;
-    border: solid 0px white;
+    padding: .625rem;
+    gap: 1.25rem;
+    border: solid 0rem white;
     
     
   }
@@ -777,8 +800,8 @@ a{
   position: relative;
   align-self: center;
   width:90%;
-  height: 40px;
-  font-size: 32px;
+  height: 2.5rem;
+  font-size: 2rem;
   font-family: inherit;
   font-weight: 800;
   transform: rotateZ(4deg);
@@ -786,7 +809,7 @@ a{
   border: none;
   color: inherit;
   text-align: center;
-  padding: 6px;
+  padding: .375rem;
   cursor: pointer;
   transition: 0.1s ease-in;
   user-select: none;
@@ -799,7 +822,7 @@ a{
 }
 #work-btn:hover {
   transform: scale(1.05) rotateZ(4deg);
-  letter-spacing: 0px;
+  letter-spacing: 0rem;
  
   
 
@@ -812,11 +835,11 @@ a{
   align-items: center;
   align-self: center;
   position: relative;
-  right: 2px;
+  right: .125rem;
   width: 95%;
-  height: 40px;
+  height: 2.5rem;
   transform: rotateZ(0deg);
-  font-size: 32px;
+  font-size: 2rem;
   font-family: inherit;
   overflow-x: auto;
   overflow-y: auto;
@@ -825,7 +848,7 @@ a{
   border: none;
   color: var(--font-color);
   
-  padding: 6px;
+  padding: .375rem;
   cursor: pointer;
   transition: 0.1s ease-in;
 
@@ -837,7 +860,7 @@ a{
 }
 #about-btn:hover {
   transform: scale(1.05) rotateZ(0deg);
-  letter-spacing: 0px;
+  letter-spacing: 0rem;
 }
 
 
@@ -851,13 +874,13 @@ a{
   position: relative;
   align-self: center;
   width: 90%;
-  height: 40px;
-  font-size: 32px;
+  height: 2.5rem;
+  font-size: 2rem;
   font-family: inherit;
   font-weight: 800;
   background-color: var(--font-color);
   transform: rotateZ(-4deg);
-  padding: 6px;
+  padding: .375rem;
   border: none;
   color: inherit;
   text-align: center;
@@ -875,13 +898,13 @@ a{
 }
 #contact-btn:hover {
   transform: scale(1.05) rotateZ(-4deg);
-  letter-spacing: 0px;
+  letter-spacing: 0rem;
 }
 
 .container-cards{
   width: 100%;
-  height: 600px;
-  border: solid 1px rgba(255, 255, 255, 0.832);
+  height: 37.5rem;
+  border: solid .0625rem rgba(255, 255, 255, 0.832);
   flex-direction: column;
   display: flex;
   justify-content: space-evenly;
@@ -898,7 +921,7 @@ a{
 #close{
   position:relative;
   align-self: center;
-  top: -120px;
+  top: -7.5rem;
   justify-self: center;
   display: none;
   cursor: pointer;
@@ -910,5 +933,10 @@ a{
   transition: 0.5s;
 }
 
+.work-container-mobile{
+  display: none;
+}
 
-
+.cards-container-mobile{
+  display: none;
+}
