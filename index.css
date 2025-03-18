@@ -267,34 +267,35 @@ body {
   background-color: black;
   align-items: center;
   z-index: 3;
+  border: solid 0.1rem rgba(255, 255, 255, 0.788);
 }
 
 .container{
   display: flex;
-  height: auto;
+  height: 70%;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  gap: 10px;
   align-self: center;
   
-  height: 100%;
-  border: solid 0rem rgba(80, 80, 80, 0);
+  border: solid 0.2rem rgba(218, 216, 216, 0.788);
   background-color: var(--background-color);
-  user-select: none;
-  overflow: hidden;
+  
   z-index: 3;
   
 }
 
-.container-flow{
+.container-title{
   display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
-  border: solid 0rem rgba(227, 226, 226, 0);
+  border: solid 0.1rem rgba(76, 13, 224, 0.788);
   background-color: var(--background-color);
   padding: 1.25rem;
   margin: 0rem;
@@ -304,16 +305,7 @@ body {
   transition:  0.5s;
 }
 
-.container-flow2{
-  display: flex;
-  
-  width: 100%;
-  border: solid .0625rem rgb(233, 232, 232);
-  flex-direction: column;
-  justify-content: space-between;
-  
-  padding: 2.5rem;
-}
+
 
 
 
@@ -321,12 +313,13 @@ body {
 .navbar {
   display: flex;
   width:100%;
-  height: 21.875rem;
+  height:30%;
   justify-content: space-between;
   padding: 1.25rem;
   background-color: var(--navbar-color);
   color: var(--font-color);
   z-index: 1;
+  border: solid 3px rgba(16, 85, 234, 0.788);
   
 }
 .menuBox{
@@ -335,7 +328,7 @@ body {
   justify-content: space-between;
   gap: 1.25rem;
   padding: 0rem;
-  border: solid 0rem rgba(255, 255, 255, 0.788);
+  border: solid 0.1rem rgba(255, 255, 255, 0.788);
   z-index: 2;
 }
 
@@ -344,30 +337,17 @@ body {
   width: 9.375rem;
   visibility: hidden;
   opacity: 0;
+  border: solid 0.1rem rgba(255, 255, 255, 0.788);
 }
 .menuButton{
   display: flex;
   width: 9.375rem;
   visibility: hidden;
   opacity: 0;
+  border: solid 0.1rem rgba(255, 255, 255, 0.788);
 }
 
-/* .backButton{
-  
-  top: 2.1875rem;
-  right: 1.25rem;
-  width: 9.375rem;
-  height: 1.875rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--font-color);
-  background: none;
-  visibility: hidden;
-  opacity: 0;
-  border: 0rem solid;
-  cursor: pointer;
-  z-index: 4;
-} */
+
 
 .visible{
   visibility: visible;
@@ -382,48 +362,34 @@ body {
   padding: .25rem;
   width: 9.375rem;
   height: 2.5rem;
-  border: solid 0rem rgba(221, 220, 220, 0.897);
+  border: solid 0.1rem rgba(255, 255, 255, 0.788);
   z-index: 2;
   
 }
 
 .brand {
-  position:relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  top: 0rem;
-  background-color: transparent;
-  border: solid .0625rem rgba(238, 238, 238, 0);
-  transition: 0.3s;
-  z-index: 1;
- 
+  border: solid 0.1rem rgba(76, 13, 224, 0.788);
   h2 {
     font-family: "Advent Pro", serif;
-    position: relative;
-    top: -0.625rem;
+    
     font-weight: 800;
     font-size: 6.25rem;
     letter-spacing: .125rem;
     /* -webkit-text-stroke: .0313rem #e5eaf6d0; */
     color: var(--font-color);
+    border: solid 0.1rem rgba(255, 255, 255, 0.788);
     
    
   }
 
   h6 {
-    display: inline-block;
-        position: relative;
-        top: -2.625rem;
+    
         font-weight: 900;
         font-size: 1.5rem;
         background-color: rgba(30, 30, 30, 0);
         padding: .5rem;
         color:var(--font-color);
-        user-select: none;
-        left: -0.125rem;
-        border: solid .0625rem rgba(255, 255, 255, 0);
+        border: solid 0.1rem rgba(255, 255, 255, 0.788);
         letter-spacing: .0313rem;
         transition: 1s;
   }
@@ -432,12 +398,9 @@ body {
 .portfolio-box{
   
   display: flex;
-  position: relative;
-  bottom: 0rem;
-  
   flex-direction: column;
   align-items: center;
-  border: solid .0625rem rgba(244, 244, 244, 0);
+  border: solid 0.1rem rgba(76, 13, 224, 0.788);
   width:72.5rem;
   height:23.75rem;
   justify-content: center;
@@ -488,34 +451,32 @@ body {
 
 
 
-.text{
-  display: flex;
-  flex-direction: column;
-  gap: 9.375rem;
-}
-
-
-
-
 .work-container{
   display: none;
+  
+}
+
+.work-container.active{
+  display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
+  width: 100%;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  border: solid 0rem rgb(250, 250, 250);
+  border: solid 0.1rem rgb(250, 250, 250);
   background-color: var(--background-color);
   padding: 1.25rem;
   gap: 1.25rem;
   padding: .625rem;
   margin: 0rem;
-  z-index: 3;
- 
+
+  
 }
 
 .cards-container{
+  
   overflow-x: hidden;
   overflow-y: auto;
   width: 50%;
@@ -523,18 +484,9 @@ body {
   align-self: self-start;
   gap: 0rem;
   background-color: var(--background-color);
-  border: solid 0rem rgb(250, 250, 250);
+  border: solid 0.1rem rgb(250, 250, 250);
   padding: .625rem;
 }
-
-.cards-container-flow{
-  display: flex;
-  flex-direction: column;
-  gap: 1.875rem;
-  border: solid 0rem rgb(250, 250, 250);
-  padding: .625rem;
-}
-
 
 
 #card1, #card2, #card3, #card4, #card5, #card6{
@@ -564,14 +516,7 @@ body {
   opacity: 1;
 }
 
-/* #card1:hover, #card2:hover, #card3:hover, #card4:hover, #card5:hover, #card6:hover{
-  
-  h3{
-    border-right: solid .5rem var(--font-color);
-    filter: contrast(1);
-  }
 
-} */
 
 .selected{
   border-right: solid .5rem var(--font-color);
@@ -592,29 +537,21 @@ body {
 
 
 .cardsDetail-container{
-  display: flex;
+  
   overflow-x: hidden;
   overflow-y: auto;
   width: 50%;
   height: 100%;
   gap: 0rem;
   padding: 0rem;
-  border: solid 0rem rgba(250, 250, 250, 0.75);
+  border: solid 0.1rem rgb(250, 250, 250);
   background-color:transparent;
-  
   color: var(--font-color);
-  
-  
 }
 
-.cardDetail-container-flow{
-  display: flex;
-  flex-direction: column;
-  gap: 0rem;
-  border: solid 0rem rgb(250, 250, 250);
-  padding: 0rem;
-  
-}
+
+
+
 
 a{
   text-decoration: none;
@@ -674,9 +611,9 @@ a{
 
 
 
-.about-me {
+.container-about-me.active{
   
-  display: none;
+  display: flex;
   flex-direction: column;
   position: absolute;
   justify-content: space-between;
@@ -706,6 +643,10 @@ a{
   }
 }
 
+.container-about-me{
+  display: none;
+}
+
 .e{
   display: inline-block;
   transform: rotate(25deg);
@@ -713,25 +654,22 @@ a{
   font-weight: 900;
 }
 
-.about-me.visible {
-  visibility: visible;
-  opacity: 1;
-  transition: 1.2s ease-in;
-}
 
-.contact {
+
+.container-contact.active {
   
   flex-direction: column;
   justify-items: center;
-  align-content: center;
+  position: absolute;
+  
   align-items: center;
-  align-self: center;
-  display: none;
+  
+  display: flex;
   height: 50%;
   width: 100%;
   padding: 1.25rem;
   top:0px;
-  position: relative;
+  
   cursor: pointer;
   margin: 0px;
   border: solid 0.1rem rgba(255, 255, 255, 0.788);
@@ -750,6 +688,9 @@ a{
     border: none;
     cursor: pointer;
   }
+}
+.container-contact{
+  display: none;
 }
 
 

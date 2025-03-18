@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let portfolioBox = document.querySelector(".portfolio-box");
   let brand = document.querySelector(".brand");
   let workContainer = document.querySelector(".work-container");
-  let containerFlow = document.querySelector(".container-flow");
+  let containerTitle = document.querySelector(".container-title");
 
   let menuBtn = document.querySelector(".menuButton");
 
@@ -56,20 +56,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   backBtn.addEventListener("click", () => {
 
-    list.style.display = "flex";
-    portfolioBox.style.display = "flex";
-    brand.style.display = "flex";
-    contact.style.display = "none";
-    about.style.display = "none";
-    workContainer.style.display = "none";
-
-    backBtn.classList.remove("visible");
-    justGoodStuffContent.style.display = "none";
-    containerFlow.style.display = "flex";
-    containerCards.style.display = "none";
-    list.style.display = "flex";
     
-    card1.classList.remove("selected"); 
+    workContainer.classList.remove("active");
+
+    
 
   });
 
@@ -81,37 +71,33 @@ document.addEventListener("DOMContentLoaded", () => {
     brand.style.display = "none";
     backBtn.classList.add("visible");
     card1.classList.add("selected");
-    justGoodStuffContent.style.display = "flex";
-    containerFlow.style.display = "none";
-    workContainer.style.display = "flex";
-    containerCards.style.display = "flex";
+    
+    containerTitle.style.display = "none";
+    workContainer.classList.add("active");
+    
     list.style.display = "none";
    
   });
 
   let contactBtn = document.querySelector(".contact-btn");
-  let contact = document.querySelector(".contact");
+  let contact = document.querySelector(".container-contact ");
 
   contactBtn.addEventListener("click", () => {
     
-    portfolioBox.style.display = "none";
-    brand.style.display = "none";
-    contact.style.display = "flex";
-    list.style.display = "none";
-    backBtn.classList.add("visible");
+   
+    contact.classList.add("active");
+    
   });
 
   let aboutBtn = document.querySelector(".about-btn");
-  let about = document.querySelector(".about-me");
+  let about = document.querySelector(".container-about-me");
 
   aboutBtn.addEventListener("click", () => {
     
 
-    portfolioBox.style.display = "none";
-    brand.style.display = "none";
-    about.style.display = "flex";
-    list.style.display = "none";
-    backBtn.classList.add("visible");
+    
+    about.classList.add("active");
+    
     
   });
 
