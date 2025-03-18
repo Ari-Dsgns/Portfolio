@@ -1,49 +1,5 @@
 
 
-
-@media (max-width: 64rem) {
-
-  .menuButton{
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  .list{
-   div{
-    display: none;
-   }
-  }
-  #card1, #card2, #card3, #card4, #card5, #card6{
-    h3{
-      font-size: 3.75rem;
-    }
-  }
-
-  .portfolio1{
-    font-size: 12.5rem;
-    letter-spacing: 0rem;
-    top: .25rem;
-    left: 0rem;
-  }
-  .portfolio2{
-    font-size: 12.5rem;
-    letter-spacing: 0rem;
-    top: -0.3125rem;
-    left: 0rem;
-  }
-
-  .about-me{
-    h3{
-      font-size: 3.25rem;
-    }
-    p{
-      font-size: 1.125rem;
-    }
-  }
-}
-
-
-
 @media (max-width: 48rem) {
   
   
@@ -64,42 +20,21 @@
 
   #card1, #card2, #card3, #card4, #card5, #card6{
     h3{
-      align-self: center;
+      text-align: start;
     }
   }
 
+  .selected{
+    border-right: solid 0rem var(--font-color);
+      h3{
+      transform: scale(1);
+    }
+    
+  }
   
   
-  .backButton{
-    display: none;
-  }
-  .menuButton{
-    transform: scale(0.8);
-  }
-  .brand{
-    border: solid 0.1rem #cac6c6;
-    h2{
-      font-size: 3.125rem;
-    }
-    h6{
-      font-size: .75rem;
-      top: -24px;
-    }
-  }
-  .portfolio-box{
-    border: solid 0.1rem #cac6c6;
-    width:100%;
-    height: 13.75rem;
-    top: 2.5rem;
-  }
-  .portfolio1{
-    font-size:6.75rem;
-    top: -1.25rem;
-  }
-  .portfolio2{
-    font-size: 6.25rem;
-    top: -0.5rem;
-  }
+  
+  
   .list{
     div{
       gap: .75rem;
@@ -120,3 +55,91 @@
 
 
 
+@media (max-width: 26.5625rem) {
+  
+
+  #card1, #card2, #card3, #card4, #card5, #card6{
+    h3{
+      font-size: 58px;
+      text-align: start;
+    }
+  }
+
+  .menuBox{
+    width: 90px;
+  }
+  .icon-menu{
+    width: 90px;
+  }
+
+  .selected{
+    border-right: solid 0rem var(--font-color);
+      h3{
+      transform: scale(1);
+    }
+    
+  }
+  
+  .list{
+    div{
+      gap: .75rem;
+      display: none;
+    }
+  }
+
+  .main-container.night{
+    .selected{
+      border-right:none;
+        h3{
+          -webkit-text-stroke: 0; 
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+@media (max-width: 23.4375rem) {
+  
+  .cards-container{
+    align-content: center;
+  }
+
+  #card1, #card2, #card3, #card4, #card5, #card6{
+    h3{
+      font-size: 48px;
+      text-align: start;
+    }
+  }
+
+  .menuBox{
+    width: 80px;
+  }
+  .icon-menu{
+    width: 80px;
+  }
+
+  .selected{
+    border-right: solid 0rem var(--font-color);
+      h3{
+      transform: scale(1);
+    }
+    
+  }
+  
+  .list{
+    div{
+      gap: .75rem;
+      display: none;
+    }
+  }
+
+  .main-container.night{
+    .selected{
+      border-right:none;
+        h3{
+          -webkit-text-stroke: 0; 
+        transform: scale(1);
+      }
+    }
+  }
+}

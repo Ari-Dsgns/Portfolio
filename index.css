@@ -128,9 +128,8 @@ body {
 
 .main-container.night{
   
-  .container-flow{
-    background-color: var(--background-color-night);
-    
+  .container-title{
+    background: var(--background-color-night);
   }
   .work-container{
     background-color: var(--background-color-night);
@@ -305,6 +304,10 @@ body {
   transition:  0.5s;
 }
 
+.container-title.hidden{
+  display: none;
+}
+
 
 
 
@@ -339,12 +342,17 @@ body {
   opacity: 0;
   border: solid 0.1rem rgba(255, 255, 255, 0.788);
 }
+
 .menuButton{
   display: flex;
   width: 9.375rem;
   visibility: hidden;
   opacity: 0;
   border: solid 0.1rem rgba(255, 255, 255, 0.788);
+}
+
+.menuButton{
+  display: none;
 }
 
 
@@ -371,23 +379,19 @@ body {
   border: solid 0.1rem rgba(76, 13, 224, 0.788);
   h2 {
     font-family: "Advent Pro", serif;
-    
     font-weight: 800;
     font-size: 6.25rem;
     letter-spacing: .125rem;
-    /* -webkit-text-stroke: .0313rem #e5eaf6d0; */
     color: var(--font-color);
     border: solid 0.1rem rgba(255, 255, 255, 0.788);
-    
-   
   }
 
   h6 {
-    
+
         font-weight: 900;
         font-size: 1.5rem;
         background-color: rgba(30, 30, 30, 0);
-        padding: .5rem;
+        
         color:var(--font-color);
         border: solid 0.1rem rgba(255, 255, 255, 0.788);
         letter-spacing: .0313rem;
@@ -401,7 +405,7 @@ body {
   flex-direction: column;
   align-items: center;
   border: solid 0.1rem rgba(76, 13, 224, 0.788);
-  width:72.5rem;
+  width: auto;
   height:23.75rem;
   justify-content: center;
   justify-self: center;
@@ -512,9 +516,7 @@ body {
   }
 }
 
-#card1:hover, #card2:hover, #card3:hover, #card4:hover, #card5:hover, #card6:hover{
-  opacity: 1;
-}
+
 
 
 
@@ -543,7 +545,7 @@ body {
   width: 50%;
   height: 100%;
   gap: 0rem;
-  padding: 0rem;
+  padding: 40px;
   border: solid 0.1rem rgb(250, 250, 250);
   background-color:transparent;
   color: var(--font-color);
@@ -730,6 +732,10 @@ a{
     
   }
 
+}
+
+.list.hidden{
+  display: none;
 }
 
 

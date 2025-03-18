@@ -55,50 +55,39 @@ document.addEventListener("DOMContentLoaded", () => {
   let backBtn = document.querySelector(".backButton");
 
   backBtn.addEventListener("click", () => {
-
-    
+    containerTitle.classList.remove("hidden");
     workContainer.classList.remove("active");
-
-    
+    about.classList.remove("active");
+    contact.classList.remove("active");
+    backBtn.classList.remove("visible");
+    list.classList.remove("hidden");
 
   });
 
   let workBtn = document.querySelector(".work-btn");
 
   workBtn.addEventListener("click", () => {
-    
-    portfolioBox.style.display = "none";
-    brand.style.display = "none";
     backBtn.classList.add("visible");
     card1.classList.add("selected");
-    
-    containerTitle.style.display = "none";
+    containerTitle.classList.add("hidden");
     workContainer.classList.add("active");
-    
-    list.style.display = "none";
-   
+    list.classList.add("hidden");
+    justGoodStuffContent.style.display = "flex";  
   });
 
   let contactBtn = document.querySelector(".contact-btn");
   let contact = document.querySelector(".container-contact ");
 
   contactBtn.addEventListener("click", () => {
-    
-   
+
     contact.classList.add("active");
-    
   });
 
   let aboutBtn = document.querySelector(".about-btn");
   let about = document.querySelector(".container-about-me");
 
   aboutBtn.addEventListener("click", () => {
-    
-
-    
     about.classList.add("active");
-    
-    
   });
 
   
