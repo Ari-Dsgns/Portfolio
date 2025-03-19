@@ -1,8 +1,34 @@
 
+@media (max-width: 75rem) {
+  
+  .menuButton{
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .list{
+    div{
+      gap: .75rem;
+      display: none;
+    }
+  }
 
+  .main-container.night{
+    .selected{
+      border-right:none;
+        h3{
+          -webkit-text-stroke: 0; 
+        transform: scale(1);
+      }
+    }
+  }
+}
 @media (max-width: 48rem) {
   
-  
+  .menuButton{
+    visibility: visible;
+    opacity: 1;
+  }
   .work-container.active{
     flex-direction: column;
     
@@ -100,9 +126,7 @@
 
 @media (max-width: 23.4375rem) {
   
-  .cards-container{
-    align-content: center;
-  }
+  
 
   #card1, #card2, #card3, #card4, #card5, #card6{
     h3{

@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     contact.classList.remove("active");
     backBtn.classList.remove("visible");
     list.classList.remove("hidden");
-
+    menuBtn.style.display = "flex";
   });
 
   let workBtn = document.querySelector(".work-btn");
@@ -72,22 +72,30 @@ document.addEventListener("DOMContentLoaded", () => {
     containerTitle.classList.add("hidden");
     workContainer.classList.add("active");
     list.classList.add("hidden");
-    justGoodStuffContent.style.display = "flex";  
+    justGoodStuffContent.style.display = "flex"; 
+    menuBtn.style.display = "none"; 
   });
 
   let contactBtn = document.querySelector(".contact-btn");
   let contact = document.querySelector(".container-contact ");
 
   contactBtn.addEventListener("click", () => {
-
+    list.classList.add("hidden");
+    containerTitle.classList.add("hidden");
     contact.classList.add("active");
+    backBtn.classList.add("visible");
+    menuBtn.style.display = "none";
   });
 
   let aboutBtn = document.querySelector(".about-btn");
   let about = document.querySelector(".container-about-me");
 
   aboutBtn.addEventListener("click", () => {
+    list.classList.add("hidden");
+    containerTitle.classList.add("hidden");
     about.classList.add("active");
+    backBtn.classList.add("visible");
+    menuBtn.style.display = "none";
   });
 
   
