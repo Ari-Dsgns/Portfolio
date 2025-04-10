@@ -1,10 +1,9 @@
 
 @media (max-width: 75rem) {
   
-  .menuButton{
-    visibility: visible;
-    opacity: 1;
-  }
+  
+
+  
   
   .list{
     div{
@@ -35,10 +34,7 @@
     
   }
 
-  .cards-container{
-    width: 100%;
-    
-  }
+  
  
   .cardsDetail-container{
     display: none;
@@ -126,6 +122,8 @@
 
 @media (max-width: 23.4375rem) {
   
+  
+
   
 
   #card1, #card2, #card3, #card4, #card5, #card6{

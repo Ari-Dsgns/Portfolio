@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+  let body = document.querySelector("body");
   let mainContainer = document.querySelector(".main-container");
+  let container = document.querySelector(".container");
   let navBar = document.querySelector(".navbar");
   let list = document.querySelector(".list");
 
@@ -44,13 +46,69 @@ document.addEventListener("DOMContentLoaded", () => {
   let workContainer = document.querySelector(".work-container");
   let containerTitle = document.querySelector(".container-title");
 
+  let menuOptions = document.querySelector(".menu-options");
+
   let menuBtn = document.querySelector(".menuButton");
+  let workBtnMenu = document.querySelector("#work-button-menu");
+  let aboutBtnMenu = document.querySelector("#about-me-button-menu"); 
+  let contactBtnMenu = document.querySelector("#contact-button-menu");
+  let backBtnMenu = document.querySelector("#backButton-menu");
 
   menuBtn.addEventListener("click", () => {
-    brand.style.display = "none";
-    portfolioBox.style.display = "none";
+
+    
+    if(menuOptions.classList.contains("active")){
+      menuOptions.classList.remove("active");
+      containerTitle.classList.remove("hidden");
+      menuBtn.style.display = "block";
+      list.classList.remove("hidden");
+    }
+    else{
+      menuOptions.classList.add("active");
+      
+      containerTitle.classList.add("hidden");
+      menuBtn.style.display = "none";
+      list.classList.add("hidden");
+      navBar.style.filter = "blur(10px)";
+      container.style.filter = "blur(10px)";
+      menuOptions.style.filter = "blur(0px)";
+      
+
+    }   
 
   });
+
+  
+  
+  workBtnMenu.addEventListener("click", () => {
+    menuOptions.classList.remove("active");
+    menuBtn.style.display = "none";
+    backBtn.classList.add("visible");
+    containerTitle.classList.add("hidden");
+    workContainer.classList.add("active");
+
+    
+    
+  
+  }
+  );
+
+  aboutBtnMenu.addEventListener("click", () => {
+    menuOptions.classList.remove("active");
+    menuBtn.style.display = "none";
+    backBtn.classList.add("visible");
+    containerTitle.classList.add("hidden");
+    about.classList.add("active");
+  });
+
+  contactBtnMenu.addEventListener("click", () => { 
+    menuOptions.classList.remove("active");
+    menuBtn.style.display = "none";
+    backBtn.classList.add("visible");
+    containerTitle.classList.add("hidden");
+    contact.classList.add("active");
+  }
+  );  
 
   let backBtn = document.querySelector(".backButton");
 
@@ -67,13 +125,26 @@ document.addEventListener("DOMContentLoaded", () => {
   let workBtn = document.querySelector(".work-btn");
 
   workBtn.addEventListener("click", () => {
-    backBtn.classList.add("visible");
+    
+
     card1.classList.add("selected");
+    justGoodStuffContent.style.display = "flex";
+    tuviniloContent.style.display = "none";
+    destineaContent.style.display = "none";
+    readmeappContent.style.display = "none";
+
+    card2.classList.remove("selected");
+    card3.classList.remove("selected");
+    card5.classList.remove("selected");
+    
+    backBtn.classList.add("visible");
     containerTitle.classList.add("hidden");
     workContainer.classList.add("active");
-    list.classList.add("hidden");
-    justGoodStuffContent.style.display = "flex"; 
     menuBtn.style.display = "none"; 
+
+    if(workContainer.classList.contains("active")){
+      list.classList.add("hidden");
+    }
   });
 
   let contactBtn = document.querySelector(".contact-btn");
@@ -98,6 +169,10 @@ document.addEventListener("DOMContentLoaded", () => {
     menuBtn.style.display = "none";
   });
 
+    
+  
+    
+
   
 
   
@@ -117,6 +192,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let destineaContent = document.querySelector(".destinea-content");
   let readmeappContent = document.querySelector(".readmeapp-content");
 
+  
+
   card1.addEventListener("mouseover", () => {
     justGoodStuffContent.style.display = "flex";
     tuviniloContent.style.display = "none";
@@ -127,6 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
     card2.classList.remove("selected");
     card3.classList.remove("selected");
     card5.classList.remove("selected");
+    
 
   });
 
@@ -167,3 +245,5 @@ document.addEventListener("DOMContentLoaded", () => {
     card2.classList.remove("selected");
   });
 });
+
+
