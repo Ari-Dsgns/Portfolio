@@ -4,10 +4,25 @@ document.addEventListener("DOMContentLoaded", () => {
   let container = document.querySelector(".container");
   let navBar = document.querySelector(".navbar");
   let list = document.querySelector(".list");
+  let loading = document.querySelector(".loading");
 
   let noise = document.querySelector(".noise");
 
   let noiseBtn = document.querySelector("#noise-btn");
+
+  setTimeout(() => {
+    navBar.style.display = "none";
+    container.style.display = "none";
+  }, 0);
+
+  setTimeout(() => {   
+     navBar.style.display = "flex";
+      container.style.display = "flex"; 
+      loading.style.display = "none";
+  }, 3000); 
+
+  
+  
 
   noiseBtn.addEventListener("click", () => {
     if (noise.classList.contains("clean")) {
@@ -46,69 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let workContainer = document.querySelector(".work-container");
   let containerTitle = document.querySelector(".container-title");
 
-  let menuOptions = document.querySelector(".menu-options");
-
-  let menuBtn = document.querySelector(".menuButton");
-  let workBtnMenu = document.querySelector("#work-button-menu");
-  let aboutBtnMenu = document.querySelector("#about-me-button-menu"); 
-  let contactBtnMenu = document.querySelector("#contact-button-menu");
-  let backBtnMenu = document.querySelector("#backButton-menu");
-
-  menuBtn.addEventListener("click", () => {
-
-    
-    if(menuOptions.classList.contains("active")){
-      menuOptions.classList.remove("active");
-      containerTitle.classList.remove("hidden");
-      menuBtn.style.display = "block";
-      list.classList.remove("hidden");
-    }
-    else{
-      menuOptions.classList.add("active");
-      
-      containerTitle.classList.add("hidden");
-      menuBtn.style.display = "none";
-      list.classList.add("hidden");
-      navBar.style.filter = "blur(10px)";
-      container.style.filter = "blur(10px)";
-      menuOptions.style.filter = "blur(0px)";
-      
-
-    }   
-
-  });
-
-  
-  
-  workBtnMenu.addEventListener("click", () => {
-    menuOptions.classList.remove("active");
-    menuBtn.style.display = "none";
-    backBtn.classList.add("visible");
-    containerTitle.classList.add("hidden");
-    workContainer.classList.add("active");
-
-    
-    
-  
-  }
-  );
-
-  aboutBtnMenu.addEventListener("click", () => {
-    menuOptions.classList.remove("active");
-    menuBtn.style.display = "none";
-    backBtn.classList.add("visible");
-    containerTitle.classList.add("hidden");
-    about.classList.add("active");
-  });
-
-  contactBtnMenu.addEventListener("click", () => { 
-    menuOptions.classList.remove("active");
-    menuBtn.style.display = "none";
-    backBtn.classList.add("visible");
-    containerTitle.classList.add("hidden");
-    contact.classList.add("active");
-  }
-  );  
 
   let backBtn = document.querySelector(".backButton");
 
@@ -126,13 +78,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   workBtn.addEventListener("click", () => {
     
-
+    
     card1.classList.add("selected");
     justGoodStuffContent.style.display = "flex";
     tuviniloContent.style.display = "none";
     destineaContent.style.display = "none";
     readmeappContent.style.display = "none";
-
+    list.classList.add("hidden");
     card2.classList.remove("selected");
     card3.classList.remove("selected");
     card5.classList.remove("selected");
@@ -146,6 +98,8 @@ document.addEventListener("DOMContentLoaded", () => {
       list.classList.add("hidden");
     }
   });
+
+  
 
   let contactBtn = document.querySelector(".contact-btn");
   let contact = document.querySelector(".container-contact ");

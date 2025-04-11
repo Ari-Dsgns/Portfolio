@@ -28,6 +28,60 @@ body {
   background-color: var(--background-color-night);
 }
 
+.loading{
+  position: relative;
+  border: solid 0.1rem rgba(255, 255, 255, 0);  
+  width:120px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  top: 200px;
+  justify-self: center;
+  color: white;
+  
+
+}
+
+#dot{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  transition: 3s;
+  animation: loading 3s infinite alternate ;
+  
+}
+
+@keyframes loading {
+  0% {
+    transform: rotateZ(0deg);
+    border-radius: 0%;
+    width: 20px;
+    height: 20px;
+  }
+
+  50% {
+    transform: rotateZ(180deg);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+  }
+  
+
+  100% {
+    transform: rotateZ(0deg);
+    border-radius: 0%;
+    width: 20px;
+    height: 20px;
+  }
+  
+}
+
 .noise {
   position: fixed;
   z-index: 9999;
@@ -40,7 +94,7 @@ body {
   background-image: url(./noise1.png);
   background-size: 12.5rem;
   background-repeat: repeat;
-  opacity: 0.5;
+  opacity: 0.7;
   pointer-events: none;
 }
 .noise.clean {
@@ -150,7 +204,7 @@ body {
   }
 
   .noise {
-    opacity: 0.2;
+    opacity: 0.3;
   }
   #noise-btn {
     color: #eaeaed;
@@ -164,13 +218,8 @@ body {
       color: var(--font-color-night2);
     }
   }
-  .portfolio1 {
-    color: rgb(40, 40, 40);
-    -webkit-text-stroke: 0.0625rem var(--font-color-night2);
-  }
-  .portfolio2 {
-    color: var(--font-color-night2);
-  }
+  
+  
 
   .e {
     color: var(--font-color-night2);
@@ -254,8 +303,8 @@ body {
   .destinea-content,
   .readmeapp-content {
     color: #eaeaed;
-    background-color: rgb(51, 50, 50);
-    border: solid 1px #242424;
+    
+    border: solid 1px #52505000;
   }
   a {
     color: #eaeaed;
@@ -279,7 +328,10 @@ body {
 
 #noise-btn {
   cursor: pointer;
+  
 }
+
+
 
 #noise-btn.on {
   cursor: pointer;
@@ -292,9 +344,13 @@ body {
 
 #dark-btn {
   cursor: pointer;
-  border-right: solid 0.0938rem;
-  padding-right: 0.75rem;
+  width: 90px;
+  border: solid 1px rgba(245, 245, 245, 0);
+  
+ 
 }
+
+
 
 .main-container {
   position: fixed;
@@ -306,22 +362,30 @@ body {
   align-items: center;
   z-index: 3;
   border: solid 0.1rem rgba(255, 255, 255, 0);
+  
 }
 
 .container {
   display: flex;
+  width: 90%;
   height: 70%;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
+  justify-self: center;
   align-items: center;
-  gap: 10px;
-  align-self: center;
-  padding: 0px;
-
-  border: solid 2px var(--background-color-night);
-  background-color: var(--background-color);
-  transition: 0.2s;
+  
+  gap: 40px;
+  border: solid 4px var(--background-color-night);
+  background-color: var(--background-color); 
   z-index: 3;
+
+  
+
+
+  @media (max-width: 1440px) {
+    width: 100%;
+    
+  }
 }
 
 .container-title {
@@ -329,17 +393,16 @@ body {
   flex-direction: column;
   align-content: center;
   align-items: center;
-  height: 100vh;
+  
   width: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  
   border: solid 0.1rem rgba(76, 13, 224, 0);
   background-color: var(--background-color);
   gap: 0px;
 
   z-index: 3;
   position: relative;
-  transition: 0.5s;
+  
   
 
   /* background-color: #70a0a675;
@@ -353,15 +416,22 @@ body {
 
 .navbar {
   display: flex;
-  width: 100%;
+  width: 90%;
   height: 30%;
   justify-content: space-between;
+  justify-self: center;
   padding: 1.25rem;
   background-color: var(--navbar-color);
   color: var(--font-color);
   z-index: 1;
-  border: solid 2px var(--background-color-night);
-  transition: 0.2s;
+  border: solid 4px var(--background-color-night);
+  
+
+  @media (max-width: 1440px) {
+    width: 100%;
+    
+  }
+  
 }
 .menuBox {
   display: flex;
@@ -369,8 +439,8 @@ body {
   align-items: end;
   justify-content: space-between;
   gap: 1.25rem;
-  width: 90px;
-  padding: 0rem;
+  
+ 
   border: solid 0.1rem rgba(255, 255, 255, 0);
   z-index: 2;
 }
@@ -389,135 +459,14 @@ body {
 }
 
 .backButton:hover{
-  letter-spacing: 8px;
-}
-
-.menuButton {
-  display: flex;
-  justify-content: end;
-  width: 9.375rem;
-  visibility: hidden;
-  opacity: 0;
-  border: solid 0.1rem rgba(255, 255, 255, 0);
-
-  @media (max-width: 1200px) {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-.menu-options {
-  display: none;
-}
-
-.menu-options.active {
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items: center;
-  align-self: center;
-  justify-self: center;
-  gap: 20px;
-  width: 50%;
-  height: 0%;
-  position: relative;
-  top: 200px;
-  
-  
-  color: var(--font-color);
-  border: solid #cfcccc00 0.1rem;
-  
-  background-color:transparent;
-  transition: 0.5s;
-  z-index: 5;
-
-
-  @media (min-width: 1200px) {
-    width: 50%;
-  }
-}
-
-#work-button-menu{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 340px;
-  height: 80px;
-  padding: 20px;
-  font-family: "Advent Pro", serif;
-  font-weight: 800;
-  font-size: 60px;
-  border-radius: 1px;
-
-  color: var(--background-color-night);
-  
-  background-color: var(--font-color);
-  cursor: pointer;
-  text-align: center;
-  opacity: 1;
-  transition: 0.2s;
-  transform: rotateZ(-2deg);
-  
-}
-#work-button-menu:hover {
-  transform: rotate(-2deg);
-  letter-spacing: 10px;
-  outline: solid 2px var(--background-color-night);
-  
-}
-
-#about-me-button-menu{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 340px;
-  height: 80px;
-  font-family: "Advent Pro", serif;
-  font-weight: 800;
-  font-size: 60px;
-  cursor: pointer;
-  color: var(--background-color-night);
-  border-radius: 1px;
-  background-color: var(--font-color);
-  transition: 0.2s;
-  transform: rotateZ(0deg);
-}
-#about-me-button-menu:hover {
-  letter-spacing: 4px;
-  outline: solid 2px var(--background-color-night);
-}
-#contact-button-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 340px;
-  height: 80px;
-  cursor: pointer;
-  font-family: "Advent Pro", serif;
-  font-weight: 800;
-  font-size: 60px;
-  border-radius: 1px;
-  color: var(--background-color-night);
-  transform: rotateZ(2deg);
-  background-color: var(--font-color);
-  transition: 0.2s;
-}
-#contact-button-menu:hover {
-  letter-spacing: 8px;
-  outline: solid 2px var(--background-color-night);
-
-}
-
-#back-button-menu{
-  position: relative;
-  left: 120px;
+  transform: scale(1.05);
 }
 
 
 .visible {
   visibility: visible;
   opacity: 1;
-  transition: 0.2s;
+  transition: 0.1s;
 }
 
 .icon-menu {
@@ -529,6 +478,8 @@ body {
   height: 2.5rem;
   border: solid 0.1rem rgba(255, 255, 255, 0);
   z-index: 2;
+
+  
 }
 
 .noise-popup {
@@ -558,9 +509,9 @@ body {
     @media (max-width: 1200px) {
       font-size: 68px;
     }
-    @media (max-width: 480px) {
-      font-size: 48px;
-      letter-spacing: 6px;
+    @media (max-width: 425px) {
+      font-size: 50px;
+      letter-spacing: 0px;
     }
   }
 
@@ -571,115 +522,29 @@ body {
     position: relative;
     bottom: 20px;
     color: var(--font-color);
-
     border: solid 0.1rem rgba(255, 255, 255, 0);
     letter-spacing: 0.0313rem;
-    transition: 1s;
+    
 
     @media (max-width: 1200px) {
       font-size: 16px;
       bottom: 16px;
     }
 
-    @media (max-width: 480px) {
-      font-size: 14px;
+    @media (max-width: 425px) {
+      font-size: 12px;
       bottom: 12px;
       letter-spacing: 0px;
-      left: -4px;
+      left: 0px;
     }
   }
-}
-
-.portfolio-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: solid 0.1rem rgba(204, 203, 207, 0);
-  width: 62%;
-  height: 70%;
-  justify-content: center;
-  justify-self: center;
-  margin: 0rem;
-  overflow: hidden;
-  z-index: 0;
-  transition: 0.3s;
 
   @media (max-width: 1440px) {
-    width: 95%;
-    
-    
-  }  
-
-  @media (max-width:425px) {
-    width: 100%;
-   
-    
-  }
-
-  
-}
-
-.portfolio1 {
-  position: relative;
-  font-family: "Advent Pro", serif;
-  font-weight: 900;
-  font-size: 16.25rem;
-  top: 1.875rem;
-  left: 0.625rem;
-
-  
-  border: solid 0.0625rem rgba(244, 244, 244, 0);
-  letter-spacing: 1.25rem;
-  -webkit-text-stroke: 0.0625rem var(--font-color);
-  color: var(--background-color);
-  transition: 0.3s;
-  transform: scaleY(1.2);
-
-
- @media (max-width: 768px) {
-    font-size: 160PX;
-    transform: scaleY(2);
-    letter-spacing: 8PX;
-    top: -30px;
-  }
-
-  @media (max-width: 425px) {
-    font-size: 110PX;
-    transform: scaleY(3);
-    letter-spacing: 0PX;
-    top: -60px;
-  }
-  
-
-  
-}
-.portfolio2 {
-  position: relative;
-  border: solid 0.0625rem rgba(244, 244, 244, 0);
-  transform: rotateX(180deg);
-  font-family: "Advent Pro", serif;
-  font-weight: 900;
-  font-size: 16.25rem;
-  letter-spacing: 1.25rem;
-  top: -1.875rem;
-  left: 0.625rem;
-  color: #fce89a9c;
-  transition: 0.3s;
-  transform: scaleY(-1.2);
-
-  @media (max-width: 768px) {
-    font-size: 160PX;
-    transform: scaleY(-2);
-    letter-spacing: 8PX;
-    top: 30px;
-  }
-  @media (max-width: 425px) {
-    font-size: 110PX;
-    transform: scaleY(3);
-    letter-spacing: 0PX;
-    top: 60px;
+    transform: scale(0.9);
   }
 }
+
+
 
 .work-container {
   display: none;
@@ -708,7 +573,7 @@ body {
   align-self: self-start;
   gap: 10px;
 
-  background-color: #70a0a675;
+  
 
   background-color: #4d767c;
   
@@ -757,7 +622,11 @@ body {
 }
 
 .selected {
-  border-right: solid 0.5rem var(--font-color);
+ border-right:  solid 0.5rem var(--font-color);
+ 
+  
+
+  
   h3{
     transform: translateX(40px) ;
     
@@ -784,7 +653,7 @@ body {
   
   color: var(--font-color);
 
-  background-color: #70a0a675;
+  
 
   background-color: #4d767c;
 
@@ -824,6 +693,8 @@ a {
   transition: 0.1s ease-in;
   user-select: none;
   z-index: 3;
+
+  
   a {
     text-decoration: none;
     color: inherit;
@@ -831,12 +702,13 @@ a {
 }
 
 .try-me-button:hover {
-  transform: rotateZ(4deg);
+  transform: rotateZ(0deg);
   transition: 0.3s;
   letter-spacing: 0rem;
   background-color: black;
   border: solid 1px var(--font-color);
   color: var(--font-color);
+  animation: none;
 }
 
 .justgoodstuff-content,
@@ -851,14 +723,14 @@ a {
   padding: 20px;
   gap: 1.875rem;
   color: #eaeaed;
-  border: solid 1px #25303179;
+  border: solid 1px #25303100;
   border-radius: 2px;
   overflow-x: hidden;
   overflow-y: auto;
 
-  background-color: #4d767c;
   
-  background-color: #70a0a675;
+  
+  
   
   /* box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.3); */
 
@@ -895,7 +767,10 @@ a {
 
     img {
       width: 100%;
-      border-radius: 2px;
+      border-radius: 8px;
+      border: solid 2px rgb(191, 191, 191);
+      
+      box-shadow: 0px 0px 20px rgb(33, 33, 33);
       
       
     }
@@ -1016,16 +891,15 @@ a {
 }
 
 .list {
-  position: fixed;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-self: center;
   justify-content: space-evenly;
-  top: 9rem;
-  right: 2.5rem;
-  width: 17.5rem;
+  transform: scale(1.2);
+  width: 22.5rem;
   height: 17.5rem;
-  border: solid 0rem white;
+  border: solid 1px rgba(255, 255, 255, 0);
   padding: 1.25rem;
   font-family: "Advent Pro", serif;
 
@@ -1040,10 +914,22 @@ a {
     gap: 1.25rem;
     border: solid 0rem white;
   }
+
+  
 }
 
 .list.hidden {
   display: none;
+}
+
+
+@keyframes shake{
+  from{
+    transform: rotateZ(-1deg);
+  }
+  to{
+    transform: rotateZ(3deg);
+  }
 }
 
 #work-btn {
@@ -1054,7 +940,7 @@ a {
   position: relative;
   align-self: center;
   width: 90%;
-  height: 2.5rem;
+  height: 50px;
   font-size: 2rem;
   font-family: inherit;
   font-weight: 800;
@@ -1065,6 +951,7 @@ a {
   text-align: center;
   padding: 0.375rem;
   cursor: pointer;
+  animation: shake 0.4s infinite alternate;
   transition: 0.1s ease-in;
   user-select: none;
   z-index: 3;
@@ -1073,10 +960,11 @@ a {
     color: inherit;
   }
 }
+
 #work-btn:hover {
-  outline: solid 0px black;
+  animation: none;
   letter-spacing: 8px;
-  transform: scale(1.05) rotateZ(4deg);
+  transform: scale(1.05) rotateZ(0deg);
 
 }
 
@@ -1087,8 +975,8 @@ a {
   align-self: center;
   position: relative;
   right: 0.125rem;
-  width: 95%;
-  height: 2.5rem;
+  width: 90%;
+  height: 50px;
   transform: rotateZ(0deg);
   font-size: 2rem;
   font-family: inherit;
@@ -1103,6 +991,9 @@ a {
   cursor: pointer;
   transition: 0.1s ease-in;
 
+  animation: shake 1.2s infinite alternate;
+  transition: 0.1s ease-in;
+
   a {
     text-decoration: none;
     color: inherit;
@@ -1111,7 +1002,8 @@ a {
 #about-btn:hover {
   outline: solid 0px var(--font-color);
   letter-spacing: 8px;
-  transform: scale(1.05);
+  transform: scale(1.1);
+  animation: none;
 }
 
 #contact-btn {
@@ -1121,7 +1013,7 @@ a {
   position: relative;
   align-self: center;
   width: 90%;
-  height: 2.5rem;
+  height: 50px;
   font-size: 2rem;
   font-family: inherit;
   font-weight: 800;
@@ -1133,8 +1025,12 @@ a {
   text-align: center;
   cursor: pointer;
   transition: 0.1s ease-in;
-
+  transition-delay: 0.2s;
   z-index: 3;
+
+  animation: shake 4.8s infinite alternate;
+  transition: 0.1s ease-in;
+
 
   a {
     text-decoration: none;
@@ -1144,7 +1040,8 @@ a {
 #contact-btn:hover {
   outline: solid 0px black;
   letter-spacing: 4px;
-  transform: scale(1.05) rotateZ(-4deg);
+  transform: scale(1.05) rotateZ(0deg);
+  animation: none;
 }
 
 #close {
