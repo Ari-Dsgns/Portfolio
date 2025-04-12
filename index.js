@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
      navBar.style.display = "flex";
       container.style.display = "flex"; 
       loading.style.display = "none";
-  }, 3000); 
+  }, 3500); 
 
   
   
@@ -59,6 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let portfolioBox = document.querySelector(".portfolio-box");
   let brand = document.querySelector(".brand");
   let workContainer = document.querySelector(".work-container");
+  let detailContainer= document.querySelector(".cardsDetail-container");
+  let cardsContainer = document.querySelector(".cards-container");
   let containerTitle = document.querySelector(".container-title");
 
 
@@ -72,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     backBtn.classList.remove("visible");
     list.classList.remove("hidden");
     menuBtn.style.display = "flex";
+    
   });
 
   let workBtn = document.querySelector(".work-btn");
@@ -79,24 +82,19 @@ document.addEventListener("DOMContentLoaded", () => {
   workBtn.addEventListener("click", () => {
     
     
-    card1.classList.add("selected");
-    justGoodStuffContent.style.display = "flex";
-    tuviniloContent.style.display = "none";
-    destineaContent.style.display = "none";
-    readmeappContent.style.display = "none";
+    cardsContainer.style.display = "flex";
+    detailContainer.style.display = "none";
     list.classList.add("hidden");
-    card2.classList.remove("selected");
-    card3.classList.remove("selected");
-    card5.classList.remove("selected");
+    
+    
     
     backBtn.classList.add("visible");
     containerTitle.classList.add("hidden");
     workContainer.classList.add("active");
-    menuBtn.style.display = "none"; 
+    backBtn.classList.add("visible");
+    
 
-    if(workContainer.classList.contains("active")){
-      list.classList.add("hidden");
-    }
+    
   });
 
   
@@ -148,56 +146,62 @@ document.addEventListener("DOMContentLoaded", () => {
 
   
 
-  card1.addEventListener("mouseover", () => {
+  let backToWorksBtn = document.querySelectorAll(".back-to-works");
+
+  card1.addEventListener("click", () => {
+    navBar.style.display = "none";
+    container.style.height = "100%";
+
     justGoodStuffContent.style.display = "flex";
     tuviniloContent.style.display = "none";
-    destineaContent.style.display = "none";
+    destineaContent.style.display = "none"; 
     readmeappContent.style.display = "none";
 
-    card1.classList.add("selected");
-    card2.classList.remove("selected");
-    card3.classList.remove("selected");
-    card5.classList.remove("selected");
-    
-
+    cardsContainer.style.display = "none";
+    detailContainer.style.display = "flex";
+    backBtn.classList.remove("visible");
   });
 
-  card2.addEventListener("mouseover", () => {
+  card2.addEventListener("click", () => {
+    navBar.style.display = "none";
+    container.style.height = "100%";
+
     tuviniloContent.style.display = "flex";
     justGoodStuffContent.style.display = "none";
     destineaContent.style.display = "none";
     readmeappContent.style.display = "none";
 
-    card2.classList.add("selected");
-    card1.classList.remove("selected");
-    card3.classList.remove("selected");
-    card5.classList.remove("selected");
+    cardsContainer.style.display = "none";
+    detailContainer.style.display = "flex";
+    backBtn.classList.remove("visible");
   });
 
-  card3.addEventListener("mouseover", () => {
+  card3.addEventListener("click", () => {   
+    navBar.style.display = "none";
+    container.style.height = "100%";
+
     destineaContent.style.display = "flex";
     tuviniloContent.style.display = "none";
     justGoodStuffContent.style.display = "none";
     readmeappContent.style.display = "none";
 
-    card3.classList.add("selected");
-    card1.classList.remove("selected");
-    card2.classList.remove("selected");
-    card5.classList.remove("selected");
-    
+    cardsContainer.style.display = "none";
+    detailContainer.style.display = "flex";
+    backBtn.classList.remove("visible");
+  }
+  );  
+
+  document.querySelector(".cardsDetail-container").addEventListener("click", (e) => {
+    if (e.target.classList.contains("back-to-works")) {
+      navBar.style.display = "flex";
+      container.style.height = "70%";
+      cardsContainer.style.display = "flex";
+      detailContainer.style.display = "none";
+      backBtn.classList.add("visible");
+    }
   });
 
-  card5.addEventListener("mouseover", () => {
-    readmeappContent.style.display = "flex";
-    justGoodStuffContent.style.display = "none";
-    tuviniloContent.style.display = "none";
-    destineaContent.style.display = "none";
 
-    card5.classList.add("selected");
-    card3.classList.remove("selected");
-    card1.classList.remove("selected");
-    card2.classList.remove("selected");
-  });
 });
 
 
