@@ -37,7 +37,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  top: 350px;
+  top: 300px;
   justify-self: center;
   color: white;
 
@@ -404,7 +404,7 @@ body {
   @media (max-width: 425px) {
     
     padding: 2px;
-    padding-bottom: 40px;
+    
   }
 }
   
@@ -492,10 +492,10 @@ body {
 }
 
 .backButton {
-  display: flex;
+  
   padding: 4px;
   visibility: hidden;
-  opacity: 0;
+  
   border: none;
   background: transparent;
   color: var(--font-color);
@@ -602,7 +602,7 @@ body {
   align-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   padding: 10px;
@@ -723,6 +723,8 @@ body {
    
     width: 100%;  
     padding: 0px;
+    padding-top: 20px;
+    padding-bottom: 40px;
   }
 }
 
@@ -850,6 +852,18 @@ a {
     align-items: center;
     padding: 0px;
   }
+}
+
+.back-to-works{
+  padding: 4px;
+  
+  
+  border: none;
+  background: transparent;
+  color: var(--font-color);
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .container-about-me.active {

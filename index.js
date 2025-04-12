@@ -189,7 +189,22 @@ document.addEventListener("DOMContentLoaded", () => {
     detailContainer.style.display = "flex";
     backBtn.classList.remove("visible");
   }
-  );  
+  ); 
+
+  card5.addEventListener("click", () => {
+    navBar.style.display = "none";
+    container.style.height = "100%";
+
+    readmeappContent.style.display = "flex";
+    tuviniloContent.style.display = "none";
+    justGoodStuffContent.style.display = "none";
+    destineaContent.style.display = "none";
+
+    cardsContainer.style.display = "none";
+    detailContainer.style.display = "flex";
+    backBtn.classList.remove("visible");
+  }
+  );
 
   document.querySelector(".cardsDetail-container").addEventListener("click", (e) => {
     if (e.target.classList.contains("back-to-works")) {
