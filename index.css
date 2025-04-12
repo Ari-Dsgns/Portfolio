@@ -489,6 +489,7 @@ body {
  
   border: solid 0.1rem rgba(255, 255, 255, 0);
   z-index: 2;
+  
 }
 
 .backButton {
@@ -502,6 +503,11 @@ body {
   font-size: 20px;
   font-weight: 600;
   cursor: pointer;
+
+  @media (max-width: 425px) {
+    font-size: 16px;
+    
+  }
 }
 
 .backButton:hover{
@@ -666,6 +672,10 @@ body {
     }
     @media (max-width: 425px) {
       font-size: 52px;
+    }
+
+    @media (max-width: 325px) {
+      font-size: 44px;
     }
   }
 }
@@ -904,11 +914,19 @@ a {
   h3 {
     font-weight: 800;
     font-size: 3.875rem;
+
+    @media (max-width: 425px) {
+      font-size: 2.5rem;
+    }
   }
   p {
     font-size: 1.625rem;
     font-weight: 600;
     font-family: "Nunito Sans", serif;
+
+    @media (max-width: 425px) {
+      font-size: 1.25rem;
+    }
   }
   div {
     display: flex;
@@ -1008,6 +1026,8 @@ a {
   }
 
   
+
+  
 }
 
 .list.hidden {
@@ -1051,6 +1071,11 @@ a {
     text-decoration: none;
     color: inherit;
   }
+
+  @media (max-width: 425px) {
+    width: 80%;
+    height: 40px;
+  }
 }
 
 #work-btn:hover {
@@ -1090,6 +1115,11 @@ a {
     text-decoration: none;
     color: inherit;
   }
+
+  @media (max-width: 425px) {
+    width: 80%;
+    height: 40px;
+  }
 }
 #about-btn:hover {
   outline: solid 0px var(--font-color);
@@ -1127,6 +1157,11 @@ a {
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  @media (max-width: 425px) {
+    width: 80%;
+    height: 40px;
   }
 }
 #contact-btn:hover {
