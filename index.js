@@ -70,18 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let containerTitle = document.querySelector(".container-title");
 
 
-  let backBtn = document.querySelector(".backButton");
-
-  backBtn.addEventListener("click", () => {
-    containerTitle.classList.remove("hidden");
-    workContainer.classList.remove("active");
-    about.classList.remove("active");
-    contact.classList.remove("active");
-    backBtn.classList.remove("visible");
-    list.classList.remove("hidden");
-    menuBtn.style.display = "flex";
-    
-  });
+  
 
   
 
