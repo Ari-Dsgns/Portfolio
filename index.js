@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
      navBar.style.display = "flex";
       container.style.display = "flex"; 
       loading.style.display = "none";
-  }, 3500); 
+  }, 0); 
 
   
   
