@@ -1,52 +1,58 @@
 document.addEventListener("DOMContentLoaded", () => {
-  let body = document.querySelector("body");
+
   let mainContainer = document.querySelector(".main-container");
+  let savedTheme = localStorage.getItem("theme");
+  let savedNoise = localStorage.getItem("noise");
+  let noise = document.querySelector(".noise");
+
   let container = document.querySelector(".container");
   let navBar = document.querySelector(".navbar");
   let list = document.querySelector(".list");
-  let loading = document.querySelector(".loading");
-
-  let noise = document.querySelector(".noise");
-
   let noiseBtn = document.querySelector("#noise-btn");
+  let darkBtn = document.querySelector("#dark-btn");
+  let icon = darkBtn.querySelector("i");
 
-  setTimeout(() => {
-    navBar.style.display = "none";
-    container.style.display = "none";
-  }, 0);
 
-  setTimeout(() => {   
-     navBar.style.display = "flex";
-      container.style.display = "flex"; 
-      loading.style.display = "none";
-  }, 0); 
+  if (savedTheme === "night") {
+    mainContainer.classList.add("night");
+  }
 
-  
-  
+  if (savedNoise === "on") {
+    noise.classList.add("clean");
+    
+  }
+
 
   noiseBtn.addEventListener("click", () => {
     if (noise.classList.contains("clean")) {
+      localStorage.setItem("noise", "off");
       noiseBtn.classList.remove("on");
     } else {
+      localStorage.setItem("noise", "on");
       noiseBtn.classList.add("on");
     }
     cleanNoise();
   });
 
-  let darkBtn = document.querySelector("#dark-btn");
-  let icon = darkBtn.querySelector("i");
 
   darkBtn.addEventListener("click", () => {
     mainContainer.classList.toggle("night");
-
+  
+    
     if (mainContainer.classList.contains("night")) {
+      localStorage.setItem("theme", "night");
+
       icon.classList.remove("bi-brightness-high");
       icon.classList.add("bi-brightness-high-fill");
+
     } else {
+      localStorage.setItem("theme", "day");
+
       icon.classList.remove("bi-brightness-high-fill");
       icon.classList.add("bi-brightness-high");
     }
   });
+
 
   function cleanNoise() {
     if (noise.classList.contains("clean")) {
@@ -56,8 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  let portfolioBox = document.querySelector(".portfolio-box");
-  let brand = document.querySelector(".brand");
+  
+  
   let workContainer = document.querySelector(".work-container");
   let detailContainer= document.querySelector(".cardsDetail-container");
   let cardsContainer = document.querySelector(".cards-container");
@@ -77,49 +83,13 @@ document.addEventListener("DOMContentLoaded", () => {
     
   });
 
-  let workBtn = document.querySelector(".work-btn");
+  
 
-  workBtn.addEventListener("click", () => {
-    
-    
-    cardsContainer.style.display = "flex";
-    detailContainer.style.display = "none";
-    list.classList.add("hidden");
-    
-    
-    
-    backBtn.classList.add("visible");
-    containerTitle.classList.add("hidden");
-    workContainer.classList.add("active");
-    backBtn.classList.add("visible");
-    
-
-    
-  });
+ 
 
   
 
-  let contactBtn = document.querySelector(".contact-btn");
-  let contact = document.querySelector(".container-contact ");
-
-  contactBtn.addEventListener("click", () => {
-    list.classList.add("hidden");
-    containerTitle.classList.add("hidden");
-    contact.classList.add("active");
-    backBtn.classList.add("visible");
-    menuBtn.style.display = "none";
-  });
-
-  let aboutBtn = document.querySelector(".about-btn");
-  let about = document.querySelector(".container-about-me");
-
-  aboutBtn.addEventListener("click", () => {
-    list.classList.add("hidden");
-    containerTitle.classList.add("hidden");
-    about.classList.add("active");
-    backBtn.classList.add("visible");
-    menuBtn.style.display = "none";
-  });
+  
 
     
   
@@ -130,82 +100,15 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
   
-  let containerCards = document.querySelector(".cardsDetail-container");
+  
 
-  let card1 = document.querySelector("#card1");
-  let card2 = document.querySelector("#card2");
-  let card3 = document.querySelector("#card3");
-  let card4 = document.querySelector("#card4");
-  let card5 = document.querySelector("#card5");
-  let card6 = document.querySelector("#card6");
-
-  let justGoodStuffContent = document.querySelector(".justgoodstuff-content");
-  let tuviniloContent = document.querySelector(".tuvinilo-content");
-  let destineaContent = document.querySelector(".destinea-content");
-  let readmeappContent = document.querySelector(".readmeapp-content");
+  
 
   
 
   let backToWorksBtn = document.querySelectorAll(".back-to-works");
 
-  card1.addEventListener("click", () => {
-    navBar.style.display = "none";
-    container.style.height = "100%";
-
-    justGoodStuffContent.style.display = "flex";
-    tuviniloContent.style.display = "none";
-    destineaContent.style.display = "none"; 
-    readmeappContent.style.display = "none";
-
-    cardsContainer.style.display = "none";
-    detailContainer.style.display = "flex";
-    backBtn.classList.remove("visible");
-  });
-
-  card2.addEventListener("click", () => {
-    navBar.style.display = "none";
-    container.style.height = "100%";
-
-    tuviniloContent.style.display = "flex";
-    justGoodStuffContent.style.display = "none";
-    destineaContent.style.display = "none";
-    readmeappContent.style.display = "none";
-
-    cardsContainer.style.display = "none";
-    detailContainer.style.display = "flex";
-    backBtn.classList.remove("visible");
-  });
-
-  card3.addEventListener("click", () => {   
-    navBar.style.display = "none";
-    container.style.height = "100%";
-
-    destineaContent.style.display = "flex";
-    tuviniloContent.style.display = "none";
-    justGoodStuffContent.style.display = "none";
-    readmeappContent.style.display = "none";
-
-    cardsContainer.style.display = "none";
-    detailContainer.style.display = "flex";
-    backBtn.classList.remove("visible");
-  }
-  ); 
-
-  card5.addEventListener("click", () => {
-    navBar.style.display = "none";
-    container.style.height = "100%";
-
-    readmeappContent.style.display = "flex";
-    tuviniloContent.style.display = "none";
-    justGoodStuffContent.style.display = "none";
-    destineaContent.style.display = "none";
-
-    cardsContainer.style.display = "none";
-    detailContainer.style.display = "flex";
-    backBtn.classList.remove("visible");
-  }
-  );
-
+  
   document.querySelector(".cardsDetail-container").addEventListener("click", (e) => {
     if (e.target.classList.contains("back-to-works")) {
       navBar.style.display = "flex";
