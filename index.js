@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   
 
-  let backToWorksBtn = document.querySelectorAll(".back-to-works");
+  
 
   
   document.querySelector(".cardsDetail-container").addEventListener("click", (e) => {
