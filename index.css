@@ -124,6 +124,9 @@ body {
     background-color: rgb(40, 40, 40);
 
   }
+  .container-mainPage{
+    border: solid 8px rgb(40, 40, 40);
+  }
   .cardsDetail-container {
     background-color: rgb(40, 40, 40);
   }
@@ -391,6 +394,7 @@ body {
   align-items: center;
   border: solid 8px var(--background-color);
   padding: 10px;
+  z-index: 3;
 }
 
 .container-works{
@@ -574,6 +578,7 @@ body {
   padding: 10px;
   padding-bottom: 30px;
   background-color: #4d767c;
+  z-index: 3;
 }
 
 .cards-container {
@@ -683,6 +688,7 @@ body {
   padding: 16px;
   
   color: var(--font-color);
+  z-index: 3;
 
   
   
@@ -868,6 +874,7 @@ body {
   background-color: #4d767c;
  
   transition: 0.5s;
+  z-index: 3;
 
   
 }
@@ -885,6 +892,7 @@ body {
   
   
   border: solid 1px #25303100;
+  z-index: 3;
   
 
   h3 {
@@ -938,7 +946,7 @@ body {
   height: 100%;
   width: 100%;
   padding: 20px;
-  
+  z-index: 3;
   border: solid 0.1rem rgba(255, 255, 255, 0);
   background-color: #4d767c;
   div {
@@ -968,6 +976,7 @@ body {
 
   border: solid 1px #25303100;
   border-radius: 2px;
+  z-index: 3;
 }
 
 .list {
