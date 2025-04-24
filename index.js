@@ -12,6 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
   let darkBtn = document.querySelector("#dark-btn");
   let icon = darkBtn.querySelector("i");
 
+  
+
+
+  
+
 
   if (savedTheme === "night") {
     mainContainer.classList.add("night");
@@ -52,6 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
       icon.classList.add("bi-brightness-high");
     }
   });
+
+  
 
 
   function cleanNoise() {
