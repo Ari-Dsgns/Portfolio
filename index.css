@@ -366,6 +366,7 @@ body {
 
 .backButton:hover{
   transform: scale(1.05);
+  
 }
 
 
@@ -486,7 +487,7 @@ body {
   border: solid 4px var(--background-color-night);
   z-index: 3;
 
-  
+  transition:0.5s;
   
 
   @media (max-width: 1440px) {
@@ -497,6 +498,8 @@ body {
   
   
 }
+
+
 
 
 

@@ -69,40 +69,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  
-  
+
   let workContainer = document.querySelector(".work-container");
   let detailContainer= document.querySelector(".cardsDetail-container");
   let cardsContainer = document.querySelector(".cards-container");
   let containerTitle = document.querySelector(".container-title");
-
-
-  
-
-  
-
- 
-
-  
-
-  
-
-    
-  
-    
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
   
   document.querySelector(".cardsDetail-container").addEventListener("click", (e) => {
@@ -114,6 +85,11 @@ document.addEventListener("DOMContentLoaded", () => {
       backBtn.classList.add("visible");
     }
   });
+
+
+  
+  
+
 
 
 });
