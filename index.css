@@ -32,19 +32,37 @@ body {
 
 .footer{
   display: flex;
-  flex-direction: column;
+  
   align-items: end;
   justify-content: end;
   width: 100%;
   height: 20%;
-  background-color: var(--background-color);
-  padding: 10px;
+  background-color: transparent;
+  
   z-index: 3;
+
+  div{
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: end;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+  }
   p{
-    color: rgb(22, 22, 22);
+    color: var(--font-color);
     font-weight: 600;
     
   }
+  button{
+    color: var(--font-color);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
 }
 
 
@@ -60,7 +78,7 @@ body {
   background-image: url(./noise1.png);
   background-size: 12.5rem;
   background-repeat: repeat;
-  opacity: 0.5;
+  opacity: 0.4;
   pointer-events: none;
 }
 .noise.clean {
@@ -305,6 +323,13 @@ body {
 
 #noise-btn {
   cursor: pointer;
+  font-size: 25px;
+  color:inherit;
+  background-color: transparent;
+  cursor: pointer;
+  width: 28px;
+  height: 32px;
+  border: none;
   
 }
 
@@ -327,11 +352,13 @@ body {
   border: solid 0.1rem rgba(255, 255, 255, 0);
 }
 #dark-btn {
+  font-size: 25px;
+  color:inherit;
+  background-color: transparent;
   cursor: pointer;
   width: 28px;
   height: 32px;
-  border: solid 1px rgba(152, 152, 152, 0);
-  
+  border: none;
  
 }
 
@@ -392,7 +419,7 @@ body {
 
 .container {
   display: flex;
-  width: 90%;
+  width: 100%;
   height: 70%;
   flex-direction: column;
   justify-content: space-between;
@@ -475,7 +502,7 @@ body {
 
 .navbar {
   display: flex;
-  width: 90%;
+  width: 100%;
   height: 30%;
   justify-content: space-between;
   justify-self: center;
@@ -536,7 +563,7 @@ body {
 .brand {
   border: solid 0rem rgba(76, 13, 224, 0);
   text-align: center;
-  h2 {
+  h1 {
     font-family: "Advent Pro", serif;
     
     font-weight: 800;
@@ -567,7 +594,7 @@ body {
 
   }
 
-  h6 {
+  h2 {
     font-weight: 900;
     font-size: 24px;
     background-color: rgba(30, 30, 30, 0);
@@ -662,6 +689,7 @@ body {
 #card6 {
   cursor: pointer;
   display: flex;
+  
   justify-content:center;
   
   
@@ -730,7 +758,7 @@ body {
   justify-self: center;
   overflow-x: hidden;
   overflow-y: auto;
-  width: 90%;
+  width: 100%;
   height: 100%;
   gap: 0rem;
   padding: 16px;
@@ -826,7 +854,13 @@ body {
   
   
   /* box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.3); */
-
+  h2{
+    font-family: "Advent Pro", serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: var(--font-color);
+    border: solid 0rem rgb(250, 250, 250);
+  }
   h3 {
     font-family: "Advent Pro", serif;
     font-weight: 600;
@@ -851,19 +885,19 @@ body {
 
   #img-box {
     
-    border-radius: 2px ;
+    border-radius: 1px ;
     border: solid 0px rgb(250, 250, 250);
     display: flex;
-    
+    max-width: 100%;
     justify-content: center;
     align-items: center;
 
     img {
-      width: 100%;
-      border-radius: 8px;
-      border: solid 2px rgb(191, 191, 191);
-      
-      box-shadow: 0px 0px 20px rgb(33, 33, 33);
+      max-width: 100%;
+      border-radius: 2px;
+      border: solid 0px rgb(191, 191, 191);
+      height: auto;
+      box-shadow: 0px 0px 20px rgba(33, 33, 33, 0);
       
       
     }
@@ -880,7 +914,7 @@ body {
   }
 
   @media (max-width:1024px) {
-    width: 70%;
+    width: 80%;
     
     padding: 0px;
   }
@@ -890,6 +924,15 @@ body {
     align-items: center;
     padding: 10px;
   }
+}
+
+#subtitle{
+  position: relative;
+  font-size: 1.125rem;
+  top: -30px;
+  font-weight: 600;
+  color: var(--font-color);
+  font-family: "Advent Pro", serif;
 }
 
 .back-to-works{
@@ -935,7 +978,7 @@ body {
   justify-content: space-evenly;
   border: solid 1px rgba(255, 255, 255, 0.962);
   gap: 1.25rem;
-  width: 70%;
+  width: 50%;
   height: 100%;
   padding: 10px;
   overflow-y: auto;
@@ -1129,14 +1172,14 @@ a {
   font-size: 2rem;
   font-family: inherit;
   font-weight: 800;
-  transform: rotateZ(4deg);
+  transform: rotateZ(-2deg);
   background-color: var(--font-color);
   border: none;
   color: inherit;
   text-align: center;
   padding: 10px;
   cursor: pointer;
-  animation: shake 0.4s infinite alternate;
+  animation: shakeS 0.4s infinite alternate;
   transition: 0.1s ease-in;
   user-select: none;
   z-index: 3;
@@ -1151,7 +1194,7 @@ a {
 #work-btn:hover {
   animation: none;
   letter-spacing: 8px;
-  transform: rotateZ(0deg);
+  
 
 }
 
@@ -1178,7 +1221,7 @@ a {
   cursor: pointer;
   transition: 0.1s ease-in;
 
-  animation: shake 1.2s infinite alternate;
+  animation: shakeS 1.2s infinite alternate;
   transition: 0.1s ease-in;
 
   a {
@@ -1207,7 +1250,7 @@ a {
   font-family: inherit;
   font-weight: 800;
   background-color: var(--font-color);
-  transform: rotateZ(-4deg);
+  transform: rotateZ(2deg);
   padding: 10px;
   border: none;
   color: inherit;
@@ -1217,7 +1260,7 @@ a {
   transition-delay: 0.2s;
   z-index: 3;
 
-  animation: shake 4.8s infinite alternate;
+  animation: shakeS 4.8s infinite alternate;
   transition: 0.1s ease-in;
 
 
@@ -1231,7 +1274,7 @@ a {
 #contact-btn:hover {
   outline: solid 0px black;
   letter-spacing: 4px;
-  transform:  rotateZ(0deg);
+  
   animation: none;
 }
 
