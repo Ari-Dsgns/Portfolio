@@ -298,12 +298,18 @@ body {
   .justgoodstuff-content,
   .tuvinilo-content,
   .destinea-content,
-  .readmeapp-content {
+  .readmeapp-content,.saffvision-content {
     color: #eaeaed;
     background-color: rgb(40, 40, 40);
     border: solid 1px #52505000;
   }
+  h2{
+    color: #eaeaed;
+  }
   a {
+    color: #eaeaed;
+  }
+  #subtitle {
     color: #eaeaed;
   }
 
@@ -551,6 +557,8 @@ body {
   
 }
 
+
+
 .noise-popup {
   display: none;
   width: 60px;
@@ -758,6 +766,7 @@ body {
 .cardsDetail-container {
   display: flex;
   justify-content: center;
+  
   justify-self: center;
   overflow-x: hidden;
   overflow-y: auto;
@@ -804,14 +813,16 @@ body {
   align-self: center;
   width: 100%;
   height: 2.5rem;
-  font-size: 28px;
+  font-size: 18px;
   font-family: inherit;
   font-weight: 800;
-  transform: rotateZ(4deg);
+  
 
-  color: black;
-  background-color: var(--font-color);
-  border: solid 1px black;
+  background-color: var(--navbar-night);
+  border: solid 1px var(--font-color);
+
+  color: var(--font-color);
+  border-radius: 2px;
 
   text-align: center;
   padding: 10px;
@@ -828,11 +839,12 @@ body {
 }
 
 .try-me-button:hover {
-  transform: scale(0.95) rotate(4deg);
+  transform: scale(0.95);
   transition: 0.3s;
   letter-spacing: 0rem;
-  background-color: black;
+  
   border: solid 1px var(--font-color);
+  
   color: var(--font-color);
   animation: none;
 }
@@ -843,8 +855,10 @@ body {
 .readmeapp-content {
   display: flex;
   flex-direction: column;
-  align-items: self-start;
-  width: 50%;
+  align-items: start;
+  
+  
+  width: 60%;
   height:100%;
   padding: 20px;
   gap: 1.875rem;
@@ -889,7 +903,8 @@ body {
   }
 
   #img-box {
-    
+    display: flex;
+    flex-direction: column;
     border-radius: 1px ;
     border: solid 0px rgb(250, 250, 250);
     display: flex;
@@ -907,6 +922,7 @@ body {
       
     }
     
+    
   }
   
 
@@ -915,10 +931,10 @@ body {
     color: var(--font-color);
     font-size: 1.125rem;
     font-weight: 600;
-    align-self: center;
+    align-self: start;
   }
 
-  @media (max-width:1024px) {
+  @media (max-width:1280px) {
     width: 80%;
     
     padding: 0px;
@@ -932,10 +948,10 @@ body {
 
 #subtitle{
   position: relative;
-  font-size: 1.125rem;
+  font-size: 22px;
   top: -30px;
-  font-weight: 600;
-  color: var(--font-color);
+  font-weight: 700;
+  color: inherit;
   font-family: "Advent Pro", serif;
 }
 
