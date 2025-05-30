@@ -222,6 +222,7 @@ body {
     color: #eaeaed;
   }
   .backButton {
+    
     color: #eaeaed;
   }
 
@@ -375,13 +376,14 @@ body {
   
 }
 
-.backButton {
+.backButton  {
   
   padding: 4px;
   
   border: none;
   background: transparent;
   color: var(--font-color);
+  
   font-size: 20px;
   font-weight: 600;
   cursor: pointer;
@@ -667,7 +669,7 @@ body {
   box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   
 
-  background-color: #4d767c;
+  background-color: #4b7177;
 
  
   
@@ -771,6 +773,7 @@ body {
   
 
   background-color: #4d767c;
+  
 
   /* border-right: solid 8px var(--background-color);
   border-top: solid 8px var(--background-color);
@@ -1000,10 +1003,10 @@ body {
     }
   }
   p {
-    font-size: 1.625rem;
+    font-size: 22px;
     font-weight: 600;
     font-family: "Nunito Sans", serif;
-    font-family: "Advent Pro", serif;
+    
 
     @media (max-width: 425px) {
       font-size: 1.25rem;
@@ -1016,7 +1019,7 @@ body {
   }
 
   @media (max-width: 768px) {
-    width: 90%;
+    width: 95%;
     
     
   }
