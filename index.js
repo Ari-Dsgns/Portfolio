@@ -39,19 +39,21 @@ document.addEventListener("DOMContentLoaded", () => {
     cleanNoise();
   });
 
-
+  let moon= document.querySelector(".moon");
   darkBtn.addEventListener("click", () => {
     mainContainer.classList.toggle("night");
-  
+    
     
     if (mainContainer.classList.contains("night")) {
       localStorage.setItem("theme", "night");
-
+      moon.style.animation = "moon 20s";
       icon.classList.remove("bi-brightness-high");
       icon.classList.add("bi-brightness-high-fill");
+      
 
     } else {
       localStorage.setItem("theme", "day");
+      moon.style.animation = "none";
 
       icon.classList.remove("bi-brightness-high-fill");
       icon.classList.add("bi-brightness-high");
@@ -77,7 +79,15 @@ document.addEventListener("DOMContentLoaded", () => {
   let containerTitle = document.querySelector(".container-title");
 
 
-  
+  document.querySelector(".cardsDetail-container").addEventListener("click", (e) => {
+    if (e.target.classList.contains("back-to-works")) {
+      navBar.style.display = "flex";
+      container.style.height = "70%";
+      cardsContainer.style.display = "flex";
+      detailContainer.style.display = "none";
+      backBtn.classList.add("visible");
+    }
+  });
 
   
 
@@ -105,17 +115,12 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
   
-  document.querySelector(".cardsDetail-container").addEventListener("click", (e) => {
-    if (e.target.classList.contains("back-to-works")) {
-      navBar.style.display = "flex";
-      container.style.height = "70%";
-      cardsContainer.style.display = "flex";
-      detailContainer.style.display = "none";
-      backBtn.classList.add("visible");
-    }
-  });
+  
+
+  
 
 
 });
+
 
 
