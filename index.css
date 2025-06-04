@@ -209,7 +209,7 @@ body {
   #card4,
   #card5,
   #card6 {
-    filter: contrast(0.8);
+    background-color: var(--font-color-night2);
     h3 {
       -webkit-text-stroke: 2px #475a91;
       color: #475a91;
