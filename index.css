@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 * {
@@ -40,7 +41,7 @@ body {
   align-items: end;
   justify-content: end;
   width: 100%;
-  height: 20%;
+  
   background-color: transparent;
   
   z-index: 3;
@@ -67,6 +68,9 @@ body {
     background-color: transparent;
     cursor: pointer;
     font-size: 18px;
+  }
+  @media (max-width: 425px) {
+    justify-content: center;
   }
   
 }
@@ -401,8 +405,8 @@ body {
   
   border: none;
   background: transparent;
-  color: var(--font-color);
-  
+  color: rgba(0, 0, 0, 0.3);
+  box-shadow: -10px 10px 0px rgba(0, 0, 0, 0.3) , 10px -10px 0px rgba(0, 0, 0, 0.3) ;
   font-size: 20px;
   font-weight: 600;
   cursor: pointer;
@@ -415,6 +419,7 @@ body {
 
 .backButton:hover{
   transform: scale(1.05);
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3) , -10px -10px 0px rgba(0, 0, 0, 0.3) ;
 }
 
 
@@ -436,6 +441,7 @@ body {
     padding: 2px;
     
   }
+   
 }
   
 
@@ -444,11 +450,11 @@ body {
   width: 100%;
   height: 70%;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content:flex-start;
   justify-self: center;
   align-items: center;
   
-  gap: 40px;
+  gap: 0px;
   border: solid 4px var(--background-color-night);
   background-color: var(--background-color); 
   z-index: 3;
@@ -475,8 +481,8 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   flex-direction: column;
-  justify-content:space-between;
-  gap: 0px;
+  justify-content:flex-start;
+  gap: 2;
   align-items: center;
   border: solid 8px var(--background-color);
   padding: 0px;
@@ -521,6 +527,7 @@ body {
     animation: rightToLeft 10s ease-in infinite; 
     
   }
+   animation: appear 2s  ;
 
   /* background-color: #70a0a675;
   box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
@@ -685,7 +692,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   padding: 10px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   background-color: #4d767c;
   background-color: var(--background-color);
   z-index: 3;
@@ -704,7 +711,7 @@ body {
   align-items: center;
   gap: 50px;
   border: solid 0rem rgba(255, 255, 255, 0);
-  box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.3) ;
+  box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.175) ;
   background-color: #4b7177;
   background-color: var(--background-color);
 
@@ -723,12 +730,18 @@ body {
     padding: 16px;
     
   }
+
+  animation: appear 2s  ;
+
+  
+ 
 }
 
 #card1{
   
   
   font-family: "Advent Pro", serif;
+  
   transform: rotate(-2deg);
   text-align: center;
   background-color: var(--font-color);
@@ -904,7 +917,7 @@ body {
   width: 100%;
   height: 100%;
   gap: 0rem;
-  padding: 28px;
+  padding: 10px;
   
   color: var(--font-color);
   z-index: 3;
@@ -952,7 +965,7 @@ body {
   
 
   color: var(--background-color-night);
-  
+  transform: rotate(-1deg);
 
   text-align: center;
   padding: 10px;
@@ -985,6 +998,7 @@ body {
 .tuvinilo-content,
 .destinea-content,
 .readmeapp-content {
+  
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -1001,7 +1015,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   background-color:#4d767c;
-  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3) , -4px -4px 0px rgba(0, 0, 0, 0.3) ;
+  
   
   
   /* box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.3); */
@@ -1030,7 +1044,7 @@ body {
   p {
     font-size: 1.25rem;
     font-weight: 500;
-    font-family: "Nunito Sans", serif;
+    font-family: "Space Mono", monospace;
     border: solid 0rem rgb(250, 250, 250);
   }
 
@@ -1043,16 +1057,18 @@ body {
     max-width: 100%;
     justify-content: center;
     align-items: center;
+    padding: 40px;
+
 
     img {
       max-width: 100%;
-      border-radius: 2px;
       border: solid 0px rgb(191, 191, 191);
       height: auto;
-      box-shadow: 0px 0px 20px rgba(33, 33, 33, 0);
-      
-      
+      transition: 0.1s;
+      box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3) , -10px -10px 0px rgba(0, 0, 0, 0.3) ;  
     }
+
+    
     
     
   }
@@ -1078,13 +1094,11 @@ body {
   }
 }
 
-#subtitle{
-  position: relative;
-  font-size: 22px;
-  top: -30px;
-  font-weight: 700;
-  color: inherit;
-  font-family: "Advent Pro", serif;
+.nextAndBack{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  
 }
 
 .back-to-works{
@@ -1107,7 +1121,7 @@ body {
   align-content: center;
   max-width: 100%;
   height: 100%;
-  padding: 10px;
+  padding: 20px;
   border-radius: 2px;
 
   gap: 1.25rem;
@@ -1128,7 +1142,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  border: solid 1px rgba(255, 255, 255, 0.962);
+  
   gap: 1.25rem;
   width: 50%;
   height: 100%;
@@ -1137,15 +1151,15 @@ body {
   overflow-y: auto;
   
   
-  border: solid 1px #cdcece00;
   z-index: 3;
   animation: appear 3s  ;
   
 
-  h3 {
+  h1 {
     font-family: "Advent Pro", serif;
     font-weight: 800;
     font-size: 3.875rem;
+    
 
     @media (max-width: 425px) {
       font-size: 2.5rem;
@@ -1153,8 +1167,8 @@ body {
   }
   p {
     font-size: 22px;
-    font-weight: 600;
-    font-family: "Nunito Sans", serif;
+    font-weight: 500;
+    font-family: "Space Mono", monospace;
     
 
     @media (max-width: 425px) {
@@ -1171,6 +1185,7 @@ body {
     margin-top: 40px;
     margin-bottom: 40px;
     opacity: 0.8;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3) , -10px -10px 0px rgba(0, 0, 0, 0.3) ;  
   }
   @media (max-width: 768px) {
     width: 95%;
@@ -1269,20 +1284,12 @@ body {
   font-family: "Advent Pro", serif;
   padding: 10px;
   z-index: 4;
-  gap: 10px;
+  gap: 20px;
 
   transition: 1s; 
   
 
-  @media (max-height: 510px) {
-    width: 30%;
-    height: 30%;
-    
-    
-  }
-
-  
-
+   animation: appear 2.5s  ;
 
 
   @media  (max-width: 768px) {
@@ -1302,7 +1309,10 @@ body {
   /* border: solid 0.1rem rgba(255, 255, 255, 0);
   box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   border-radius: 4px; */
-
+  @media (max-height: 660px) {
+    transform: scale(0.8);
+    
+  }
   
 }
 
