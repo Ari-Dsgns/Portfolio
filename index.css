@@ -53,6 +53,7 @@ body {
     align-items: end;
     justify-content: end;
     background-color: #4d6b70;
+    background-color: var(--background-color-night);
     border: solid 0.1rem rgba(227, 227, 227, 0);
     color: var(--font-color);
     
@@ -266,10 +267,15 @@ body {
     background-color: var(--font-color-night2);
     color: #eaeaed;
   }
+  
   #contact-btn {
     background-color: #eaeaed;
     color: var(--font-color-night2);
+    
   }
+
+
+ 
 
   #close {
     color: white;
@@ -292,6 +298,24 @@ body {
     }
   }
 
+  .input-field, .input-field-textArea{
+    background-color: rgb(40, 40, 40);
+    color: #eaeaed;
+    border: solid 1px #52505000;
+    background-color: rgb(219, 219, 219);
+    
+  }
+  .contact-form input,
+  .contact-form textarea {
+    background-color: rgb(40, 40, 40);
+    border: solid 1px #52505000;
+  }
+
+  .submit-btn{
+    background-color: var(--font-color-night2);
+    color: #eaeaed;
+    border: none;
+  }
   
   .container-about-me{
     color: #eaeaed;
@@ -320,7 +344,7 @@ body {
     background-color: rgb(40, 40, 40);
     border: solid 1px #52505000;
   }
-  h2{
+  h1,h2,h3,a{
     color: #eaeaed;
   }
   a {
@@ -1019,15 +1043,22 @@ body {
   
   
   /* box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.3); */
-  h2{
+  h1{
     font-family: "Advent Pro", serif;
     font-weight: 800;
     font-size: 2.5rem;
     color: var(--font-color);
     border: solid 0rem rgb(250, 250, 250);
   }
-  h3 {
+  h2{
     font-family: "Advent Pro", serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--font-color);
+    border: solid 0rem rgb(250, 250, 250);
+  }
+  h3 {
+    font-family: "Space Mono", monospace;
     font-weight: 500;
     font-size: 1.5rem;
     border: solid 0rem rgb(250, 250, 250);
@@ -1041,7 +1072,7 @@ body {
     gap: 0.5rem;
     
   }
-  p {
+  p, a {
     font-size: 1.25rem;
     font-weight: 500;
     font-family: "Space Mono", monospace;
@@ -1224,30 +1255,23 @@ body {
 
 .container-contact{
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   display: flex;
-  height: 100%;
+  height: auto;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   z-index: 3;
-  border: solid 0.1rem rgba(255, 255, 255, 0);
-  background-color: #4d767c;
+  border: solid 0px rgba(255, 255, 255, 0);
+  background-color:var(--background-color);
+  overflow: hidden;
+  overflow-y: scroll;
   div {
     display: flex;
     gap: 1rem;
   }
 
-  a,
-  button {
-    font-size: 1.375rem;
-    font-weight: 500;
-    color: var(--font-color);
-    text-decoration: none;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
+  
 
   @media (max-width: 425px) {
     justify-content: end;
@@ -1258,16 +1282,135 @@ body {
 .contact-content{
   display: flex;
   flex-direction: column;
+  width: 50%;
   
   align-items: center;
   align-content: center ;
-  padding: 10px;
-
-  border: solid 1px #25303100;
+  padding: 0px;
+  overflow: hidden;
+  overflow-y: scroll;
+  border: solid 0px #f2f2f2cb;
   border-radius: 2px;
   z-index: 3;
+
+  h1{
+    text-align: center;
+    font-family: "Advent Pro", serif;
+    font-family: "Space Mono", monospace;
+    color: var(--font-color) ;
+    font-size: 38px;
+    font-weight: 800;
+
+    @media (max-width: 425px) {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    
+    width: 75%  !important;
+    padding: 2px;
+    
+  }
+  @media (max-width: 425px) {
+    width: 100% !important;
+    height: 100%;
+    padding: 2px;
+    
+  }
+  @media (max-height: 600px) {
+    transform: scale(0.8);
+    
+  }
 }
 
+.form-container{
+  font-family: "Space Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  height: 100%;
+  padding: 20px;
+  align-items: start;
+  justify-content: start;
+  border: solid 0px rgba(255, 255, 255, 0.829);
+
+  div{
+    width: 100%;
+  }
+}
+
+.input-field{
+  font-family: "Space Mono", monospace;
+  border: none;
+  background-color: #9aced5;
+  width:100%;
+  padding: 4px;
+  height: 30px;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3) , -6px -6px 0px rgba(0, 0, 0, 0.3) ;
+}
+
+.input-field-textArea{
+  font-family: "Space Mono", monospace;
+  border: none;
+  background-color: #9aced5;
+  width:100%;
+  padding: 4px;
+  min-height:200px;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3) , -6px -6px 0px rgba(0, 0, 0, 0.3) ;
+}
+
+.input-field:focus,
+.input-field-textArea:focus {
+  outline: none;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3) , -6px -6px 0px rgba(0, 0, 0, 0.3) ;
+  font-family: "Space Mono", monospace !important;
+  font-weight: 700;
+  
+}
+
+.input-field:focus::placeholder,
+.input-field-textArea:focus::placeholder {
+  color: transparent;
+  font-family: "Space Mono", monospace;
+}
+
+.input-field::placeholder,
+.input-field-textArea::placeholder {  
+  color: rgba(55, 55, 55, 0.5);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Space Mono", monospace;
+}
+
+.submit-btn{
+  width: 20%;
+  height: 40px;
+  align-self: center;
+  background-color: var(--font-color);
+  color: var(--background-color-night);
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-family: "Space Mono", monospace;
+  border: none;
+  cursor: pointer;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3) , -6px -6px 0px rgba(0, 0, 0, 0.3) ;
+
+  @media (max-width: 425px) {
+    width: 50%;
+    height: 40px;
+  }
+}
+
+.contact-icons{
+    color: var(--font-color);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 28px;
+    
+}
 
 
 .list {

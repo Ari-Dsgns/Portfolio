@@ -13,36 +13,42 @@
 <body>
     <div class="main-container" id="main">
         <nav class="navbar">
-
             <div class="dark-btn-box">
                 <button id="dark-btn"><i class="bi bi-brightness-high"></i></button>
                 <a href="/index.html"><button class="backButton">Back</button></a>
-            </div>
-            
+            </div> 
             <div class="moon">
                 <img src="../moon.svg" alt="moon icon">
             </div>
-
             <div class="menuBox">
                 <button id="noise-btn"><i class="bi bi-noise-reduction"></i><span><button class="noise-popup">NOISE ON</button></span></button>
-            </div>
-
-            
+            </div>    
         </nav>
         <div class="container">
             <div class="container-contact" id="contact">
                 <div class="contact-content">
-                    <div>
-                        <a href="https://linkedin.com/in/ari-sanchez" target="_blank"><button id="linkedin"><i class="bi bi-linkedin"></i></button></a>
-                        <a href="https://github.com/Ari-Dsgns" target="_blank"><button id="github"><i class="bi bi-github"></i></button></a>
-                        <!-- <a href="https://wa.me/34664094007?text=Hola%20quiero%20contactar%20contigo" target="_blank"><button id="whatsapp"><i class="bi bi-whatsapp"></i></button></a> -->
-                    </div>
-                    <a href="mailto:arisanpala@gmail.com?Subject=Hola%20quiero%20más%20información"><p>arisanpala@gmail.com <i class="bi bi-envelope-at"></i></p></a>
+                    <h1>Design.Code.Launch.It all starts with “Hello” :)</h1>
+                    <form class="form-container" action="https://formsubmit.co/arisanpala@gmail.com" method="POST">
+                        <div>
+                            <input type="text" id="name" name="name" placeholder="Name" required class="input-field">
+                            <input type="email" id="email" name="email" placeholder="Email" required class="input-field">
+                        </div>
+                        <div>
+                            <input type="text" id="phone" name="phone" placeholder="Phone Number" required class="input-field">
+                        </div>
+                        <div>
+                            <textarea id="comments" name="comments" class="input-field-textArea" placeholder="Comments"></textarea>
+                        </div>
+                        <button type="submit" name="submit" class="submit-btn">Submit</button>
+                        <div>
+                            <a href="https://github.com/Ari-Dsgns" target="_blank"><button id="github"  class="contact-icons"><i class="bi bi-github"></i></button></a>
+                            <a href="https://linkedin.com/in/ari-sanchez" target="_blank"><button id="linkedin"  class="contact-icons"><i class="bi bi-linkedin"></i></button></a>
+                        </div>
+                    </form>
                 </div>
             </div>
+            <div class="noise"></div>
         </div>
-        
-        <div class="noise"></div>
     </div>
     
 </body>
