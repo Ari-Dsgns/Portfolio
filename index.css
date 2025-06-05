@@ -1165,7 +1165,11 @@ body {
   z-index: 3;
   font-family: "Advent Pro", serif;
 
-  
+  @media (max-width: 425px) {
+    
+    padding: 2px;
+    
+  }
 }
 
 #about-me-content {
@@ -1219,7 +1223,7 @@ body {
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3) , -10px -10px 0px rgba(0, 0, 0, 0.3) ;  
   }
   @media (max-width: 768px) {
-    width: 95%;
+    width: 100%;
     
     
   }
@@ -1275,6 +1279,7 @@ body {
 
   @media (max-width: 425px) {
     justify-content: end;
+    padding: 2px;
   }
 }
 
