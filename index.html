@@ -1,78 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Arisanpala - Front-End Developer & Web Designer. Explore my portfolio showcasing innovative web designs and development projects. Let's create something amazing together!">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Arisanpala - Front-End Developer & Web Designer. Explore my portfolio showcasing innovative web designs and development projects. Let's create something amazing together!"
+    />
+    <meta name="author" content="Ari Sanpala" />
+    <meta name="robots" content="index, follow" />
+    <meta name="copyright" content="arisanpala.com" />
 
-    <meta property="og:title" content="Arisanpala - Front-End Developer & Web Designer">
-    <meta property="og:description" content="Explore my portfolio showcasing innovative web designs and development projects. Let's create something amazing together!">
-    <meta property="og:image" content="https://arisanpala.com/assets/img/og-image.png">
-    <meta property="og:url" content="https://arisanpala.com">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Arisanpala">
+    <meta
+      property="og:title"
+      content="Arisanpala - Front-End Developer & Web Designer"
+    />
+    <meta
+      property="og:description"
+      content="Explore my portfolio showcasing innovative web designs and development projects. Let's create something amazing together!"
+    />
+    <meta
+      property="og:image"
+      content="https://arisanpala.com/assets/img/og-image.png"
+    />
+    <meta property="og:url" content="https://arisanpala.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Arisanpala" />
 
-    <meta name="twitter:title" content="">
-    <meta name="autor" content="Ari Sanpala">
-    <meta name="copyright" content="arisanpala.com">
+    <meta
+      name="twitter:title"
+      content="Ari Sanpala - Front-End Developer & Web Designer"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://arisanpala.com/assets/img/og-image.png"
+    />
 
-    <meta name="robots" content="index, follow">
-    
-    <title>Arisanpala</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="shortcut icon" href="./assets/icons/favicon.svg">
-    <link rel="stylesheet" href="./index.css">
-    
-    <script src="./index.js" defer ></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
-</head>
-<body>
+    <title>Ari Sanpala | Front-End Developer & Web Designer</title>
+    <link rel="canonical" href="https://arisanpala.com" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./assets/icons/favicon.svg" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
     <div class="main-container" id="main">
-        <nav class="navbar">
-            <div class="dark-btn-box">
-                <button id="dark-btn"><i class="bi bi-brightness-high"></i></button>
+      <nav class="navbar" role="banner" aria-label="Main navigation">
+        <div class="dark-btn-box">
+          <button id="dark-btn" aria-label="Toggle dark mode"><i class="bi bi-brightness-high"></i></button>
+        </div>
+        <div class="moon">
+          <img src="./moon.svg" alt="moon icon" />
+        </div>
+        <div class="menuBox">
+          <button id="noise-btn" aria-label="Toggle noise effect">
+            <i class="bi bi-noise-reduction"></i><NOISE ON
+          </button>
+        </div>
+      </nav>
+      <main class="container">
+        <div class="container-mainPage">
+          <div class="container-title">
+            <div class="brand" id="brand">
+              <h1>ARI SA<span>N</span>PALA</h1>
+              <h2>
+                FRONT-END DEVELOPER & WEB DESIGNER<span
+                  style="font-weight: 200"
+                ></span>
+              </h2>
+              <!-- <h2>HI THERE! I'M ARI A FRONT-END DEVELOPER & WEB DESIGNER. WELCOME TO MY PORTFOLIO<span style="font-weight: 200;"></span></h2> -->
             </div>
-            <div class="moon">
-                <img src="./moon.svg" alt="moon icon">
-            </div>
-            <div class="menuBox">
-                <button id="noise-btn"><i class="bi bi-noise-reduction"></i><NOISE ON </button>
-            </div>
-        </nav>
-        <main class="container">
-
-            
-
-            <div class="container-mainPage">
-
-                
-            
-                <div class="container-title">
-                    <div class="brand" id="brand">
-                        <h1>ARI SA<span>N</span>PALA</h1>
-                        <h2>FRONT-END DEVELOPER & WEB DESIGNER<span style="font-weight: 200;"></span></h2>
-                        <!-- <h2>HI THERE! I'M ARI A FRONT-END DEVELOPER & WEB DESIGNER. WELCOME TO MY PORTFOLIO<span style="font-weight: 200;"></span></h2> -->
-                    </div>
-                </div>
-                <div class="list" id="list">                
-                    <a href="./works/works.html"><button class="work-btn" id="work-btn"><i class="bi bi-dot"></i>Work<i class="bi bi-dot"></i></button></a>
-                    <a href="./aboutme/aboutme.html"><button class="about-btn" id="about-btn" ><i class="bi bi-dot"></i>About<i class="bi bi-dot"></i></button></a>
-                    <a href="./contact/contact.html"><button class="contact-btn" id="contact-btn" ><i class="bi bi-dot"></i>Contact<i class="bi bi-dot"></i></button></a>                
-                </div>
-            </div>
-            <footer class="footer">
-                <div>
-                    <a href="https://github.com/Ari-Dsgns" target="_blank"><button id="github"><i class="bi bi-github"></i></button></a>
-                    <a href="https://linkedin.com/in/ari-sanchez" target="_blank"><button id="linkedin"><i class="bi bi-linkedin"></i></button></a>
-                    <p>arisanpala.com ©</p>
-                </div>
-            </footer>
-            <div class="noise"></div>
-
-        </main>
+          </div>
+          <div class="list" id="list">
+            <a href="./works/works.html"
+              ><button class="work-btn" id="work-btn">
+                <i class="bi bi-dot"></i>Work<i class="bi bi-dot"></i></button
+            ></a>
+            <a href="./aboutme/aboutme.html"
+              ><button class="about-btn" id="about-btn">
+                <i class="bi bi-dot"></i>About<i class="bi bi-dot"></i></button
+            ></a>
+            <a href="./contact/contact.html"
+              ><button class="contact-btn" id="contact-btn">
+                <i class="bi bi-dot"></i>Contact<i
+                  class="bi bi-dot"
+                ></i></button
+            ></a>
+          </div>
+        </div>
+        <footer class="footer">
+          <div>
+            <a href="https://github.com/Ari-Dsgns" target="_blank"
+              ><button id="github"><i class="bi bi-github"></i></button
+            ></a>
+            <a href="https://linkedin.com/in/ari-sanchez" target="_blank"
+              ><button id="linkedin"><i class="bi bi-linkedin"></i></button
+            ></a>
+            <p>arisanpala.com ©</p>
+          </div>
+        </footer>
+        <div class="noise"></div>
+      </main>
     </div>
-</body>
+  </body>
 </html>

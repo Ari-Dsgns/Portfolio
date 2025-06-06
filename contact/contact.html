@@ -1,55 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../index.css">
-    
-    <script src="../index.js" defer ></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Ari Sanpala - Front-End Developer & Web Designer. Let's collaborate and bring your ideas to life!" />
+  <meta name="author" content="Ari Sanpala" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Contact - Ari Sanpala" />
+  <meta property="og:description" content="Let's collaborate and bring your ideas to life!" />
+  <meta property="og:url" content="https://arisanpala.com/contact/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://arisanpala.com/assets/img/og-image.png" />
+  <title>Contact | Ari Sanpala</title>
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="shortcut icon" href="../assets/icons/favicon.svg" />
+  <script src="../index.js" defer></script>
 </head>
-<body>
+  <body>
     <div class="main-container" id="main">
-        <nav class="navbar">
-            <div class="dark-btn-box">
-                <button id="dark-btn"><i class="bi bi-brightness-high"></i></button>
-                <a href="/index.html"><button class="backButton">Back</button></a>
-            </div> 
-            <div class="moon">
-                <img src="../moon.svg" alt="moon icon">
-            </div>
-            <div class="menuBox">
-                <button id="noise-btn"><i class="bi bi-noise-reduction"></i><span><button class="noise-popup">NOISE ON</button></span></button>
-            </div>    
-        </nav>
-        <div class="container">
-            <div class="container-contact" id="contact">
-                <div class="contact-content">
-                    <h1>Design.Code.Launch.It all starts with “Hello” :)</h1>
-                    <form class="form-container" action="https://formsubmit.co/arisanpala@gmail.com" method="POST">
-                        <div>
-                            <input type="text" id="name" name="name" placeholder="Name" required class="input-field">
-                            <input type="text" id="phone" name="phone" placeholder="Phone Number" required class="input-field">
-                        </div>
-                        <div>
-                            <input type="email" id="email" name="email" placeholder="Email" required class="input-field">
-                        </div>
-                        <div>
-                            <textarea id="comments" name="comments" class="input-field-textArea" placeholder="Comments"></textarea>
-                        </div>
-                        <button type="submit" name="submit" class="submit-btn">Send</button>
-                    </form>
-                    <div>
-                        <a href="https://github.com/Ari-Dsgns" target="_blank"><button id="github"  class="contact-icons"><i class="bi bi-github"></i></button></a>
-                        <a href="https://linkedin.com/in/ari-sanchez" target="_blank"><button id="linkedin"  class="contact-icons"><i class="bi bi-linkedin"></i></button></a>
-                    </div>
-                </div>
-            </div>
-            <div class="noise"></div>
+      <nav class="navbar" role="banner" aria-label="Main navigation">
+        <div class="dark-btn-box">
+          <button id="dark-btn"><i class="bi bi-brightness-high"></i></button>
+          <a href="/index.html"><button class="backButton">Back</button></a>
         </div>
+        <div class="moon">
+          <img src="../moon.svg" alt="moon icon" />
+        </div>
+        <div class="menuBox">
+          <button id="noise-btn">
+            <i class="bi bi-noise-reduction"></i
+            ><span><button class="noise-popup">NOISE ON</button></span>
+          </button>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="container-contact" id="contact">
+          <div class="contact-content">
+            <h1>Design.Code.Launch.It all starts with “Hello” :)</h1>
+            <form
+              class="form-container"
+              action="https://formsubmit.co/arisanpala@gmail.com"
+              method="POST"
+            >
+              <div>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Name"
+                  required
+                  class="input-field"
+                />
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  placeholder="Phone Number"
+                  required
+                  class="input-field"
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                  class="input-field"
+                />
+              </div>
+              <div>
+                <textarea
+                  id="comments"
+                  name="comments"
+                  class="input-field-textArea"
+                  placeholder="Comments"
+                ></textarea>
+              </div>
+              <button type="submit" name="submit" class="submit-btn">
+                Send
+              </button>
+            </form>
+            <div>
+              <a href="https://github.com/Ari-Dsgns" target="_blank"
+                ><button id="github" class="contact-icons">
+                  <i class="bi bi-github"></i></button
+              ></a>
+              <a href="https://linkedin.com/in/ari-sanchez" target="_blank"
+                ><button id="linkedin" class="contact-icons">
+                  <i class="bi bi-linkedin"></i></button
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="noise"></div>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>

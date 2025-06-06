@@ -381,14 +381,18 @@ body {
   width: 28px;
   height: 32px;
   border: none;
-  
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3) , -6px -6px 0px rgba(0, 0, 0, 0.3) ;
 }
 
+#noise-btn:hover {
+  
+  box-shadow: -6px 6px 0px rgba(0, 0, 0, 0.5) , 6px -6px 0px rgba(0, 0, 0, 0.5) ;
 
+}
 
 #noise-btn.on {
   cursor: pointer;
-  opacity: 0.5;
+  color: rgba(0, 0, 0, 0.5);;
 }
 #noise-btn.off {
   opacity: 1;
@@ -410,7 +414,13 @@ body {
   width: 28px;
   height: 32px;
   border: none;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3) , -6px -6px 0px rgba(0, 0, 0, 0.3) ;
  
+}
+
+#dark-btn:hover{
+  
+  box-shadow: -6px 6px 0px rgba(0, 0, 0, 0.5) , 6px -6px 0px rgba(0, 0, 0, 0.5) ;
 }
 
 .menuBox {
@@ -426,26 +436,25 @@ body {
 }
 
 .backButton  {
-  
+  font-family: "Advent Pro", serif;
   padding: 4px;
-  
   border: none;
   background: transparent;
-  color: rgba(0, 0, 0, 0.3);
-  box-shadow: -10px 10px 0px rgba(0, 0, 0, 0.3) , 10px -10px 0px rgba(0, 0, 0, 0.3) ;
+  color: rgba(0, 0, 0, 0.5);
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3) , -8px -8px 0px rgba(0, 0, 0, 0.3) ;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 800;
   cursor: pointer;
+  transition: 0.1s ease-in-out;
 
   @media (max-width: 425px) {
     font-size: 16px;
-    
   }
 }
 
 .backButton:hover{
-  transform: scale(1.05);
-  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3) , -10px -10px 0px rgba(0, 0, 0, 0.3) ;
+  
+  box-shadow: -8px 8px 0px rgba(0, 0, 0, 0.500) , 8px -8px 0px rgba(0, 0, 0, 0.500) ;
 }
 
 
@@ -1134,7 +1143,6 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  
 }
 
 .back-to-works{
@@ -1236,8 +1244,6 @@ body {
   
 }
 
-
-
 .e {
   display: inline-block;
   position: relative;
@@ -1245,8 +1251,6 @@ body {
   left: 3px;
   color: rgb(73, 72, 72);
   font-weight: 900;
-
-  
 }
 
 
@@ -1430,12 +1434,9 @@ body {
 
 
 .list {
-  
   display: flex;
   flex-direction: column;
   justify-self: center;
-  
-  
   justify-content: space-evenly;
   width: 350px;
   height: 50%;
@@ -1444,35 +1445,29 @@ body {
   padding: 10px;
   z-index: 4;
   gap: 20px;
-
   transition: 1s; 
-  
-
-   animation: appear 2.5s  ;
-
-
+  animation: appear 2.5s  ;
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
   @media  (max-width: 768px) {
     width: 300px;
     height:50%;
-    
-    
   }
-
   @media (max-width:425px) {
     width: 250px;
     height:50%;
-    
-    
   }
-
-  /* border: solid 0.1rem rgba(255, 255, 255, 0);
-  box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-  border-radius: 4px; */
+  @media (max-width: 325px) {
+    width: 200px;
+    height:50%;
+  }
   @media (max-height: 660px) {
     transform: scale(0.8);
-    
   }
-  
 }
 
 
