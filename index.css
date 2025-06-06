@@ -10,7 +10,7 @@
 }
 
 :root {
-  /* --navbar-color: #fc5215; */
+  
   --navbar-color: #eb5a46;
   --navbar-night: #292f32;
   --background-color: #6aa0a8;
@@ -24,6 +24,8 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+
 
 body {
   font-family: "Nunito Sans", serif;
@@ -1403,12 +1405,18 @@ body {
   font-family: "Space Mono", monospace;
   border: none;
   cursor: pointer;
+  transition: 0.1s;
   box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3) , -6px -6px 0px rgba(0, 0, 0, 0.3) ;
 
   @media (max-width: 425px) {
     width: 50%;
     height: 40px;
   }
+}
+
+.submit-btn:hover{
+  letter-spacing: 2px;
+  box-shadow: -6px 6px 0px rgba(0, 0, 0, 0.3) , 6px -6px 0px rgba(0, 0, 0, 0.3) ;
 }
 
 .contact-icons{
