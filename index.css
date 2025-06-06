@@ -169,12 +169,15 @@ body {
 
 .main-container.night {
 
-  animation: appear 0.5s ease-in-out;
+  animation: appear 0.1s ease-in-out;
 
   .noise {
     opacity: 0.2;
   }
   #noise-btn {
+    color: #eaeaed;
+  }
+  #dark-btn {
     color: #eaeaed;
   }
   .footer{
@@ -600,7 +603,11 @@ body {
 
 }
 
-
+.nav-dark-noise{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
 
 
 
@@ -943,8 +950,9 @@ body {
 
 .cardsDetail-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  
+  align-items: center;
   justify-self: center;
   overflow-x: hidden;
   overflow-y: auto;
@@ -1185,23 +1193,18 @@ body {
 }
 
 #about-me-content {
-   
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  
   gap: 1.25rem;
   width: 50%;
   height: 100%;
   padding: 10px;
   padding-bottom: 80px;
   overflow-y: auto;
-  
-  
   z-index: 3;
   animation: appear 3s  ;
   
-
   h1 {
     font-family: "Advent Pro", serif;
     font-weight: 800;

@@ -1,83 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../index.css">
-    
-    <script src="../index.js" defer ></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
-</head>
-<body>
+    <link rel="stylesheet" href="../index.css" />
 
+    <script src="../index.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
     <div class="main-container" id="main">
-        
-            <div class="cardsDetail-container">
-                <div class="justgoodstuff-content">
+      <div class="cardsDetail-container">
+        <div class="nav-dark-noise">
+            <div class="dark-btn-box">
+              <button id="dark-btn" aria-label="Toggle dark mode">
+                <i class="bi bi-brightness-high"></i>
+              </button>
+            </div>
+            <div class="menuBox">
+              <button id="noise-btn" aria-label="Toggle noise effect">
+                <i class="bi bi-noise-reduction"></i
+                ><span><button class="noise-popup"></button></span>
+              </button>
+            </div>
+          </div>
+        <div class="justgoodstuff-content">
+          <div class="nextAndBack">
+            <a href="./works.html"><button class="backButton">Back</button></a>
+            <a href="./tuvinilo.html"
+              ><button class="backButton">Next</button></a
+            >
+          </div>
+          <h1>JUSTGOODSTUFF</h1>
+          <h2 id="subtitle">
+            A React-based minimalist eCommerce built from scratch using Firebase
+            & Context API
+          </h2>
+          <a href="https://github.com/Ari-Dsgns/my-ecommerce" target="_blank"
+            ><i class="bi bi-link-45deg"></i>View source code → GitHub</a
+          >
+          <a href="https://justgoodstuff.vercel.app/" target="_blank"
+            ><button class="try-me-button">
+              <i class="bi bi-rocket-takeoff"></i>Live Demo
+              <i class="bi bi-rocket-takeoff"></i></button
+          ></a>
+          <div id="icon-box">
+            <img src="../assets/icons/html-icon.svg" alt="html icon" />
+            <img src="../assets/icons/css-icon.svg" alt="css icon" />
+            <img src="../assets/icons/js-icon.svg" alt=" js icon" />
+            <img src="../assets/icons/react-icon.svg" alt="react icon" />
+            <img
+              src="../assets/icons/bootstrap-icon.svg"
+              alt="bootstrap icon"
+            />
+            <img src="../assets/icons/canva-icon.svg" alt="canva icon" />
+          </div>
+          <h3><strong>Summary:</strong></h3>
+          <p>
+            JustGoodStuff is an online store built with React.js as part of a
+            bootcamp project, designed to be presented to a digital agency in
+            Argentina. It simulates a modern eCommerce experience with dynamic
+            navigation, a functional cart, and a full checkout process.
+          </p>
 
-                    <div class="nextAndBack">
-                        <a href="./works.html"><button class="backButton">Back</button></a>
-                        <a href="./tuvinilo.html"><button class="backButton">Next</button></a>
-                    </div>
-                    <h1>JUSTGOODSTUFF</h1>
-                    <h2 id="subtitle">A React-based minimalist eCommerce built from scratch using Firebase & Context API</h2>
-                    <a href="https://github.com/Ari-Dsgns/my-ecommerce" target="_blank"><i class="bi bi-link-45deg"></i>View source code → GitHub</a>
-                    <a href="https://justgoodstuff.vercel.app/" target="_blank" ><button class="try-me-button"> <i class="bi bi-rocket-takeoff"></i>Live Demo <i class="bi bi-rocket-takeoff"></i> </button></a>
-                    <div id="icon-box">
-                        <img src="../assets/icons/html-icon.svg" alt="html icon">
-                        <img src="../assets/icons/css-icon.svg" alt="css icon">
-                        <img src="../assets/icons/js-icon.svg" alt=" js icon">
-                        <img src="../assets/icons/react-icon.svg" alt="react icon">
-                        <img src="../assets/icons/bootstrap-icon.svg" alt="bootstrap icon">
-                        <img src="../assets/icons/canva-icon.svg" alt="canva icon">
-                    </div>
-                    <h3><strong>Summary:</strong></h3>
-                        <p>JustGoodStuff is an online store built with React.js as part of a bootcamp project, designed to be presented
-                        to a digital agency in Argentina. It simulates a modern eCommerce experience with dynamic navigation, a functional
-                        cart, and a full checkout process.</p>
-                        
-                    <div id="img-box">
-                        <img src="../assets/img/justgood.gif" alt="gif of JustGoodStuff e-commerce website">
-                    </div>
-                    <h3><strong>Project goal:</strong></h3>
-                    <p>The goal was to build a scalable Single Page Application (SPA) with clean architecture and good development practices,
-                    delivering an intuitive user experience.</p>
-                    <h3><strong>Technologies used:</strong></h3>
-                    <p>React.js</p>
-                    <p>React Router DOM</p>
-                    <p>Context API</p>
-                    <p>Firebase (for order storage and purchase ID generation)</p>
-                    <p>Custom CSS</p>
-                    <p>Vercel (deployment)</p>
-                    <p>⚙️ Project management with npm</p>
-                    <h3><strong>My role</strong>:</h3>
-                    <p>I developed the entire project from scratch:</p>
-                    <p>✅ Designed the UI/UX</p>
-                    <p>✅ Built responsive and semantic layout</p>
-                    <p>✅ Implemented dynamic routing (/item/:itemId, /category/:categoryId)</p>
-                    <p>✅ Developed global cart logic using Context API</p>
-                    <p>✅ Integrated Firebase for order storage and checkout functionality</p>
-                    <h3><strong>Challenges and solutions:</strong></h3>
-                    <p>The main challenge was keeping dynamic routing for categories and product pages fully in sync while maintaining
-                    a consistent global cart state. I solved this using React Router for dynamic routes and Context API for state management
-                    I also implemented a checkout system that stores each order in Firebase with a unique ID.</p>
-                    <p>What I learned:</p>
-                    <p>Modular architecture in React</p>
-                    <p>Global state management with Context API</p>
-                    <p>Front-end integration with cloud services (Firebase)</p>
-                    <p>SPA routing best practices</p>
-                    <p>Professional workflow using npm and continuous deployment</p>
-                    <div class="nextAndBack">
-                        <a href="./works.html"><button class="backButton">Back</button></a>
-                        <a href="./tuvinilo.html"><button class="backButton">Next</button></a>
-                    </div>
-                </div>
+          <div id="img-box">
+            <img
+              src="../assets/img/justgood.gif"
+              alt="gif of JustGoodStuff e-commerce website"
+            />
+          </div>
+          <h3><strong>Project goal:</strong></h3>
+          <p>
+            The goal was to build a scalable Single Page Application (SPA) with
+            clean architecture and good development practices, delivering an
+            intuitive user experience.
+          </p>
+          <h3><strong>Technologies used:</strong></h3>
+          <p>React.js</p>
+          <p>React Router DOM</p>
+          <p>Context API</p>
+          <p>Firebase (for order storage and purchase ID generation)</p>
+          <p>Custom CSS</p>
+          <p>Vercel (deployment)</p>
+          <p>⚙️ Project management with npm</p>
+          <h3><strong>My role</strong>:</h3>
+          <p>I developed the entire project from scratch:</p>
+          <p>✅ Designed the UI/UX</p>
+          <p>✅ Built responsive and semantic layout</p>
+          <p>
+            ✅ Implemented dynamic routing (/item/:itemId,
+            /category/:categoryId)
+          </p>
+          <p>✅ Developed global cart logic using Context API</p>
+          <p>
+            ✅ Integrated Firebase for order storage and checkout functionality
+          </p>
+          <h3><strong>Challenges and solutions:</strong></h3>
+          <p>
+            The main challenge was keeping dynamic routing for categories and
+            product pages fully in sync while maintaining a consistent global
+            cart state. I solved this using React Router for dynamic routes and
+            Context API for state management I also implemented a checkout
+            system that stores each order in Firebase with a unique ID.
+          </p>
+          <p>What I learned:</p>
+          <p>Modular architecture in React</p>
+          <p>Global state management with Context API</p>
+          <p>Front-end integration with cloud services (Firebase)</p>
+          <p>SPA routing best practices</p>
+          <p>Professional workflow using npm and continuous deployment</p>
+          <div class="nextAndBack">
+            <a href="./works.html"><button class="backButton">Back</button></a>
+            <a href="./tuvinilo.html"
+              ><button class="backButton">Next</button></a
+            >
+          </div>
         </div>
-        
-        <div class="noise"></div>
+      </div>
+
+      <div class="noise"></div>
     </div>
-    
-</body>
+  </body>
 </html>

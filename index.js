@@ -89,12 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  document.getElementById("contact-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const message = document.getElementById("form-message");
-  message.textContent = "Mensaje enviado correctamente.";
-});
+  
 
 
  
