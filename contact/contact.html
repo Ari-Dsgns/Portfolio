@@ -51,6 +51,7 @@
                   placeholder="Name"
                   required
                   class="input-field"
+                  autocomplete="name" required
                 />
                 <input
                   type="text"
@@ -59,6 +60,7 @@
                   placeholder="Phone Number"
                   required
                   class="input-field"
+                  autocomplete="Phone Number" required
                 />
               </div>
               <div>
@@ -69,33 +71,37 @@
                   placeholder="Email"
                   required
                   class="input-field"
+                  autocomplete="email" required
                 />
               </div>
               <div>
                 <textarea
+                  type="text"
                   id="comments"
                   name="comments"
                   class="input-field-textArea"
                   placeholder="Comments"
+                  required
                 ></textarea>
               </div>
               <button type="submit" name="submit" class="submit-btn">
                 Send
               </button>
             </form>
+            <p id="form-message" aria-live="polite" style="color: green;"></p>
             <div>
-              <a href="https://github.com/Ari-Dsgns" target="_blank"
+              <a href="https://github.com/Ari-Dsgns" target="_blank"aria-label="GitHub"
                 ><button id="github" class="contact-icons">
                   <i class="bi bi-github"></i></button
               ></a>
-              <a href="https://linkedin.com/in/ari-sanchez" target="_blank"
+              <a href="https://linkedin.com/in/ari-sanchez" target="_blank"aria-label="LinkedIn"
                 ><button id="linkedin" class="contact-icons">
                   <i class="bi bi-linkedin"></i></button
               ></a>
             </div>
           </div>
         </div>
-        <div class="noise"></div>
+        <div class="noise" aria-hidden="true"></div>
       </div>
     </div>
   </body>

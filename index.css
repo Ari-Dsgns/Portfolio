@@ -31,7 +31,6 @@ body {
   font-family: "Nunito Sans", serif;
   background-color: var(--background-color-night);
 
-  
 }
 
 
@@ -920,7 +919,7 @@ body {
 #card5:hover,
  #card6:hover {
   box-shadow: -12px 12px 0px rgba(0, 0, 0, 0.3) , 12px -12px 0px rgba(0, 0, 0, 0.3) ;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 
@@ -1230,6 +1229,8 @@ body {
   }
 
   img{
+    max-width: 100%;
+    height: auto;
     margin-top: 40px;
     margin-bottom: 40px;
     opacity: 0.8;
