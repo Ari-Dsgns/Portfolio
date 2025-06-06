@@ -169,7 +169,7 @@ body {
 
 .main-container.night {
 
-  animation: appear 0.1s ease-in-out;
+  
 
   .noise {
     opacity: 0.2;
@@ -239,6 +239,11 @@ body {
   
   
   .navbar {
+    background-color: var(--navbar-night);
+    color: #eaeaed;
+  }
+
+  .nav-dark-noise{
     background-color: var(--navbar-night);
     color: #eaeaed;
   }
@@ -387,9 +392,8 @@ body {
 }
 
 #noise-btn:hover {
-  
   box-shadow: -6px 6px 0px rgba(0, 0, 0, 0.5) , 6px -6px 0px rgba(0, 0, 0, 0.5) ;
-
+  
 }
 
 #noise-btn.on {
@@ -604,9 +608,15 @@ body {
 }
 
 .nav-dark-noise{
+  background-color: #eb5a46;
   display: flex;
+  padding: 12px;
   width: 100%;
   justify-content: space-between;
+  
+  outline: solid 4px var(--background-color-night);
+  
+  color: var(--font-color);
 }
 
 
