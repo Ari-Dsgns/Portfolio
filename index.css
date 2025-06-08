@@ -183,6 +183,10 @@ body {
   #noise-btn {
     color: #eaeaed;
   }
+
+  #noise-btn.on{
+    color: #a4a4a4;
+  }
   #dark-btn {
     color: #eaeaed;
   }
@@ -393,12 +397,9 @@ body {
 
 #noise-btn.on {
   cursor: pointer;
-  color: rgba(0, 0, 0, 0.5);;
+  color: #591107;
 }
-#noise-btn.off {
-  opacity: 1;
-  transition: 0.2s;
-}
+
 
 .dark-btn-box{
   display: flex;
@@ -1478,7 +1479,7 @@ body {
 
 .input-field::placeholder,
 .input-field-textArea::placeholder {  
-  color: rgba(55, 55, 55, 0.5);
+  color: #5E5E5E;
   font-size: 1rem;
   font-weight: 600;
   font-family: "Space Mono", monospace;
