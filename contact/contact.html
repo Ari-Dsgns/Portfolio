@@ -46,7 +46,7 @@
               method="POST"
             >
               <div>
-                <label for="name"></label>
+                <label for="name" class="visually-hidden">Name</label>
                 <input
                   type="text"
                   id="name"
@@ -56,7 +56,7 @@
                   class="input-field"
                   autocomplete="name" required
                 />
-                <label for="phone"></label>
+                <label for="phone"  class="visually-hidden">Number</label>
                 <input
                   type="text"
                   id="phone"
@@ -68,7 +68,7 @@
                 />
               </div>
               <div>
-                <label for="email"></label>
+                <label for="email"  class="visually-hidden">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -80,7 +80,7 @@
                 />
               </div>
               <div>
-                <label for="comments"></label>
+                <label for="comments"  class="visually-hidden">Comments</label>
                 <textarea
                   type="text"
                   id="comments"
@@ -96,12 +96,14 @@
             </form>
             <p id="form-message" aria-live="polite" style="color: green;"></p>
             <div>
-              <a href="https://github.com/Ari-Dsgns" id="github" target="_blank" rel="noopener" aria-label="Visit GitHub Profile"
-              ><i class="bi bi-github"></i>
-            </a>
-            <a href="https://linkedin.com/in/ari-sanchez" id="linkedin" target="_blank" rel="noopener" aria-label="Visit LinkedIn Profile"
-              ><i class="bi bi-linkedin"></i>
-            </a>
+              <div class="contact-icons">
+                <a href="https://github.com/Ari-Dsgns" id="github" target="_blank" rel="noopener" aria-label="Visit GitHub Profile"
+                  ><i class="bi bi-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/ari-sanchez" id="linkedin" target="_blank" rel="noopener" aria-label="Visit LinkedIn Profile"
+                  ><i class="bi bi-linkedin"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
