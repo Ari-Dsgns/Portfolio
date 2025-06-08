@@ -16,6 +16,7 @@
   --background-color: #4d767c;
   --background-color-night: rgb(26, 25, 25);
   --font-color: #fce89a;
+  --font-color-text: #FFFBAD;
 
   --font-color-night1: #E4E4E7;
   --font-color-night2: #6476A9;
@@ -327,12 +328,14 @@ body {
   }
   
   .container-about-me{
-    color: #eaeaed;
+    
     background-color: rgb(40, 40, 40);
   }
   #about-me-content {
-    color: #eaeaed;
     
+    p{
+      color: var(--font-color-night1);
+    }
   
   }
 
@@ -353,8 +356,8 @@ body {
     background-color: rgb(40, 40, 40);
     border: solid 1px #52505000;
   }
-  h1,h2,h3,a{
-    color: #eaeaed;
+  h1,h2,h3,a,p{
+    color: var(--font-color-night1);
   }
   a {
     color: #eaeaed;
@@ -1143,6 +1146,7 @@ body {
     font-weight: 500;
     font-family: "Space Mono", monospace;
     border: solid 0rem rgb(250, 250, 250);
+    color: var(--font-color-text);
   }
 
   #img-box {
@@ -1268,6 +1272,7 @@ body {
     font-size: 22px;
     font-weight: 500;
     font-family: "Space Mono", monospace;
+    color: var(--font-color-text);
     
 
     @media (max-width: 425px) {
