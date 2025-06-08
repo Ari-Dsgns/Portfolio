@@ -268,7 +268,7 @@ body {
   
 
   .e {
-    color: var(--font-color-night3);
+    color: var(--font-color-night2);
   }
   #work-btn {
     background-color:var(--color-card-night1);
@@ -1335,8 +1335,8 @@ body {
   position: relative;
   transform: rotate(25deg);
   left: 3px;
-  color: rgb(73, 72, 72);
-  font-weight: 900;
+  color:var(--background-color-night);
+  font-weight: 800;
 }
 
 
