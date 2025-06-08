@@ -79,16 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let containerTitle = document.querySelector(".container-title");
 
 
-  document.querySelector(".cardsDetail-container").addEventListener("click", (e) => {
-    if (e.target.classList.contains("back-to-works")) {
-      navBar.style.display = "flex";
-      container.style.height = "70%";
-      cardsContainer.style.display = "flex";
-      detailContainer.style.display = "none";
-      backBtn.classList.add("visible");
-    }
-  });
-
+  
   
 
 
