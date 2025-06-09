@@ -975,15 +975,15 @@ a {
 }
 
 .try-me-button {
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  align-self: center;
-  width: 100%;
-  height: 40px;
+  align-self: flex-start;
+  width: 10rem;
+  height: 2.5rem;
   font-size: 1.125rem;
-  font-family: inherit;
   font-weight: 800;
   border: none;
   background-color: var(--font-color);
@@ -993,13 +993,9 @@ a {
   padding: .625rem;
   cursor: pointer;
   transition: 0.1s ease-in;
-  user-select: none;
   z-index: 3;
   box-shadow: .5rem .5rem 0rem rgba(0, 0, 0, 0.3) , -0.5rem -0.5rem 0rem rgba(0, 0, 0, 0.3) ;
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+  
 }
 
 .try-me-button:hover {
@@ -1054,7 +1050,7 @@ a {
     align-self: flex-start;
     gap: 8px;
   }
-  p, a {
+  p{
     font-size: 20px;
     font-weight: 500;
     font-family: "Space Mono", monospace;
@@ -1084,12 +1080,7 @@ a {
       padding: .125rem;
     }
   }
-  a {
-    color: var(--font-color);
-    font-size: 18px;
-    font-weight: 600;
-    align-self: start;
-  }
+  
   @media (max-width:80rem) {
     width: 80%;
   }
@@ -1410,33 +1401,24 @@ border: 0;
 
 
 #work-btn {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   align-self: center;
+  text-decoration: none;
   width: 100%;
-  height:100%;
-  font-size: 32px;
-  font-family: inherit;
+  height:25%;
+  font-size: 2rem;
   font-weight: 800;
   transform: rotateZ(-2deg);
   background-color: var(--font-color);
   border: none;
   color: inherit;
-  text-align: center;
-  padding: .625rem;
   cursor: pointer;
   animation: shakeS 0.4s infinite alternate;
   transition: 0.1s ease-in;
-  user-select: none;
   z-index: 3;
   box-shadow: .5rem .5rem 0rem rgba(0, 0, 0, 0.3) , -0.5rem -0.5rem 0rem rgba(0, 0, 0, 0.3) ;
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
 }
 
 #work-btn:hover {
@@ -1446,33 +1428,21 @@ border: 0;
 }
 
 #about-btn {
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
   align-self: center;
-  position: relative;
-  right: 2px;
   width: 100%;
-  height:100%;
-  transform: rotateZ(0deg);
-  font-size: 32px;
-  font-family: inherit;
-  overflow-x: auto;
-  overflow-y: auto;
+  height:25%;
+  font-size: 2rem;
   font-weight: 800;
   background-color: var(--background-color-night);
   border: none;
   color: var(--font-color);
   box-shadow: .625rem 0rem 0rem rgba(0, 0, 0, 0.3) , -0.625rem 0rem 0px rgba(0, 0, 0, 0.3) ;
-  padding:.625rem;
-  cursor: pointer;
   transition: 0.1s ease-in;
-  animation: shakeS 1.2s infinite alternate;
-  transition: 0.1s ease-in;
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+
 }
 #about-btn:hover {
   outline: solid 0rem var(--font-color);
@@ -1483,33 +1453,25 @@ border: 0;
 }
 
 #contact-btn {
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   align-self: center;
   width: 100%;
-  height: 100%;
-  font-size: 32px;
-  font-family: inherit;
+  height: 25%;
+  font-size: 2rem;
   font-weight: 800;
   background-color: var(--font-color);
   transform: rotateZ(2deg);
-  padding: .625rem;
   border: none;
   color: inherit;
   text-align: center;
   cursor: pointer;
   transition: 0.1s ease-in;
-  transition-delay: 0.2s;
   z-index: 3;
   box-shadow: .5rem .5rem 0rem rgba(0, 0, 0, 0.3) , -0.5rem -0.5rem 0rem rgba(0, 0, 0, 0.3) ;
-  animation: shakeS 4.8s infinite alternate;
-  transition: 0.1s ease-in;
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
 }
 #contact-btn:hover {
   outline: solid 0rem black;
