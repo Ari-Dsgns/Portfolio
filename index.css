@@ -425,6 +425,9 @@ a {
 .dark-btn-box{
   display: flex;
   gap: 1.25rem;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
   width: 90px;
   border: solid .1rem rgba(255, 255, 255, 0);
 }
