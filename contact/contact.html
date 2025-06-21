@@ -20,25 +20,31 @@
   <body>
     <div class="main-container" id="main">
       <nav class="navbar" role="banner" aria-label="Main navigation">
-        <div class="dark-btn-box">
-          <button id="dark-btn" aria-label="Toggle dark mode"><i class="bi bi-brightness-high"></i></button>
-          <a href="/index.html" class="backButton" aria-label="Go back to home">Back</a>
+       <div class="nav-box-iconsAndBackButton">
+          <div class="dark-btn-box">
+            <button id="dark-btn" aria-label="Toggle dark mode"><i class="bi bi-brightness-high"></i></button>
+            <button id="day-btn" aria-label="Toggle day mode"><i class="bi bi-brightness-high-fill"></i></button>
+          </div>
+          <a data-i18n="backBtn" href="/index.html" class="backButton" aria-label="Go back to home">Back</a>
         </div>
 
-        <div class="moon">
-          <img src="../moon.svg" alt="moon icon decorative image">
-        </div>
-
+        
         <div class="menuBox">
-          <button id="noise-btn" aria-label="Toggle noise effect">
-            <i class="bi bi-noise-reduction"></i>
-          </button>
+          <div class="lang-selector">
+            <button id="lang-toggle" aria-label="Select language">En <i class="bi bi-chevron-down"></i></button>
+            <ul id="lang-menu" class="hidden">
+              <li><button data-lang="en">English</button></li>
+              <li><button data-lang="es">Español</button></li>
+            </ul>
+          </div>
+          <button id="noise-btn" aria-label="Toggle noise effect"><i class="bi bi-noise-reduction"></i></button>
         </div>
+        
       </nav>
       <div class="container">
         <div class="container-contact" id="contact">
           <div class="contact-content">
-            <h1>Design.Code.Launch.It all starts with “Hello” :)</h1>
+            <h1 data-i18n="contactTitle">Design.Code.Launch.It all starts with “Hello” :)</h1>
             <form
               class="form-container"
               action="https://formsubmit.co/arisanpala@gmail.com"
@@ -47,6 +53,7 @@
               <div>
                 <label for="name" class="visually-hidden">Name</label>
                 <input
+                  data-i18n="placeholderName"
                   type="text"
                   id="name"
                   name="name"
@@ -57,6 +64,7 @@
                 />
                 <label for="phone"  class="visually-hidden">Number</label>
                 <input
+                  data-i18n="placeholderNumber"
                   type="text"
                   id="phone"
                   name="phone"
@@ -69,6 +77,7 @@
               <div>
                 <label for="email"  class="visually-hidden">Email</label>
                 <input
+                  data-i18n="placeholderEmail"
                   type="email"
                   id="email"
                   name="email"
@@ -81,6 +90,7 @@
               <div>
                 <label for="comments"  class="visually-hidden">Comments</label>
                 <textarea
+                  data-i18n="placeholderComment"
                   type="text"
                   id="comments"
                   name="comments"
@@ -89,7 +99,7 @@
                   required
                 ></textarea>
               </div>
-              <button type="submit" name="submit" class="submit-btn">
+              <button data-i18n="contactSendButton" type="submit" name="submit" class="submit-btn">
                 Send
               </button>
             </form>

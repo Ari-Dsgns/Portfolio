@@ -17,15 +17,21 @@
       <div class="cardsDetail-container">
         <div class="nav-dark-noise">
           <div class="dark-btn-box">
-            <button id="dark-btn" aria-label="Toggle dark mode">
-              <i class="bi bi-brightness-high"></i>
-            </button>
+            <button id="dark-btn" aria-label="Toggle dark mode"><i class="bi bi-moon-stars"></i></button>
+            <button id="day-btn" aria-label="Toggle day mode"><i class="bi bi-brightness-high-fill"></i></button>
           </div>
+          
           <div class="menuBox">
-            <button id="noise-btn" aria-label="Toggle noise effect">
-              <i class="bi bi-noise-reduction"></i>
-            </button>
+            <div class="lang-selector">
+              <button id="lang-toggle" aria-label="Select language">En <i class="bi bi-chevron-down"></i></button>
+              <ul id="lang-menu" class="hidden">
+                <li><button data-lang="en">En</button></li>
+                <li><button data-lang="es">Es</button></li>
+              </ul>
+            </div>
+            <button id="noise-btn" aria-label="Toggle noise effect"><i class="bi bi-noise-reduction"></i></button>
           </div>
+
         </div>
         <div class="destinea-content">
           <div class="nextAndBack">

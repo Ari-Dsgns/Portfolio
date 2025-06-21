@@ -23,37 +23,44 @@
 <body>
     <div class="main-container" id="main">
         <nav class="navbar" role="banner" aria-label="Main navigation">
-            <div class="dark-btn-box">
-          <button id="dark-btn" aria-label="Toggle dark mode"><i class="bi bi-brightness-high"></i></button>
-          <a href="/index.html" class="backButton" aria-label="Go back to home">Back</a>
-        </div>
+            <div class="nav-box-iconsAndBackButton">
+              <div class="dark-btn-box">
+                <button id="dark-btn" aria-label="Toggle dark mode"><i class="bi bi-brightness-high"></i></button>
+                <button id="day-btn" aria-label="Toggle day mode"><i class="bi bi-brightness-high-fill"></i></button>
+              </div>
+              <a href="/index.html" class="backButton" aria-label="Go back to home">Back</a>
+            </div>
 
-        <div class="moon">
-          <img src="../moon.svg" alt="moon icon" />
-        </div>
+            
 
-        <div class="menuBox">
-          <button id="noise-btn" aria-label="Toggle noise effect">
-            <i class="bi bi-noise-reduction"></i>
-          </button>
-        </div>
+            <div class="menuBox">
+              <div class="lang-selector">
+                <button id="lang-toggle" aria-label="Select language">En <i class="bi bi-chevron-down"></i></button>
+                <ul id="lang-menu" class="hidden">
+                  <li><button data-lang="en">English</button></li>
+                  <li><button data-lang="es">Español</button></li>
+                </ul>
+              </div>
+              <button id="noise-btn" aria-label="Toggle noise effect"><i class="bi bi-noise-reduction"></i></button>
+            </div>
+
         </nav>
         <div class="container">
             <div class="container-about-me" id="about-me">
                 <div id="about-me-content">
-                    <div>
-                        <h1>About m<span class="e">e</span></h1>
-                        <p>
+                    <div >
+                        <h1 data-i18n= "aboutBtn">About me</h1>
+                        <p data-i18n="aboutMeContent" >
                            Hello, I'm Ari, a front-end developer and web designer passionate about design, symmetry, and clean user interfaces. I believe that well-crafted layouts not only provide visual stability but also enhance the user experience in subtle, powerful ways. Over the years, I've found a unique balance between design and development, where creativity and logic 
                             converge
                         . It's in that middle ground where I feel most at home, turning ideas into engaging and functional experiences for users. I'm always seeking opportunities to grow, collaborate with inspiring teams, and create products that make a difference.
                         </p>
                     </div>                    
                     <img src="../assets/img/Ari-typing.webp"  alt="The author is sitting and typing in front of the PC."loading="lazy">
-                    <p><span style="font-style: italic;">"Below the surface of the machine,
+                    <p data-i18n="aboutMeContent2"><span style="font-style: italic;">"Below the surface of the machine,
                         the program moves. Without effort, it expands and contracts.
-                        In great harmony, electrons scatter and regroup. <br> The forms on the monitor are but ripples on the water.
-                        The essence stays invisibly below"<br>
+                        In great harmony, electrons scatter and regroup. The forms on the monitor are but ripples on the water.
+                        The essence stays invisibly below"
                     </p>                                   
                 </div>               
             </div> 

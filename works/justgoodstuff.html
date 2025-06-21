@@ -36,28 +36,34 @@
       <div class="cardsDetail-container">
         <div class="nav-dark-noise">
           <div class="dark-btn-box">
-            <button id="dark-btn" aria-label="Toggle dark mode">
-              <i class="bi bi-brightness-high"></i>
-            </button>
+            <button id="dark-btn" aria-label="Toggle dark mode"><i class="bi bi-moon-stars"></i></button>
+            <button id="day-btn" aria-label="Toggle day mode"><i class="bi bi-brightness-high-fill"></i></button>
           </div>
+          
           <div class="menuBox">
-            <button id="noise-btn" aria-label="Toggle noise effect">
-              <i class="bi bi-noise-reduction"></i>
-            </button>
+            <div class="lang-selector">
+              <button id="lang-toggle" aria-label="Select language">En <i class="bi bi-chevron-down"></i></button>
+              <ul id="lang-menu" class="hidden">
+                <li><button data-lang="en">En</button></li>
+                <li><button data-lang="es">Es</button></li>
+              </ul>
+            </div>
+            <button id="noise-btn" aria-label="Toggle noise effect"><i class="bi bi-noise-reduction"></i></button>
           </div>
+
         </div>
         <div class="justgoodstuff-content">
           <div class="nextAndBack">
-            <a href="./works.html"class="backButton" id="backButton">Back</a>
-            <a href="../index.html" class="backButton">Main</a>
-            <a href="./tuvinilo.html" class="backButton">Next</a>
+            <a data-i18n="backBtn" href="./works.html"class="backButton" id="backButton">Back</a>
+            <a data-i18n="mainBtn" href="../index.html" class="backButton">Main</a>
+            <a data-i18n="nextBtn" href="./tuvinilo.html" class="backButton">Next</a>
           </div>
           <h1>JUSTGOODSTUFF</h1>
-          <h2 id="subtitle">
+          <h2 data-i18n="jgsSubtitle" id="subtitle">
             A React-based minimalist eCommerce built from scratch using Firebase
             & Context API
           </h2>
-          <a href="https://github.com/Ari-Dsgns/my-ecommerce" target="_blank"
+          <a  href="https://github.com/Ari-Dsgns/my-ecommerce" target="_blank"
             ><i class="bi bi-link-45deg"></i>View source code → GitHub</a
           >
           <a href="https://justgoodstuff.vercel.app/" target="_blank" class="try-me-button">
@@ -72,52 +78,94 @@
             <img src="../assets/icons/bootstrap-icon.svg" alt="bootstrap icon">
             <img src="../assets/icons/canva-icon.svg" alt="canva icon">
           </div>
-          <h3><strong>Summary:</strong></h3>
-          <p>
-            JustGoodStuff is an online store built with React.js as part of a
-            bootcamp project, designed to be presented to a digital agency in
-            Argentina. It simulates a modern eCommerce experience with dynamic
-            navigation, a functional cart, and a full checkout process.
+          <h3>
+            <strong>
+              <i class="bi bi-clipboard-check"></i>
+              <span data-i18n="jgsSummaryTitle">Summary</span>
+            </strong>
+          </h3>
+          <p data-i18n="jgsSummaryContent">
+            Just Good Stuff is a fictional online clothing store I built as my final bootcamp project.
+            The goal was to create a realistic web app that could also be presented to a development
+            agency in Argentina, showcasing both frontend skills and integration with external services.
           </p>
 
           <div id="img-box">
             <img src="../assets/img/justgood.gif" alt="gif of JustGoodStuff e-commerce website showing its features">
           </div>
-          <h3><strong>Project goal:</strong></h3>
-          <p>
-            The goal was to build a scalable Single Page Application (SPA) with
-            clean architecture and good development practices, delivering an
-            intuitive user experience.
+          <h3>
+            <strong>
+              <i class="bi bi-bullseye"></i> 
+              <span data-i18n="jgsGoalTitle">Project goal:</span>
+            </strong>
+          </h3>
+          <p data-i18n="jgsGoalContent">
+            The main challenge was to build a modern, fast, and responsive online store that features:
           </p>
-          <h3><strong>Technologies used:</strong></h3>
-          <p>React.js</p>
-          <p>React Router DOM</p>
-          <p>Context API</p>
-          <p>Firebase (for order storage and purchase ID generation)</p>
-          <p>Custom CSS</p>
-          <p>Vercel (deployment)</p>
-          <p>⚙️ Project management with npm</p>
-          <h3><strong>My role</strong>:</h3>
-          <p>I developed the entire project from scratch:</p>
-          <p>✅ Designed the UI/UX</p>
-          <p>✅ Built responsive and semantic layout</p>
+          <p><i class="bi bi-dot"></i> A dynamic product catalog</p>
+          <p><i class="bi bi-dot"></i> Shopping cart functionality</p>
+          <p><i class="bi bi-dot"></i> Category filters</p>
+          <p><i class="bi bi-dot"></i> A smooth, reload-free user experience</p>
+          <h3>
+            <strong>
+              <i class="bi bi-cpu-fill"></i>
+              <span data-i18n="jgsTechTitle"> Technologies used:</span>
+            </strong>
+          </h3>
+          <p><i class="bi bi-dot"></i> React.js</p>
+          <p><i class="bi bi-dot"></i> React Router DOM</p>
+          <p><i class="bi bi-dot"></i> Context API</p>
+          <p><i class="bi bi-dot"></i> Firebase </p>
+          <p><i class="bi bi-dot"></i> Custom CSS</p>
+          <p><i class="bi bi-dot"></i> Vercel (deployment)</p>
+          <p><i class="bi bi-dot"></i> Project management - npm</p>
+          <h3>
+            <strong>
+              <i class="bi bi-person-workspace"></i>
+              <span data-i18n="jgsRoleTitle"> My role:</span>
+            </strong>
+          </h3>
+          <p data-i18n="jgsRoleContent">I developed the entire project from scratch:</p>
           <p>
-            ✅ Implemented dynamic routing (/item/:itemId,
-            /category/:categoryId)
+            <i class="bi bi-check2-circle"></i>
+            <span data-i18n="jgsRoleContent_a">Designed the UI/UX</span>
           </p>
-          <p>✅ Developed global cart logic using Context API</p>
           <p>
-            ✅ Integrated Firebase for order storage and checkout functionality
+            <i class="bi bi-check2-circle"></i>
+            <span data-i18n="jgsRoleContent_b">Built responsive layout</span>
           </p>
-          <h3><strong>Challenges and solutions:</strong></h3>
           <p>
+            <i class="bi bi-check2-circle"></i>
+            <span data-i18n="jgsRoleContent_c">Implemented dynamic routing (/item/:itemId,
+            /category/:categoryId)</span> 
+          </p>
+          <p>
+            <i class="bi bi-check2-circle"></i>
+            <span data-i18n="jgsRoleContent_d">Developed global cart logic using Context API</span>
+          </p>
+          <p>
+            <i class="bi bi-check2-circle"></i>
+            <span data-i18n="jgsGoalContent_e">Integrated Firebase for order storage and checkout functionality</span>
+          </p>
+          <h3>
+            <strong>
+              <i class="bi bi-lightbulb"></i>
+              <span data-i18n="jgsChallengeTitle">Challenges and solutions:</span>
+            </strong>
+          </h3>
+          <p data-i18n="jgsChallengeContent">
             The main challenge was keeping dynamic routing for categories and
             product pages fully in sync while maintaining a consistent global
             cart state. I solved this using React Router for dynamic routes and
             Context API for state management I also implemented a checkout
             system that stores each order in Firebase with a unique ID.
           </p>
-          <p>What I learned:</p>
+          <h3>
+            <strong>
+              <i class="bi bi-mortarboard"></i>
+              <span data-i18n="jgsLearnTitle">What I learned:</span>
+            </strong>
+          </h3>
           <p>Modular architecture in React</p>
           <p>Global state management with Context API</p>
           <p>Front-end integration with cloud services (Firebase)</p>
