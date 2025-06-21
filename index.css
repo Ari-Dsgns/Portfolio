@@ -425,11 +425,12 @@ a {
 .dark-btn-box{
   display: flex;
   gap: 1.25rem;
-  align-content: center;
+  height: 40px;
   align-items: center;
+  align-content: center;
   justify-content: space-between;
   width: 90px;
-  border: solid .1rem rgba(255, 255, 255, 0);
+  border: solid 0px rgba(255, 255, 255, 0.774);
 }
 #dark-btn {
   font-size: 1.25rem;
@@ -461,8 +462,8 @@ a {
   align-content: center;
   align-items: center;
   justify-content: space-between;
-  
   width: 90px;
+  border: solid 0px rgba(255, 255, 255, 0.774);
 
 }
 
