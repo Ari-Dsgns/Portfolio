@@ -45,8 +45,8 @@
             <div class="lang-selector">
               <button id="lang-toggle" aria-label="Select language">En <i class="bi bi-chevron-down"></i></button>
               <ul id="lang-menu" class="hidden">
-                <li><button data-lang="en">En</button></li>
-                <li><button data-lang="es">Es</button></li>
+                <li><button data-lang="en">English</button></li>
+                <li><button data-lang="es">Español</button></li>
               </ul>
             </div>
             <button id="noise-btn" aria-label="Toggle noise effect"><i class="bi bi-noise-reduction"></i></button>
@@ -55,12 +55,12 @@
         </div>
         <div class="tuvinilo-content">
           <div class="nextAndBack">
-            <a href="./justgoodstuff.html" class="backButton">Back</a>
-            <a href="../index.html" class="backButton">Main</a>
-            <a href="./destinea.html"class="backButton">Next</a>
+            <a data-i18n="backBtn" href="./justgoodstuff.html" class="backButton">Back</a>
+            <a data-i18n="mainBtn"  href="../index.html" class="backButton">Main</a>
+            <a data-i18n="nextBtn" href="./destinea.html"class="backButton">Next</a>
           </div>
           <h1>TU VINILO</h1>
-          <h2 id="subtitle">
+          <h2 data-i18n="tuviniloSubtitle" id="subtitle">
             A clean and minimalist vinyl record eCommerce with dynamic cart and
             smooth navigation
           </h2>
@@ -80,7 +80,13 @@
             <img src="../assets/icons/figma-icon.svg" alt="figma icon">
             <img src="../assets/icons/canva-icon.svg" alt="canva icon">
           </div>
-          <p>
+          <h3>
+            <strong>
+              <i class="bi bi-clipboard-check"></i>
+              <span data-i18n="SummaryTitle">Summary</span>
+            </strong>
+          </h3>
+          <p data-i18n="tuviniloSummaryContent">
             TuVinilo is an online vinyl record store designed for music lovers.
             The platform allows users to browse a curated collection of records,
             add them to their cart, and complete their purchase with ease. The
@@ -91,26 +97,46 @@
           <div id="img-box">
             <img src="../assets/img/tuvinilo (2).gif" alt="short gif showing website interactions">
           </div>
-          <h3><strong>Technologies used:</strong></h3>
-          <p>HTML5</p>
-          <p>CSS3</p>
-          <p>javaScript Vanilla</p>
-          <h3><strong>Project goal:</strong></h3>
-          <p>
+          <h3>
+            <strong>
+              <i class="bi bi-bullseye"></i> 
+              <span data-i18n="GoalTitle">Project goal:</span>
+            </strong>
+          </h3>
+          <p data-i18n="tuviniloGoalContent">
             The main objective was to create a visually appealing and functional
             eCommerce experience that captures the vibe of vinyl culture. The
             focus was on smooth navigation and an interface that feels as
             nostalgic and enjoyable as listening to records.
           </p>
-          <h3><strong>My role:</strong></h3>
-          <p>
+          <h3>
+            <strong>
+              <i class="bi bi-cpu-fill"></i>
+              <span data-i18n="TechTitle"> Technologies used:</span>
+            </strong>
+          </h3>
+          <p>HTML5</p>
+          <p>CSS3</p>
+          <p>javaScript Vanilla</p>
+          <h3>
+            <strong>
+              <i class="bi bi-person-workspace"></i>
+              <span data-i18n="RoleTitle"> My role:</span>
+            </strong>
+          </h3>
+          <p data-i18n="tuviniloRoleContent">
             I handled the entire development process—from UI/UX design to
             implementing core features like the shopping cart and dynamic
             navigation. Special care was taken to ensure the user journey was
             seamless, balancing aesthetics with usability across all devices.
           </p>
-          <h3><strong>Challenges & lessons learned:</strong></h3>
-          <p>
+          <h3>
+            <strong>
+              <i class="bi bi-lightbulb"></i>
+              <span data-i18n="ChallengeTitle">Challenges and solutions:</span>
+            </strong>
+          </h3>
+          <p data-i18n="tuviniloChallengeContent">
             One of the key challenges was creating an intuitive layout while
             keeping the interface visually clean. I implemented
             hidden-yet-accessible navigation and cart elements, which required
@@ -119,8 +145,8 @@
             to merge visual design with interactive functionality.
           </p>
           <div class="nextAndBack">
-            <a href="./justgoodstuff.html" class="backButton">Back</a>
-            <a href="./destinea.html" class="backButton">Next</a>
+            <a data-i18n="backBtn" href="./justgoodstuff.html" class="backButton">Back</a>
+            <a data-i18n="nextBtn" href="./destinea.html" class="backButton">Next</a>
           </div>
         </div>
       </div>

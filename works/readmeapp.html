@@ -25,8 +25,8 @@
             <div class="lang-selector">
               <button id="lang-toggle" aria-label="Select language">En <i class="bi bi-chevron-down"></i></button>
               <ul id="lang-menu" class="hidden">
-                <li><button data-lang="en">En</button></li>
-                <li><button data-lang="es">Es</button></li>
+                <li><button data-lang="en">English</button></li>
+                <li><button data-lang="es">Español</button></li>
               </ul>
             </div>
             <button id="noise-btn" aria-label="Toggle noise effect"><i class="bi bi-noise-reduction"></i></button>
@@ -35,12 +35,12 @@
         </div>
         <div class="readmeapp-content">
           <div class="nextAndBack">
-            <a href="./destinea.html" class="backButton">Back</a>
-            <a href="../index.html" class="backButton" id="main-btn">Main</a>
-            <a href="./saffvision.html" class="backButton">Next</a>
+            <a data-i18n="backBtn" href="./destinea.html" class="backButton">Back</a>
+            <a data-i18n="mainBtn" href="../index.html" class="backButton" id="main-btn">Main</a>
+            <a  data-i18n="nextBtn" href="./saffvision.html" class="backButton">Next</a>
           </div>
           <h1>READMEAPP</h1>
-          <h2 id="subtitle">
+          <h2 data-i18n="readmeappSubtitle" id="subtitle">
             A fast and enjoyable app for reading- Case study
           </h2>
           <a href="https://www.youtube.com/watch?v=iSuNxiC3zIM" target="_blank" class="try-me-button">
@@ -54,8 +54,13 @@
               alt="photoshop icon"
             />
           </div>
-          <h3><strong>Summary: </strong></h3>
-          <p>
+          <h3>
+            <strong>
+              <i class="bi bi-clipboard-check"></i>
+              <span data-i18n="SummaryTitle">Summary</span>
+            </strong>
+          </h3>
+          <p data-i18n="readmeappSummaryContent">
             This is a speed reading app designed for users with little time or
             who want to improve their reading habits in a fun and purposeful
             way. It's a UX/UI project where the main objective and focus is to
@@ -68,8 +73,8 @@
             <a href="./destinea.html" class="backButton">Back</a
             >
             <a href="#main-btn" class="backButton">UP</a>
-            <a href="../index.html" class="backButton" id="main-btn">Main</button></a>
-            <a href="./saffvision.html" class="backButton">Next</a>
+            <a data-i18n="backBtn" href="../index.html" class="backButton" id="main-btn">Main</button></a>
+            <a data-i18n="nextBtn" href="./saffvision.html" class="backButton">Next</a>
           </div>
         </div>
       </div>
