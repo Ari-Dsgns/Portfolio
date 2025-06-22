@@ -1279,7 +1279,7 @@ a {
   z-index: 3;
   border: solid 0px rgba(255, 255, 255, 0);
   background-color:var(--background-color);
-  overflow: hidden;
+  overflow: visible;
   overflow-y: scroll;
   div {
     display: flex;
@@ -1298,18 +1298,22 @@ a {
   display: flex;
   flex-direction: column;
   width: 50%;
-  
+  border: solid 0px rgba(255, 255, 255, 0.884);
   align-items: center;
   align-content: center ;
   padding: 0px;
   overflow-y: auto;
+  
 
   h1{
-    
+    border: solid 0px rgba(255, 255, 255, 0.818);
     text-align: center;
-    font-family: "Advent Pro", serif;
+    font-family: "Advent Pro", serif; 
     font-family: "Space Mono", monospace;
     color: var(--font-color) ;
+    word-wrap:normal;
+    max-width: 100%;
+    hyphens: auto;
     
 
     @media (max-width: 425px) {
@@ -1393,7 +1397,7 @@ a {
 }
 
 .submit-btn{
-  width: 20%;
+  width: 120px;
   height: 40px;
   align-self: center;
   background-color: var(--font-color);
@@ -1487,7 +1491,7 @@ border: 0;
   align-self: center;
   text-decoration: none;
   width: 100%;
-  height:25%;
+  height:60px;
   font-size: 32px;
   font-weight: 800;
   transform: rotateZ(-2deg);
@@ -1514,7 +1518,7 @@ border: 0;
   align-items: center;
   align-self: center;
   width: 100%;
-  height:25%;
+  height:60px;
   font-size: 32px;
   font-weight: 800;
   background-color: var(--background-color-night);
@@ -1540,7 +1544,7 @@ border: 0;
   position: relative;
   align-self: center;
   width: 100%;
-  height: 25%;
+  height: 60px;
   font-size: 32px;
   font-weight: 800;
   background-color: var(--font-color);
