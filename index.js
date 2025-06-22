@@ -235,13 +235,13 @@ document.addEventListener("DOMContentLoaded", () => {
       ChallengeTitle: 'Desafíos y soluciones:',
       LearnTitle: 'Mi Aprendizaje: ',
       
-      jgsSummaryContent: 'JustGoodStuff es una tienda de productos online ficticia que construí como proyecto final del bootcamp. El objetivo era crear una aplicación web realista que también pudiera ser presentada a una agencia de desarrollo en Argentina, mostrando tanto las habilidades frontales como la integración con servicios externos.',
+      jgsSummaryContent: 'JustGoodStuff es una tienda de productos online ficticia que construí como proyecto final del bootcamp. El objetivo era crear una aplicación web realista que también pudiera ser presentada a una agencia de desarrollo en Argentina, mostrando tanto las habilidades de front end, así como la integración con servicios externos.',
 
       jgsGoalContent: 'El principal reto consistía en crear una tienda online moderna, rápida y con capacidad de respuesta:',
-      jgsGoalContent_a: 'Solo cosas buenas',
-      jgsGoalContent_b: 'Solo cosas buenas',
-      jgsGoalContent_c: 'Solo cosas buenas',
-      jgsGoalContent_d: 'Solo cosas buenas',
+      jgsGoalContent_a: 'Un catálogo de productos dinámico',
+      jgsGoalContent_b: 'Funcionalidad de carrito de compras',
+      jgsGoalContent_c: 'Filtros de categorías',
+      jgsGoalContent_d: 'Una experiencia de usuario fluida y sin recargas',
       
       jgsRoleContent: 'He desarrollado todo el proyecto desde cero:',
       jgsRoleContent_a: 'Diseño completo de UI/UX',
