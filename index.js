@@ -126,6 +126,30 @@ document.addEventListener("DOMContentLoaded", () => {
     langToggle.innerHTML = `${savedLang.toUpperCase()} <i class="bi bi-chevron-down"></i>`;
   });
 
+    const workBtn = document.querySelector("#work-btn");
+    const aboutBtn = document.querySelector("#about-btn");
+    const contactBtn = document.querySelector("#contact-btn");
+    const settingsLeft = document.querySelector(".settings-icon-left");
+    const settingsRight = document.querySelector(".settings-icon-right");
+
+
+    // workBtn.addEventListener("mouseenter", () => {
+    //   settingsLeft.style.transform = "rotate(50deg)";
+      
+    //   settingsRight.style.transform = "rotate(50deg)";
+    // });
+
+    // aboutBtn.addEventListener("mouseenter", () => {
+    //   settingsLeft.style.transform = "rotate(90deg)";
+    //   settingsRight.style.transform = "rotate(90deg)";
+    // });
+
+    // contactBtn.addEventListener("mouseenter", () => {
+    //   settingsLeft.style.transform = "rotate(120deg)"; 
+    //   settingsRight.style.transform = "rotate(120deg)";
+    // });  
+
+
 
 
   const translations={
@@ -198,6 +222,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       readmeappSubtitle: 'A fast and enjoyable app for reading- Case study',
       readmeappSummaryContent: 'This is a speed reading app designed for users with little time or who want to improve their reading habits in a fun and purposeful way. It is a UX/UI project where the main objective and focus is to provide a great user experience.',
+
+      saffvisionSubtitle: 'A creative portfolio with a camera shutter-inspired menu animation to captivate visitors',
+      saffvisionSummaryContent: 'SaffVision is a prototype-portfolio website designed with a commercial focus to attract and engage visitors. The site features a unique menu opening animation inspired by a camera shutter, enhancing the visual storytelling and user experience. This creative interaction helps reflect the brand’s identity and draws attention to the showcased work.',
+      saffvisionGoalContent: 'The goal was to design an innovative portfolio prototype that reflects the photography theme through creative navigation effects. This concept aims to attract attention and provide an engaging user experience in a commercial context.',
+      saffvisionRoleContent: 'I was responsible for the full design process using Figma and Photoshop, focusing on visual storytelling and interaction concepts. No coding was involved; the prototype serves as a visual blueprint for future development.',
+      saffvisionChallengeContent: 'Designing the camera shutter-inspired menu required careful planning to convey the animation concept visually. This project strengthened my skills in UI/UX design and prototyping with Figma and Photoshop, emphasizing creativity and user engagement.',
 
     },
 
@@ -272,6 +302,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       readmeappSubtitle: 'Una aplicación rápida y divertida para leer -Caso de estudio',
       readmeappSummaryContent: 'Esta es una aplicación de lectura rápida diseñada para usuarios con poco tiempo o que desean mejorar sus hábitos de lectura de una manera divertida y con propósito. Es un proyecto de UX/UI donde el objetivo principal y el enfoque es proporcionar una gran experiencia de usuario.',
+
+      saffvisionSubtitle: 'Un portafolio creativo con una animación de menú inspirada en el obturador de una cámara para cautivar a los visitantes',
+      saffvisionSummaryContent: 'SaffVision es un sitio web de prototipo-portafolio diseñado con un enfoque comercial para atraer y cautivar a los visitantes. El sitio cuenta con una animación de apertura de menú única inspirada en el obturador de una cámara, mejorando la narrativa visual y la experiencia del usuario. Esta interacción creativa ayuda a reflejar la identidad de la marca y atrae la atención hacia el trabajo exhibido.',
+      saffvisionGoalContent: 'El objetivo era diseñar un prototipo de portafolio innovador que reflejara el tema de la fotografía a través de efectos de navegación creativos. Este concepto busca atraer la atención y proporcionar una experiencia de usuario atractiva en un contexto comercial.',
+      saffvisionRoleContent: 'Fui responsable de todo el proceso de diseño utilizando Figma y Photoshop, enfocándome en la narrativa visual y los conceptos de interacción. No se involucró codificación; el prototipo sirve como un plano visual para el desarrollo futuro.',
+      saffvisionChallengeContent: 'Diseñar el menú inspirado en el obturador de la cámara requirió una planificación cuidadosa para transmitir visualmente el concepto de animación. Este proyecto fortaleció mis habilidades en diseño UI/UX y prototipado con Figma y Photoshop, enfatizando la creatividad y el compromiso del usuario.',
     }
   }
 
