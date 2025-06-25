@@ -1,159 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
-
-  
-  const mainContainer = document.querySelector(".main-container");
-  const savedTheme = localStorage.getItem("theme");
-  const savedNoise = localStorage.getItem("noise");
-  const noise = document.querySelector(".noise");
-  
-  const noiseBtn = document.querySelector("#noise-btn");
-  const darkBtn = document.querySelector("#dark-btn");
-  const dayBtn = document.querySelector("#day-btn");
-  const darkIcon = darkBtn.querySelector("i");
-  const dayIcon = dayBtn.querySelector("i");
-
-  function cleanNoise() {
-    if (noise.classList.contains("clean")) {
-      noise.classList.remove("clean");
-    } else {
-      noise.classList.add("clean");
-    }
-  }
-
-  if (savedTheme === "night") {
-    mainContainer.classList.add("night");
-    
-
-    darkIcon.classList.remove("bi-moon-stars");
-    darkIcon.classList.add("bi-moon-stars-fill");
-    dayIcon.classList.remove("bi-brightness-high-fill");
-    dayIcon.classList.add("bi-brightness-high");
-  } else {
-    mainContainer.classList.remove("night");
-    
-
-    darkIcon.classList.remove("bi-moon-stars-fill");
-    darkIcon.classList.add("bi-moon-stars");
-    dayIcon.classList.remove("bi-brightness-high");
-    dayIcon.classList.add("bi-brightness-high-fill");
-  }
-
-  if (savedNoise === "on") {
-    noise.classList.add("clean");
-  }
-
-  noiseBtn.addEventListener("click", () => {
-    if (noise.classList.contains("clean")) {
-      localStorage.setItem("noise", "off");
-      noiseBtn.classList.remove("on");
-    } else {
-      localStorage.setItem("noise", "on");
-      noiseBtn.classList.add("on");
-    }
-    cleanNoise();
-  });
-
-  darkBtn.addEventListener("click", () => {
-    if (!mainContainer.classList.contains("night")) {
-      mainContainer.classList.add("night");
-      localStorage.setItem("theme", "night");
-      
-
-      darkIcon.classList.remove("bi-moon-stars");
-      darkIcon.classList.add("bi-moon-stars-fill");
-
-      dayIcon.classList.remove("bi-brightness-high-fill");
-      dayIcon.classList.add("bi-brightness-high");
-    }
-  });
-
-  dayBtn.addEventListener("click", () => {
-    if (mainContainer.classList.contains("night")) {
-      mainContainer.classList.remove("night");
-      localStorage.setItem("theme", "day");
-      
-
-      darkIcon.classList.remove("bi-moon-stars-fill");
-      darkIcon.classList.add("bi-moon-stars");
-
-      dayIcon.classList.remove("bi-brightness-high");
-      dayIcon.classList.add("bi-brightness-high-fill");
-    }
-  });
-
-  
-
-
-  const langToggle = document.querySelector("#lang-toggle");
-  const langMenu = document.querySelector("#lang-menu");
-
-  langToggle.addEventListener("click", () => {
-    langMenu.classList.toggle("show");
-  });
-
-
-  langMenu.addEventListener("click", (event) => {
-    if (event.target.dataset.lang){
-      const lang = event.target.dataset.lang;
-      switchLanguage(lang);
-      langToggle.innerHTML = `${lang.toUpperCase()} <i class="bi bi-chevron-down"></i>`;
-      langMenu.classList.remove("show");
-    }
-  });
-
-  
-  function switchLanguage(lang) {
-    localStorage.setItem("lang", lang);
-    document.querySelectorAll("[data-i18n]").forEach(element => {
-      const key = element.getAttribute("data-i18n");
-      const span = element.querySelector("span");
-      if(span){
-        span.textContent = translations[lang][key] || span.textContent;
-      }
-       if (element.placeholder !== undefined) {
-        element.placeholder = translations[lang][key] || element.placeholder;
-      }
-      else{
-        element.textContent = translations[lang][key] || element.textContent;
-      }
-  })
-
-  }
-
-  window.addEventListener("DOMContentLoaded", () => {
-    const savedLang = localStorage.getItem("lang") || "en";
-    switchLanguage(savedLang);
-    langToggle.innerHTML = `${savedLang.toUpperCase()} <i class="bi bi-chevron-down"></i>`;
-  });
-
-    const workBtn = document.querySelector("#work-btn");
-    const aboutBtn = document.querySelector("#about-btn");
-    const contactBtn = document.querySelector("#contact-btn");
-    const settingsLeft = document.querySelector(".settings-icon-left");
-    const settingsRight = document.querySelector(".settings-icon-right");
-
-
-    // workBtn.addEventListener("mouseenter", () => {
-    //   settingsLeft.style.transform = "rotate(50deg)";
-      
-    //   settingsRight.style.transform = "rotate(50deg)";
-    // });
-
-    // aboutBtn.addEventListener("mouseenter", () => {
-    //   settingsLeft.style.transform = "rotate(90deg)";
-    //   settingsRight.style.transform = "rotate(90deg)";
-    // });
-
-    // contactBtn.addEventListener("mouseenter", () => {
-    //   settingsLeft.style.transform = "rotate(120deg)"; 
-    //   settingsRight.style.transform = "rotate(120deg)";
-    // });  
-
-
-
-
-  const translations={
+const translations={
     en: {
+
       workBtn: 'Work',
       aboutBtn: 'About',
       contactBtn: 'Contact',
@@ -229,9 +76,25 @@ document.addEventListener("DOMContentLoaded", () => {
       saffvisionRoleContent: 'I was responsible for the full design process using Figma and Photoshop, focusing on visual storytelling and interaction concepts. No coding was involved; the prototype serves as a visual blueprint for future development.',
       saffvisionChallengeContent: 'Designing the camera shutter-inspired menu required careful planning to convey the animation concept visually. This project strengthened my skills in UI/UX design and prototyping with Figma and Photoshop, emphasizing creativity and user engagement.',
 
+      cookiesLink: "Cookies & Privacy",
+      cookiesTitle: "Cookies & Privacy Policy",
+      cookiesSubtitle: "At arisanpala.com, we are committed to protecting your privacy ",
+      useCookiesTitle: "Use of Cookies",
+      useCookiesContent: "We do not use advertising or third-party tracking cookies (except those necessary for the proper functioning of the services mentioned).",
+      useCookiesContent2: "This site uses essential technical cookies required for its proper functioning. We also use services like Cloudflare to improve performance and security, which may involve the use of technical cookies.",
+      dataProtectionTitle: "Data Protection",
+      dataProtectionContent: "This site does not directly collect or process personal identifiable information without your consent.",
+      externalLinkTitle: "External Links",
+      externalLinkContent: "Links to social networks and other sites (such as GitHub, LinkedIn) are provided for reference. Clicking on them will subject you to their respective privacy policies.",
+      moreInfoTitle: "More Information",
+      moreInfoContent: "For any questions related to privacy or cookies, you can contact us through the contact form.",
+      BackToHome: "Back to Home",
+
     },
 
     es: {
+
+      
       workBtn: 'Trabajos',
       aboutBtn: 'Sobre mi',
       contactBtn: 'Contacto',
@@ -308,10 +171,134 @@ document.addEventListener("DOMContentLoaded", () => {
       saffvisionGoalContent: 'El objetivo era diseñar un prototipo de portafolio innovador que reflejara el tema de la fotografía a través de efectos de navegación creativos. Este concepto busca atraer la atención y proporcionar una experiencia de usuario atractiva en un contexto comercial.',
       saffvisionRoleContent: 'Fui responsable de todo el proceso de diseño utilizando Figma y Photoshop, enfocándome en la narrativa visual y los conceptos de interacción. No se involucró codificación; el prototipo sirve como un plano visual para el desarrollo futuro.',
       saffvisionChallengeContent: 'Diseñar el menú inspirado en el obturador de la cámara requirió una planificación cuidadosa para transmitir visualmente el concepto de animación. Este proyecto fortaleció mis habilidades en diseño UI/UX y prototipado con Figma y Photoshop, enfatizando la creatividad y el compromiso del usuario.',
+
+      cookiesLink: "Cookies & Privacidad",
+      cookiesTitle: "Política de Cookies y Privacidad",
+      cookiesSubtitle: "En arisanpala.com, estamos comprometidos con la protección de su privacidad ",
+      useCookiesTitle: "Uso de Cookies",
+      useCookiesContent: "No utilizamos cookies publicitarias ni de seguimiento de terceros (excepto las necesarias para el correcto funcionamiento de los servicios mencionados).",
+      useCookiesContent2: "Este sitio utiliza cookies técnicas esenciales requeridas para su correcto funcionamiento. También utilizamos servicios como Cloudflare para mejorar el rendimiento y la seguridad, lo que puede implicar el uso de cookies técnicas.",
+      dataProtectionTitle: "Protección de datos",
+      dataProtectionContent: "Este sitio no recopila datos personales de forma directa ni procesa información personal identificable sin tu consentimiento.",
+      externalLinkTitle: "Enlaces externos",
+      externalLinkContent: "Los enlaces a redes sociales y otros sitios (por ejemplo, GitHub, LinkedIn) se proporcionan como referencia. Al hacer clic en ellos, estarás sujeto a sus respectivas políticas de privacidad.",
+      moreInfoTitle: "Más información",
+      moreInfoContent: "Para cualquier consulta relacionada con la privacidad o las cookies, puedes contactar a través del formulario de contacto.",
+      BackToHome: "Volver al inicio",
+    }
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const mainContainer = document.querySelector(".main-container");
+  const noise = document.querySelector(".noise");
+  const noiseBtn = document.querySelector("#noise-btn");
+
+  const darkBtn = document.querySelector("#dark-btn");
+  const dayBtn = document.querySelector("#day-btn");
+
+  const langToggle = document.querySelector("#lang-toggle");
+  const langMenu = document.querySelector("#lang-menu");
+
+  const savedTheme = localStorage.getItem("theme");
+  const savedNoise = localStorage.getItem("noise");
+  const savedLang = localStorage.getItem("lang") || "en";
+
+  let darkIcon = null;
+  let dayIcon = null;
+  
+  if (darkBtn) darkIcon = darkBtn.querySelector("i");
+  if (dayBtn) dayIcon = dayBtn.querySelector("i");
+  
+  function cleanNoise() {
+    if (!noise) return;
+    noise.classList.toggle("clean");
+  }
+
+  //  Aplica tema guardado
+  if (savedTheme === "night" && mainContainer) {
+    mainContainer.classList.add("night");
+    if (darkIcon && dayIcon) {
+      darkIcon.classList.replace("bi-moon-stars", "bi-moon-stars-fill");
+      dayIcon.classList.replace("bi-brightness-high-fill", "bi-brightness-high");
+    }
+  } else {
+    mainContainer?.classList.remove("night");
+    if (darkIcon && dayIcon) {
+      darkIcon.classList.replace("bi-moon-stars-fill", "bi-moon-stars");
+      dayIcon.classList.replace("bi-brightness-high", "bi-brightness-high-fill");
     }
   }
 
-  
+  //  Aplica ruido guardado
+  if (savedNoise === "on" && noise) {
+    noise.classList.add("clean");
+  }
+
+   //  Eventos
+  noiseBtn?.addEventListener("click", () => {
+    const noiseOn = noise?.classList.contains("clean");
+    localStorage.setItem("noise", noiseOn ? "off" : "on");
+    noiseBtn.classList.toggle("on", !noiseOn);
+    cleanNoise();
+  });
+
+  darkBtn?.addEventListener("click", () => {
+    if (!mainContainer?.classList.contains("night")) {
+      mainContainer.classList.add("night");
+      localStorage.setItem("theme", "night");
+      darkIcon?.classList.replace("bi-moon-stars", "bi-moon-stars-fill");
+      dayIcon?.classList.replace("bi-brightness-high-fill", "bi-brightness-high");
+    }
+  });
+
+  dayBtn?.addEventListener("click", () => {
+    if (mainContainer?.classList.contains("night")) {
+      mainContainer.classList.remove("night");
+      localStorage.setItem("theme", "day");
+      darkIcon?.classList.replace("bi-moon-stars-fill", "bi-moon-stars");
+      dayIcon?.classList.replace("bi-brightness-high", "bi-brightness-high-fill");
+    }
+  });
+
 
   
+
+
+  //  Selector de idioma
+  langToggle?.addEventListener("click", () => {
+    langMenu?.classList.toggle("show");
+  });
+
+
+  langMenu?.addEventListener("click", (event) => {
+    const lang = event.target.dataset.lang;
+    if (lang) {
+      switchLanguage(lang);
+      localStorage.setItem("lang", lang);
+      if (langToggle)
+        langToggle.innerHTML = `${lang.toUpperCase()} <i class="bi bi-chevron-down"></i>`;
+      langMenu.classList.remove("show");
+    }
+  });
+
+  function switchLanguage(lang) {
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+      const key = element.getAttribute("data-i18n");
+      const span = element.querySelector("span");
+      if (span) {
+        span.textContent = translations[lang][key] || span.textContent;
+      } else if (typeof element.placeholder !== "undefined") {
+        element.placeholder = translations[lang][key] || element.placeholder;
+      } else {
+        element.textContent = translations[lang][key] || element.textContent;
+      }
+    });
+  }
+
+   // Traducción inicial
+  switchLanguage(savedLang);
+  if (langToggle)
+  langToggle.innerHTML = `${savedLang.toUpperCase()} <i class="bi bi-chevron-down"></i>`;
+
 });

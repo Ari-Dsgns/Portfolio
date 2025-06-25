@@ -1557,6 +1557,8 @@ border: 0;
   transition: 0.1s ease-in;
   z-index: 3;
   box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3) , -8px -8px 0px rgba(0, 0, 0, 0.3) ;
+  position: relative;
+  
   
 }
 
@@ -1581,7 +1583,7 @@ border: 0;
   color: var(--font-color);
   box-shadow: 15px 0px 0px rgba(0, 0, 0, 0.3) , -15px 0px 0rem rgba(0, 0, 0, 0.3) ;
   transition: 0.1s ease-in;
-
+  
 }
 #about-btn:hover {
   outline: solid 0px var(--font-color);
