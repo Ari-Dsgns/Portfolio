@@ -49,14 +49,14 @@ a {
   justify-content: start;
   gap: 30px;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 40px;
   color: var(--background-color-night);
   z-index: 3;
-  background-color:#e4e4e4;
+  background-color:#d4d2d2;
   @media (max-width: 425px) {
-    width: 100%;
-    height: 90vh;
+    
+    height: 100%;
     padding: 8px;
   }
 }
@@ -66,6 +66,10 @@ a {
   color: var(--font-color-text);
   font-weight: 700;
   box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.647) , -8px -8px 0px rgba(0, 0, 0, 0.699)   ;
+
+  @media (max-width: 425px) {
+    margin: 20px;
+  }
 }
 
 
@@ -267,6 +271,7 @@ a {
   .cards-container {
     background-color: rgb(40, 40, 40);
   }
+  #card0,
   #card1,
   #card2,
   #card3,
@@ -276,7 +281,7 @@ a {
     background-color: var(--color-card-night2);
 
   }
-
+  #card0:hover h3,
   #card1:hover h3,
   #card2:hover h3,
   #card3:hover h3,
@@ -393,7 +398,7 @@ a {
     color: #eaeaed;
 
   }
-
+  .erischatbot-content,
   .justgoodstuff-content,
   .tuvinilo-content,
   .destinea-content,
@@ -702,6 +707,8 @@ a {
   animation: appear 2s  ;
 }
 
+
+
 .brand {
   border: solid 0rem rgba(76, 13, 224, 0);
   text-align: center;
@@ -909,6 +916,32 @@ a {
 
 }
 
+#card0{
+  font-family: "Advent Pro", serif;
+  transform: rotate(1deg);
+  text-align: center;
+  background-color: var(--font-color);
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3), -10px -10px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.1s ease-in;
+  font-weight: 900;
+  font-size: 5.625rem;
+  padding-left: 18px;
+  padding-right: 18px;
+  color: var(--background-color-night);
+
+  @media (max-width: 75rem) {
+    font-size: 4.25rem;
+  }
+
+
+  @media (max-width: 425px) {
+    font-size: 52px;
+   
+  }
+  @media (max-width: 325px) {
+    font-size: 38px;
+  }
+}
 #card1{
   font-family: "Advent Pro", serif;
   transform: rotate(-2deg);
@@ -936,13 +969,6 @@ a {
   }
 
 }
-
-
-
-
-
-
-
 #card2{
   transform: rotate(1deg);
   background-color: var(--font-color);
@@ -1058,7 +1084,7 @@ a {
   }
 }
 
-
+#card0:hover,
 #card1:hover,
 #card2:hover,
 #card3:hover,
@@ -1134,11 +1160,12 @@ a {
     box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3) , -8px -8px 0px rgba(0, 0, 0, 0.3) ;
   }
 }
-
+.erischatbot-content,
 .justgoodstuff-content,
 .tuvinilo-content,
 .destinea-content,
-.readmeapp-content {
+.readmeapp-content,
+.saffvision-content {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -1178,6 +1205,8 @@ a {
     padding: 10px;
     align-self: flex-start;
     gap: .5rem;
+    background-color: #cce1e39d;
+    box-shadow: .375rem .375rem 0px rgba(0, 0, 0, 0.3) , -.375rem -.375rem 0px rgba(0, 0, 0, 0.3) ;
   }
   p{
     font-size: 1.25rem;
@@ -1196,6 +1225,7 @@ a {
     justify-content: center;
     align-items: center;
     padding: 40px;
+    
 
 
     img {
@@ -1514,6 +1544,7 @@ border: 0;
   gap: 20px;
   transition: 1s;
   animation: appear 2.5s  ;
+  
   ul {
     list-style: none;
     display: flex;
@@ -1558,6 +1589,7 @@ border: 0;
   z-index: 3;
   box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3) , -8px -8px 0px rgba(0, 0, 0, 0.3) ;
   position: relative;
+  
   
   
 }
@@ -1613,6 +1645,8 @@ border: 0;
   transition: 0.1s ease-in;
   z-index: 3;
   box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3) , -8px -8px 0px rgba(0, 0, 0, 0.3) ;
+
+  
 }
 #contact-btn:hover {
   outline: solid 0px black;
@@ -1622,6 +1656,10 @@ border: 0;
 }
 
 
+
+
+
+	
 
 
 

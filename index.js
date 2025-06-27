@@ -20,7 +20,7 @@ const translations={
       placeholderComment: 'Comment',
       contactSendButton: 'Send',
 
-      
+
       jgsSubtitle: 'A React-based minimalist eCommerce built from scratch using Firebase & Context API',
       jgsLinkGitHub: 'View source code → GitHub',
       jgsLinkDemo: 'Live Demo',
@@ -31,9 +31,25 @@ const translations={
       RoleTitle: 'My role:',
       ChallengeTitle: 'Challenges and solutions:',
       LearnTitle: 'What I learned:',
+
+      erischatbotSubtitle: 'A University FAQ assistant built with React, Vite & Tailwind CSS',
+      erischatbotSummaryContent: 'ERIS is a chatbot designed to answer frequently asked questions from university students. Inspired by the solar system, it combines modern UI, accessibility, and attractive animations to engage young, tech-savvy users.',
+      erischatbotGoalContent: 'Build an accessible FAQ chatbot with a playful, futuristic visual identity while applying advanced React skills and Tailwind CSS for rapid prototyping.',
+      erischatbotRoleContent: 'I designed and developed the entire project:',
+      erischatbotRoleContent_a: 'Created brand identity and UI kit in Figma',
+      erischatbotRoleContent_b: 'Built a responsive chat interface in React & Tailwind',
+      erischatbotRoleContent_c: 'Developed interactive logic and bot responses in JS',
+      erischatbotRoleContent_d: 'Implemented accessibility standards (WCAG 2.1 AA)',
+      erischatbotRoleContent_e: 'Deployed via Vercel',
+      erischatbotChallengeContent: 'Ensuring keyboard navigation, screen reader compatibility, and fluid conversation flow while maintaining the brand´s solar-system inspired animations. Solved using semantic HTML, ARIA roles, and Tailwind´s utility-first approach for rapid design iterations.',
+      erisLearned_a: '• Building accessible interactive components with Tailwind CSS',
+      erisLearned_b: '• Combining React with Vite for fast dev workflow',
+      erisLearned_c: '• Designing chatbot UI for clarity and engagement',
+      erisLearned_d: '• Structuring scalable JS logic for FAQs',
+      
+      
       
       jgsSummaryContent: 'Just Good Stuff is a fictional online clothing store I built as my final bootcamp project. The goal was to create a realistic web app that could also be presented to a development agency in Argentina, showcasing both frontend skills and integration with external services.',
-
       jgsGoalContent: 'The main challenge was to build a modern, fast, and responsive online store that features:',
       jgsGoalContent_a: 'A dynamic product catalog',
       jgsGoalContent_b: 'Shopping cart functionality',
@@ -127,9 +143,23 @@ const translations={
       RoleTitle: 'Mi rol: ',
       ChallengeTitle: 'Desafíos y soluciones:',
       LearnTitle: 'Mi Aprendizaje: ',
+
+      erischatbotSubtitle: 'Un asistente de preguntas frecuentes universitario construido con React, Vite y Tailwind CSS',
+      erischatbotSummaryContent: 'ERIS es un chatbot diseñado para responder preguntas frecuentes de estudiantes universitarios. Inspirado en el sistema solar, combina una interfaz moderna, accesibilidad y animaciones atractivas para involucrar a usuarios jóvenes y tecnológicos.',
+      erischatbotGoalContent: 'Construir un chatbot de preguntas frecuentes accesible con una identidad visual lúdica y futurista, aplicando habilidades avanzadas de React y Tailwind CSS para prototipado rápido.',
+      erischatbotRoleContent: 'Fui responsable de todo el proceso de desarrollo, desde el diseño de la interfaz del chatbot hasta la implementación de la lógica del backend utilizando Firebase. El proyecto implicó crear una interfaz de chat fácil de usar, integrar Firebase para el manejo de datos en tiempo real y asegurar que el chatbot pudiera responder a las consultas de los usuarios con precisión.',
+      erischatbotRoleContent_a: 'Creé la identidad de marca y el kit de UI en Figma',
+      erischatbotRoleContent_b: 'Construí una interfaz de chat responsiva en React y Tailwind',
+      erischatbotRoleContent_c: 'Desarrollé la lógica interactiva y las respuestas del bot en JS',
+      erischatbotRoleContent_d: 'Implementé estándares de accesibilidad (WCAG 2.1 AA)',
+      erischatbotRoleContent_e: 'Deploy del proyecto a través de Vercel',
+      erischatbotChallengeContent: 'Asegurar la navegación por teclado, la compatibilidad con lectores de pantalla y un flujo de conversación fluido mientras se mantenían las animaciones inspiradas en el sistema solar de la marca. Se resolvió utilizando HTML semántico, roles ARIA y el enfoque utilitario de Tailwind para iteraciones de diseño rápidas.',
+      erisLearned_a: '• Construcción de componentes interactivos accesibles con Tailwind CSS',
+      erisLearned_b: '• Combinación de React con Vite para un flujo de trabajo de desarrollo rápido',
+      erisLearned_c: '• Diseño de la interfaz del chatbot para claridad y compromiso',
+      erisLearned_d: 'Estructuración de la lógica JS escalable para preguntas frecuentes',
       
       jgsSummaryContent: 'JustGoodStuff es una tienda de productos online ficticia que construí como proyecto final del bootcamp. El objetivo era crear una aplicación web realista que también pudiera ser presentada a una agencia de desarrollo en Argentina, mostrando tanto las habilidades de front end, así como la integración con servicios externos.',
-
       jgsGoalContent: 'El principal reto consistía en crear una tienda online moderna, rápida y con capacidad de respuesta:',
       jgsGoalContent_a: 'Un catálogo de productos dinámico',
       jgsGoalContent_b: 'Funcionalidad de carrito de compras',
