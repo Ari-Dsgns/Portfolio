@@ -915,6 +915,9 @@ a {
   animation: appear 2s  ;
 
 }
+#separator{
+  color: var(--font-color);
+}
 
 #card0{
   font-family: "Advent Pro", serif;
