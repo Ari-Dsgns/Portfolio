@@ -227,6 +227,8 @@ const translations={
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  
+
   const mainContainer = document.querySelector(".main-container");
   const noise = document.querySelector(".noise");
   const noiseBtn = document.querySelector("#noise-btn");

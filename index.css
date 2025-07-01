@@ -275,7 +275,7 @@ a {
     background-color: rgb(40, 40, 40);
   }
   #separator {
-    color: var(--color-card-night2git);
+    color: var(--color-card-night2);
   }
   #card0,
   #card1,
